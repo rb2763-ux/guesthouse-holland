@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest House Holland | Juan Dolio, Dominican Republic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a5f7a;
+            --primary-dark: #134b61;
+            --accent: #c9a959;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --bg: #ffffff;
+            --bg-cream: #faf8f5;
+            --bg-dark: #1a1a1a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav.scrolled .logo {
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        nav.scrolled .nav-links a {
+            color: var(--text);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        nav.scrolled .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            background: var(--accent);
+            color: var(--bg-dark) !important;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        nav.scrolled .nav-cta {
+            background: var(--primary);
+            color: white !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--primary) !important;
+            color: white !important;
+        }
+
+        nav.scrolled .nav-cta:hover {
+            background: var(--primary-dark) !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=1920') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 100px 5% 0 5%;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin-top: 2rem;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .hero-badge .eco {
+            background: #27ae60;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.15;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--bg-dark);
+        }
+
+        .btn-primary:hover {
+            background: #d4b366;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--text);
+        }
+
+        /* Trust Bar */
+        .trust-bar {
+            background: var(--bg-dark);
+            color: white;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .trust-item svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--accent);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 5%;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-header span {
+            color: var(--accent);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .section-header h2 {
+            font-size: 2.75rem;
+            margin-top: 0.75rem;
+            color: var(--text);
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            margin-top: 1rem;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--bg-cream);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .about-image .eco-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(26,95,122,0.3);
+        }
+
+        .eco-badge .number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .eco-badge .text {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .about-feature svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--accent);
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .service-card-content {
+            padding: 2rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card .btn {
+            width: 100%;
+            justify-content: center;
+            background: var(--bg-cream);
+            color: var(--text);
+        }
+
+        .service-card .btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Apartments Gallery */
+        .apartments-gallery {
+            background: var(--bg-cream);
+        }
+
+        .apartments-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .apartment-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .apartment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+        }
+
+        .apartment-images {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .apartment-images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .apartment-card:hover .apartment-images img {
+            transform: scale(1.05);
+        }
+
+        .apartment-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .apartment-gallery-dots {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .gallery-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .gallery-dot.active {
+            background: white;
+        }
+
+        .apartment-info {
+            padding: 1.5rem;
+        }
+
+        .apartment-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .apartment-info .location {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .apartment-features {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .apartment-features span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .apartment-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        .price {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .price span {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+
+        .apartment-price .btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--primary);
+            color: white;
+            font-size: 0.85rem;
+        }
+
+        .apartment-price .btn:hover {
+            background: var(--primary-dark);
+        }
+
+        .view-all-apartments {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .view-all-apartments .btn {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .view-all-apartments .btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .apartments-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--primary);
+            color: white;
+        }
+
+        .testimonials .section-header span {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .testimonials .section-header h2 {
+            color: white;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .testimonial-card .stars {
+            color: var(--accent);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .testimonial-author .name {
+            font-weight: 600;
+        }
+
+        .testimonial-author .detail {
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: var(--bg-cream);
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .cta .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-dark);
+            color: white;
+            padding: 4rem 5% 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+        }
+
+        .footer-brand .logo {
+            color: white;
+            font-size: 1.75rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.6);
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-col a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 5px 20px rgba(37,211,102,0.4);
+            z-index: 999;
+            transition: transform 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+            
+            .hero-stats {
+                gap: 2rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .about-grid,
+            .services-grid,
+            .testimonial-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">Guest House <span>Holland</span></a>
+        <ul class="nav-links">
+            <li><a href="#apartments">Apartments</a></li>
+            <li><a href="#tours">Tours & Taxi</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" class="nav-cta">Book Now</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Home on the Caribbean Beach</h1>
+            <p>Discover Juan Dolio with André — 20+ years of experience, 30+ apartments, and the personal service you deserve.</p>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">30+</div>
+                    <div class="stat-label">Apartments</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">#001</div>
+                    <div class="stat-label">ECO-Tourguide</div>
+                </div>
+            </div>
+            
+            <!-- Buttons removed -->
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            🏆 Traveller Review Award since 2020
+        </div>
+        <div class="trust-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Officially Registered
+        </div>
+        <div class="trust-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Personal Service
+        </div>
+        <div class="trust-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Right on the Beach
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600" alt="André - Guest House Holland">
+                <div class="eco-badge">
+                    <div class="number">#001</div>
+                    <div class="text">ECO-Tourguide</div>
+                </div>
+            </div>
+            <div class="about-content">
+                <h2>Welcome to Guest House Holland</h2>
+                <p>My name is André, and for over 20 years I've been helping guests from the Netherlands, Germany, and around the world discover the Dominican Republic.</p>
+                <p>As the very first officially registered ECO-tourguide in the country (No. 001, Ministry of Tourism), I offer not just accommodation, but a complete experience: from comfortable beachfront apartments to unforgettable tours across the country.</p>
+                <p><strong>With me, you're not a tourist — you're a guest.</strong></p>
+                
+                <div class="about-features">
+                    <div class="about-feature">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Multilingual (EN/DE/NL/ES)</span>
+                    </div>
+                    <div class="about-feature">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Personal service</span>
+                    </div>
+                    <div class="about-feature">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Available 24/7</span>
+                    </div>
+                    <div class="about-feature">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Fair prices</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="section-header">
+            <span>Our Services</span>
+            <h2>Everything for your perfect vacation</h2>
+            <p>From accommodation to adventure — we've got you covered.</p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card" id="apartments">
+                <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Apartments">
+                <div class="service-card-content">
+                    <h3>Apartments</h3>
+                    <p>30+ fully furnished apartments right on the beach in Juan Dolio. For 2 to 6 guests, from $30/night.</p>
+                    <a href="#" class="btn">View Apartments →</a>
+                </div>
+            </div>
+            
+            <div class="service-card" id="tours">
+                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600" alt="Tours">
+                <div class="service-card-content">
+                    <h3>Tours & Excursions</h3>
+                    <p>Los Haitises, whale watching, Santo Domingo and more. With the first ECO-tourguide of the Dominican Republic.</p>
+                    <a href="#" class="btn">Discover Tours →</a>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600" alt="Taxi">
+                <div class="service-card-content">
+                    <h3>Taxi & Transfers</h3>
+                    <p>Safe and reliable transportation across the Dominican Republic. Airport transfers and private rides.</p>
+                    <a href="#" class="btn">Book Transfer →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apartments Gallery -->
+    <section class="apartments-gallery" id="apartments-gallery">
+        <div class="section-header">
+            <span>Our Apartments</span>
+            <h2>Find your perfect Caribbean home</h2>
+            <p>30+ fully equipped apartments directly on the beach in Juan Dolio</p>
+        </div>
+
+        <div class="apartments-grid">
+            <!-- Apartment: Solano -->
+            <div class="apartment-card">
+                <div class="apartment-images">
+                    <img src="img/apartments/solano/1669820981926.jpg" alt="Apartment Solano">
+                    <div class="apartment-badge">Beach View</div>
+                </div>
+                <div class="apartment-info">
+                    <h3>Solano</h3>
+                    <div class="location">📍 Juan Dolio Beach</div>
+                    <div class="apartment-features">
+                        <span>🛏️ 2 Bedrooms</span>
+                        <span>👥 4 Guests</span>
+                        <span>🌊 Beach Front</span>
+                    </div>
+                    <div class="apartment-price">
+                        <div class="price">$45 <span>/ night</span></div>
+                        <a href="https://wa.me/18093995766?text=Hi André, I'm interested in Apartment Solano" class="btn">Inquire →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apartment: M3 -->
+            <div class="apartment-card">
+                <div class="apartment-images">
+                    <img src="img/apartments/M3/1671378818886.jpg" alt="Apartment M3">
+                    <div class="apartment-badge">Popular</div>
+                </div>
+                <div class="apartment-info">
+                    <h3>M3</h3>
+                    <div class="location">📍 Juan Dolio</div>
+                    <div class="apartment-features">
+                        <span>🛏️ 1 Bedroom</span>
+                        <span>👥 2 Guests</span>
+                        <span>❄️ Air Conditioning</span>
+                    </div>
+                    <div class="apartment-price">
+                        <div class="price">$35 <span>/ night</span></div>
+                        <a href="https://wa.me/18093995766?text=Hi André, I'm interested in Apartment M3" class="btn">Inquire →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apartment: Siegfried 4 -->
+            <div class="apartment-card">
+                <div class="apartment-images">
+                    <img src="img/apartments/Siegfried 4/Siegfried 4.jpg" alt="Apartment Siegfried 4">
+                    <div class="apartment-badge">Family</div>
+                </div>
+                <div class="apartment-info">
+                    <h3>Siegfried 4</h3>
+                    <div class="location">📍 Juan Dolio</div>
+                    <div class="apartment-features">
+                        <span>🛏️ 2 Bedrooms</span>
+                        <span>👥 5 Guests</span>
+                        <span>🏊 Pool Access</span>
+                    </div>
+                    <div class="apartment-price">
+                        <div class="price">$50 <span>/ night</span></div>
+                        <a href="https://wa.me/18093995766?text=Hi André, I'm interested in Apartment Siegfried 4" class="btn">Inquire →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apartment: TCarl -->
+            <div class="apartment-card">
+                <div class="apartment-images">
+                    <img src="img/apartments/TCarl/1671378213240.jpg" alt="Apartment TCarl">
+                    <div class="apartment-badge">Modern</div>
+                </div>
+                <div class="apartment-info">
+                    <h3>TCarl</h3>
+                    <div class="location">📍 Juan Dolio</div>
+                    <div class="apartment-features">
+                        <span>🛏️ 1 Bedroom</span>
+                        <span>👥 3 Guests</span>
+                        <span>📺 Smart TV</span>
+                    </div>
+                    <div class="apartment-price">
+                        <div class="price">$40 <span>/ night</span></div>
+                        <a href="https://wa.me/18093995766?text=Hi André, I'm interested in Apartment TCarl" class="btn">Inquire →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-all-apartments">
+            <a href="https://wa.me/18093995766?text=Hi André, I'd like to see all available apartments" class="btn">View All 30+ Apartments →</a>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="section-header">
+            <span>Reviews</span>
+            <h2>What our guests say</h2>
+        </div>
+        
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"12 years as a guest with André and Cristina. A mutual trust developed, which is not common in the DomRep. They even witnessed my wedding. Highly recommended."</p>
+                <div class="testimonial-author">
+                    <div>
+                        <div class="name">Lars</div>
+                        <div class="detail">🇩🇪 12 years guest</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Dre is kindness itself. Private BBQ, beach chairs, and he even drove us to the bank. Apartment fully equipped. AMAZING!"</p>
+                <div class="testimonial-author">
+                    <div>
+                        <div class="name">Dutch Guest</div>
+                        <div class="detail">🇳🇱 Apartment</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Safe and professional experience. Always on time and very knowledgeable. Andre drove us to Los Haitises through villages sharing his knowledge of the country!"</p>
+                <div class="testimonial-author">
+                    <div>
+                        <div class="name">Sean Cassidy</div>
+                        <div class="detail">🇺🇸 Los Haitises Tour</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <h2>Ready for your Caribbean adventure?</h2>
+        <p>Get in touch and we'll help you find the perfect accommodation or tour.</p>
+        <a href="https://wa.me/18093995766" class="btn btn-primary">
+            💬 WhatsApp: +1 809 399 5766
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">Guest House <span>Holland</span></a>
+                <p>Your Dutch host in the Dominican Republic since 2004. Apartments, tours and taxi services in Juan Dolio and surroundings.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Apartments</a></li>
+                    <li><a href="#">Tours & Excursions</a></li>
+                    <li><a href="#">Taxi & Transfers</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Popular Tours</h4>
+                <ul>
+                    <li><a href="#">Los Haitises</a></li>
+                    <li><a href="#">Whale Watching</a></li>
+                    <li><a href="#">Santo Domingo</a></li>
+                    <li><a href="#">Saona Island</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="https://wa.me/18093995766">WhatsApp</a></li>
+                    <li><a href="mailto:drebroeders@gmail.com">Email</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 Guest House Holland. Juan Dolio, Dominican Republic. | First ECO-Tourguide #001</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/18093995766" class="whatsapp-float" target="_blank">
+        💬
+    </a>
+
+    <!-- Navigation Scroll Effect -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+    <!-- ChatBot Placeholder -->
+    <script>
+        // ChatPro AI Bot komt hier
+        // TODO: Bot integreren
+    </script>
+</body>
+</html>
