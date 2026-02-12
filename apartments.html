@@ -26,15 +26,11 @@
             background: var(--bg);
         }
 
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-        }
-
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; }
         a { color: var(--primary); text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        /* Navigation - same as index.html */
+        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -48,31 +44,15 @@
             border-bottom: 1px solid rgba(0,0,0,0.08);
         }
 
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--primary); }
         .logo span { color: var(--accent); }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text);
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--text); font-size: 0.9rem; font-weight: 500; }
         .nav-links a:hover { color: var(--primary); text-decoration: none; }
         .nav-links a.active { color: var(--primary); }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
             background: linear-gradient(rgba(26, 95, 122, 0.9), rgba(26, 95, 122, 0.85)), 
                         url('https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=1920') center/cover;
@@ -80,79 +60,31 @@
             color: white;
             text-align: center;
         }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
 
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
+        .hero-stats { display: flex; justify-content: center; gap: 3rem; margin-top: 2rem; }
+        .stat { text-align: center; }
+        .stat-number { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700; }
+        .stat-label { font-size: 0.85rem; opacity: 0.8; }
 
-        .hero p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-top: 2rem;
-        }
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
-
-        .stat-label {
-            font-size: 0.85rem;
-            opacity: 0.8;
-        }
-
-        /* Section Styling */
-        section {
-            padding: 4rem 5%;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-header span {
-            color: var(--accent);
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-        }
-
-        .section-header h2 {
-            font-size: 2.2rem;
-            margin-top: 0.5rem;
-            color: var(--text);
-        }
+        /* Section */
+        section { padding: 4rem 5%; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-header span { color: var(--accent); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; }
+        .section-header h2 { font-size: 2.2rem; margin-top: 0.5rem; color: var(--text); }
 
         /* Apartments Grid */
-        .apartments-section {
-            background: var(--bg-cream);
-        }
-
+        .apartments-section { background: var(--bg-cream); }
         .apartments-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 2rem;
             max-width: 1400px;
             margin: 0 auto;
         }
 
-        /* Apartment Card */
+        /* Card */
         .apartment-card {
             background: white;
             border-radius: 12px;
@@ -160,198 +92,50 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             transition: transform 0.3s, box-shadow 0.3s;
         }
-
         .apartment-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 12px 40px rgba(0,0,0,0.12);
         }
 
-        /* Video Container */
+        /* Video */
         .video-container {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 ratio */
+            padding-bottom: 56.25%;
             background: #000;
         }
-
         .video-container iframe {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             border: none;
         }
 
-        /* Image fallback for apartments without video */
-        .image-container {
-            position: relative;
-            height: 220px;
-            overflow: hidden;
-            background: var(--bg-cream);
-        }
-
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .no-video-badge {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            background: rgba(0,0,0,0.6);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 4px;
-            font-size: 0.75rem;
-        }
-
         /* Card Content */
-        .card-content {
-            padding: 1.5rem;
-        }
+        .card-content { padding: 1.5rem; }
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; }
+        .card-header h3 { font-size: 1.3rem; color: var(--text); }
+        .card-badge { background: var(--accent); color: #333; padding: 0.25rem 0.7rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600; }
+        .card-badge.premium { background: var(--primary); color: white; }
+        .card-badge.budget { background: #27ae60; color: white; }
 
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1rem;
-        }
+        .card-location { color: var(--text-light); font-size: 0.85rem; margin-bottom: 0.75rem; }
+        .card-features { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; font-size: 0.8rem; color: var(--text-light); }
 
-        .card-header h3 {
-            font-size: 1.4rem;
-            color: var(--text);
-        }
+        .card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid #eee; }
+        .price { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--primary); }
+        .price span { font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 400; color: var(--text-light); }
+        .price-secondary { font-size: 0.8rem; color: var(--text-light); margin-top: 0.2rem; }
 
-        .card-badge {
-            background: var(--accent);
-            color: #333;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-
-        .card-badge.premium {
-            background: var(--primary);
-            color: white;
-        }
-
-        .card-location {
-            color: var(--text-light);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .card-features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            font-size: 0.85rem;
-            color: var(--text-light);
-        }
-
-        .card-features span {
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-
-        .card-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 1rem;
-            border-top: 1px solid #eee;
-        }
-
-        .price {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .price span {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 400;
-            color: var(--text-light);
-        }
-
-        .price-secondary {
-            font-size: 0.85rem;
-            color: var(--text-light);
-            margin-top: 0.25rem;
-        }
-
-        /* More Apartments Section */
-        .more-section {
-            background: white;
-        }
-
-        .more-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .more-card {
-            background: var(--bg-cream);
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .more-card h4 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .more-card .price {
-            font-size: 1.3rem;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: var(--primary);
-            color: white;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            color: white;
-            margin-bottom: 1rem;
-        }
-
-        .cta-section p {
-            opacity: 0.9;
-            max-width: 500px;
-            margin: 0 auto 1.5rem;
-        }
-
-        .cta-box {
-            background: rgba(255,255,255,0.1);
-            padding: 1.5rem 2rem;
-            border-radius: 8px;
-            display: inline-block;
-        }
-
+        /* CTA */
+        .cta-section { background: var(--primary); color: white; text-align: center; }
+        .cta-section h2 { color: white; margin-bottom: 1rem; }
+        .cta-section p { opacity: 0.9; max-width: 500px; margin: 0 auto 1.5rem; }
+        .cta-box { background: rgba(255,255,255,0.1); padding: 1.5rem 2rem; border-radius: 8px; display: inline-block; }
         .cta-box strong { color: var(--accent); }
 
         /* Footer */
-        footer {
-            background: #1a1a1a;
-            color: white;
-            padding: 3rem 5%;
-            text-align: center;
-        }
-
+        footer { background: #1a1a1a; color: white; padding: 3rem 5%; text-align: center; }
         footer .logo { color: white; }
         footer a { color: #ccc; }
         footer a:hover { color: white; }
@@ -367,7 +151,6 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <a href="index.html" class="logo">Guest House <span>Holland</span></a>
         <ul class="nav-links">
@@ -378,10 +161,9 @@
         </ul>
     </nav>
 
-    <!-- Hero -->
     <section class="hero">
         <h1>Our Apartments</h1>
-        <p>Fully furnished vacation rentals directly on the beach in Juan Dolio, Dominican Republic</p>
+        <p>Fully furnished vacation rentals in Juan Dolio, Dominican Republic</p>
         <div class="hero-stats">
             <div class="stat">
                 <div class="stat-number">30+</div>
@@ -392,288 +174,311 @@
                 <div class="stat-label">From / night</div>
             </div>
             <div class="stat">
-                <div class="stat-number">20+</div>
+                <div class="stat-number">30+</div>
                 <div class="stat-label">Years Experience</div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Apartments with Videos -->
+    <!-- Premium Apartments -->
     <section class="apartments-section">
         <div class="section-header">
-            <span>Video Tours</span>
-            <h2>See the apartments before you book</h2>
+            <span>Premium</span>
+            <h2>Luxury & Long-term Rentals</h2>
         </div>
-
         <div class="apartments-grid">
-            
-            <!-- Solano -->
+
             <div class="apartment-card">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/KxM7vFLQD6w" 
-                            title="Solano Apartment Tour"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/dHjHjycddIo" title="Solano" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="card-content">
-                    <div class="card-header">
-                        <h3>Solano</h3>
-                        <span class="card-badge premium">Premium</span>
-                    </div>
+                    <div class="card-header"><h3>Solano</h3><span class="card-badge premium">Premium</span></div>
                     <div class="card-location">📍 Juan Dolio Beach</div>
-                    <div class="card-features">
-                        <span>🛏️ 2 Bedrooms</span>
-                        <span>👥 4 Guests</span>
-                        <span>🏊 Private Pool</span>
-                        <span>🌊 Beachfront</span>
-                    </div>
-                    <div class="card-footer">
-                        <div>
-                            <div class="price">$90 <span>/ night</span></div>
-                            <div class="price-secondary">$1,135 / 2 weeks</div>
-                        </div>
-                    </div>
+                    <div class="card-features"><span>🛏️ 2 BR</span><span>👥 4 Guests</span><span>🏊 Private Pool</span><span>🌊 Beach</span></div>
+                    <div class="card-footer"><div><div class="price">$90 <span>/ night</span></div><div class="price-secondary">$1,135 / 2 weeks</div></div></div>
                 </div>
             </div>
 
-            <!-- Valentine Tower A3 -->
             <div class="apartment-card">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/N1q37BxMWiA" 
-                            title="Valentine Tower A3 Tour"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/eSGFSD3FlZs" title="Valentine Tower A3" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="card-content">
-                    <div class="card-header">
-                        <h3>Valentine Tower A3</h3>
-                        <span class="card-badge premium">Luxury</span>
-                    </div>
+                    <div class="card-header"><h3>Valentine Tower A3</h3><span class="card-badge premium">Luxury</span></div>
                     <div class="card-location">📍 Juan Dolio</div>
-                    <div class="card-features">
-                        <span>🛏️ 2 Bedrooms</span>
-                        <span>👥 4 Guests</span>
-                        <span>🏙️ Panoramic View</span>
-                        <span>✨ Modern</span>
-                    </div>
-                    <div class="card-footer">
-                        <div>
-                            <div class="price">$1,300 <span>/ month</span></div>
-                            <div class="price-secondary">Long-term rental</div>
-                        </div>
-                    </div>
+                    <div class="card-features"><span>🛏️ 2 BR</span><span>👥 4 Guests</span><span>🏙️ Panoramic View</span></div>
+                    <div class="card-footer"><div><div class="price">$1,300 <span>/ month</span></div><div class="price-secondary">Long-term</div></div></div>
                 </div>
             </div>
 
-            <!-- Antoinetta 2 -->
             <div class="apartment-card">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/yiUBixlBG7E" 
-                            title="Antoinetta 2 Tour"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/IdGHo2pZ1QY" title="166 Jacuzzi" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="card-content">
-                    <div class="card-header">
-                        <h3>Antoinetta 2</h3>
-                        <span class="card-badge">Popular</span>
-                    </div>
-                    <div class="card-location">📍 80m from beach</div>
-                    <div class="card-features">
-                        <span>🛏️ 1 Bedroom</span>
-                        <span>👥 2 Guests</span>
-                        <span>❄️ AC</span>
-                        <span>📶 WiFi</span>
-                    </div>
-                    <div class="card-footer">
-                        <div>
-                            <div class="price">$50 <span>/ night</span></div>
-                            <div class="price-secondary">$750 / month</div>
-                        </div>
-                    </div>
+                    <div class="card-header"><h3>Apartment 166</h3><span class="card-badge premium">Jacuzzi</span></div>
+                    <div class="card-location">📍 Near Beach</div>
+                    <div class="card-features"><span>🛏️ Studio</span><span>👥 2 Guests</span><span>🛁 Jacuzzi</span><span>🌊 Beach</span></div>
+                    <div class="card-footer"><div><div class="price">Ask <span>for price</span></div></div></div>
                 </div>
             </div>
 
-            <!-- M6 -->
             <div class="apartment-card">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/lV3mGS3t1a4" 
-                            title="M6 Apartment Tour"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/HSDxpdslYfo" title="GUV1 Golf" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="card-content">
-                    <div class="card-header">
-                        <h3>M6</h3>
-                        <span class="card-badge">Beach Access</span>
-                    </div>
-                    <div class="card-location">📍 Juan Dolio</div>
-                    <div class="card-features">
-                        <span>🛏️ 1 Bedroom</span>
-                        <span>👥 2 Guests</span>
-                        <span>❄️ AC</span>
-                        <span>🏊 Pool</span>
-                    </div>
-                    <div class="card-footer">
-                        <div>
-                            <div class="price">$45 <span>/ night</span></div>
-                            <div class="price-secondary">$600 / month</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- M3 -->
-            <div class="apartment-card">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/sO9SyC7zVFw" 
-                            title="M3 Apartment Tour"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <h3>M3</h3>
-                        <span class="card-badge">Value</span>
-                    </div>
-                    <div class="card-location">📍 Juan Dolio</div>
-                    <div class="card-features">
-                        <span>🛏️ 1 Bedroom</span>
-                        <span>👥 2 Guests</span>
-                        <span>❄️ AC</span>
-                        <span>📶 WiFi</span>
-                    </div>
-                    <div class="card-footer">
-                        <div>
-                            <div class="price">$36 <span>/ night</span></div>
-                            <div class="price-secondary">$550 / month</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TCarl -->
-            <div class="apartment-card">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/rYWqRc1v3nQ" 
-                            title="TCarl Apartment Tour"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <h3>TCarl</h3>
-                        <span class="card-badge">Budget</span>
-                    </div>
-                    <div class="card-location">📍 Juan Dolio</div>
-                    <div class="card-features">
-                        <span>🛏️ Studio</span>
-                        <span>👥 2 Guests</span>
-                        <span>❄️ AC</span>
-                        <span>📅 Long-term OK</span>
-                    </div>
-                    <div class="card-footer">
-                        <div>
-                            <div class="price">$30 <span>/ night</span></div>
-                            <div class="price-secondary">Great for long stays</div>
-                        </div>
-                    </div>
+                    <div class="card-header"><h3>GUV1 - Guavaberry Golf</h3><span class="card-badge premium">Golf</span></div>
+                    <div class="card-location">📍 Guavaberry Golf Course</div>
+                    <div class="card-features"><span>🛏️ 2 BR</span><span>👥 4 Guests</span><span>⛳ Golf View</span><span>🏊 Pool</span></div>
+                    <div class="card-footer"><div><div class="price">Ask <span>for price</span></div></div></div>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- More Apartments (without video) -->
-    <section class="more-section">
+    <!-- Beach Apartments -->
+    <section class="apartments-section" style="background: white;">
         <div class="section-header">
-            <span>More Options</span>
-            <h2>Additional apartments available</h2>
+            <span>Beach Access</span>
+            <h2>Apartments Near the Beach</h2>
         </div>
+        <div class="apartments-grid">
 
-        <div class="more-grid">
-            <div class="more-card">
-                <h4>MM103</h4>
-                <p>3 guests • AC • WiFi • 100m beach</p>
-                <div class="price">$42 <span>/ night</span></div>
+            <div class="apartment-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/QwPU90XXJAQ" title="Antoinetta 2" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3>Antoinetta 2</h3><span class="card-badge">Popular</span></div>
+                    <div class="card-location">📍 80m from beach</div>
+                    <div class="card-features"><span>🛏️ Studio</span><span>👥 2 Guests</span><span>❄️ AC</span><span>📶 WiFi</span></div>
+                    <div class="card-footer"><div><div class="price">$50 <span>/ night</span></div><div class="price-secondary">$750 / month</div></div></div>
+                </div>
             </div>
-            <div class="more-card">
-                <h4>M1</h4>
-                <p>1 BR • 2 guests • AC • WiFi</p>
-                <div class="price">$36 <span>/ night</span></div>
+
+            <div class="apartment-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/0Dhkp6_zKqE" title="Antoinetta 1" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3>Antoinetta 1</h3><span class="card-badge">Family</span></div>
+                    <div class="card-location">📍 Juan Dolio Beach</div>
+                    <div class="card-features"><span>🛏️ 1 BR</span><span>👥 4 Guests</span><span>❄️ AC</span><span>📶 WiFi</span></div>
+                    <div class="card-footer"><div><div class="price">Ask <span>for price</span></div></div></div>
+                </div>
             </div>
-            <div class="more-card">
-                <h4>Giselly 10</h4>
-                <p>Cozy • AC • Good location</p>
-                <div class="price">$35 <span>/ night</span></div>
+
+            <div class="apartment-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/KO6ZrUFlbdw" title="M6" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3>M6</h3><span class="card-badge">Beach</span></div>
+                    <div class="card-location">📍 Near Beach</div>
+                    <div class="card-features"><span>🛏️ 1 BR</span><span>👥 2 Guests</span><span>❄️ AC</span><span>🏊 Pool</span></div>
+                    <div class="card-footer"><div><div class="price">$45 <span>/ night</span></div><div class="price-secondary">$600 / month</div></div></div>
+                </div>
             </div>
-            <div class="more-card">
-                <h4>Michel</h4>
-                <p>Beach house • 80m to beach</p>
-                <div class="price">$32 <span>/ night</span></div>
+
+            <div class="apartment-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/HHfdQQVbw6c" title="M3" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3>M3</h3><span class="card-badge">Value</span></div>
+                    <div class="card-location">📍 60m from Beach</div>
+                    <div class="card-features"><span>🛏️ 1 BR</span><span>👥 2 Guests</span><span>❄️ AC</span><span>📶 WiFi</span></div>
+                    <div class="card-footer"><div><div class="price">$36 <span>/ night</span></div><div class="price-secondary">$550 / month</div></div></div>
+                </div>
             </div>
-            <div class="more-card">
-                <h4>Luis2</h4>
-                <p>Simple • Good value</p>
-                <div class="price">$30 <span>/ night</span></div>
+
+            <div class="apartment-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/1holz72_Nnw" title="VAL.B8" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3>VAL.B8</h3><span class="card-badge">Exclusive</span></div>
+                    <div class="card-location">📍 80m from Beach</div>
+                    <div class="card-features"><span>🛏️ Studio</span><span>👥 2 Guests</span><span>❄️ AC</span><span>✨ Modern</span></div>
+                    <div class="card-footer"><div><div class="price">Ask <span>for price</span></div></div></div>
+                </div>
             </div>
-            <div class="more-card">
-                <h4>M7</h4>
-                <p>1 BR • Long-term ideal</p>
-                <div class="price">$530 <span>/ month</span></div>
+
+            <div class="apartment-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/RqXs9j_daZA" title="152" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3>Apartment 152</h3><span class="card-badge">Beach</span></div>
+                    <div class="card-location">📍 Near Beach</div>
+                    <div class="card-features"><span>🛏️ Studio</span><span>👥 2 Guests</span><span>❄️ AC</span><span>📶 WiFi</span></div>
+                    <div class="card-footer"><div><div class="price">Ask <span>for price</span></div></div></div>
+                </div>
             </div>
-            <div class="more-card">
-                <h4>Studio Center</h4>
-                <p>Studio • Central • Budget</p>
-                <div class="price">$350 <span>/ month</span></div>
+
+            <div class="apartment-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/pxvkW5QaPwI" title="153" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3>Apartment 153</h3><span class="card-badge">Spacious</span></div>
+                    <div class="card-location">📍 Near Beach</div>
+                    <div class="card-features"><span>🛏️ 2 BR</span><span>👥 4 Guests</span><span>❄️ AC</span><span>📶 WiFi</span></div>
+                    <div class="card-footer"><div><div class="price">Ask <span>for price</span></div></div></div>
+                </div>
             </div>
-            <div class="more-card">
-                <h4>5 Floor Beach</h4>
-                <p>Beachfront • Sea view</p>
-                <div class="price">$900 <span>/ month</span></div>
+
+            <div class="apartment-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/qIll8Vk-Hig" title="T3" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3>T3 - Beach Studio</h3><span class="card-badge">Beach</span></div>
+                    <div class="card-location">📍 On the Beach, Old Juan Dolio</div>
+                    <div class="card-features"><span>🛏️ Studio</span><span>👥 2 Guests</span><span>🌊 Beachfront</span></div>
+                    <div class="card-footer"><div><div class="price">Ask <span>for price</span></div></div></div>
+                </div>
             </div>
-            <div class="more-card">
-                <h4>S8</h4>
-                <p>AC • WiFi • 80m beach</p>
-                <div class="price">$792 <span>/ month</span></div>
+
+            <div class="apartment-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/7LWRKCzxER0" title="Michael" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3>Michael - Beach House</h3><span class="card-badge">Beach</span></div>
+                    <div class="card-location">📍 Juan Dolio Beach</div>
+                    <div class="card-features"><span>🛏️ 1 BR</span><span>👥 2 Guests</span><span>🏖️ Beach House</span></div>
+                    <div class="card-footer"><div><div class="price">$32 <span>/ night</span></div></div></div>
+                </div>
             </div>
-            <div class="more-card">
-                <h4>G1</h4>
-                <p>Interior • Quiet • Nature</p>
-                <div class="price">$155 <span>/ night</span></div>
+
+            <div class="apartment-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/sEMu3kcqllM" title="MAR1" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3>MAR1</h3><span class="card-badge">Marina</span></div>
+                    <div class="card-location">📍 Juan Dolio</div>
+                    <div class="card-features"><span>🛏️ 1 BR</span><span>👥 2 Guests</span><span>❄️ AC</span><span>📶 WiFi</span></div>
+                    <div class="card-footer"><div><div class="price">Ask <span>for price</span></div></div></div>
+                </div>
             </div>
-            <div class="more-card">
-                <h4>DVP2</h4>
-                <p>Interior • Peaceful</p>
-                <div class="price">$155 <span>/ night</span></div>
+
+        </div>
+    </section>
+
+    <!-- Budget & Long-term -->
+    <section class="apartments-section">
+        <div class="section-header">
+            <span>Budget & Long-term</span>
+            <h2>Affordable Options</h2>
+        </div>
+        <div class="apartments-grid">
+
+            <div class="apartment-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/pzYtW9kf2aA" title="M7" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3>M7</h3><span class="card-badge budget">Budget</span></div>
+                    <div class="card-location">📍 Near Beach</div>
+                    <div class="card-features"><span>🛏️ Studio</span><span>👥 2 Guests</span><span>📅 Long-term OK</span></div>
+                    <div class="card-footer"><div><div class="price">$530 <span>/ month</span></div></div></div>
+                </div>
             </div>
+
+            <div class="apartment-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/etswjqMja78" title="Studio Center" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3>Studio Center</h3><span class="card-badge budget">Best Value</span></div>
+                    <div class="card-location">📍 Center Old Juan Dolio</div>
+                    <div class="card-features"><span>🛏️ Studio</span><span>👥 2 Guests</span><span>🚶 Central</span></div>
+                    <div class="card-footer"><div><div class="price">$350 <span>/ month</span></div></div></div>
+                </div>
+            </div>
+
+            <div class="apartment-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/JgpS8gOGDtw" title="Dec 2025 Apt" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3>Beach & Center Apt</h3><span class="card-badge budget">Value</span></div>
+                    <div class="card-location">📍 Near Beach & Center</div>
+                    <div class="card-features"><span>🛏️ 1 BR</span><span>👥 2 Guests</span><span>❄️ AC</span><span>📶 WiFi</span></div>
+                    <div class="card-footer"><div><div class="price">$38 <span>/ night</span></div></div></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interior / Nature -->
+    <section class="apartments-section" style="background: white;">
+        <div class="section-header">
+            <span>Interior</span>
+            <h2>Quiet & Nature Locations</h2>
+        </div>
+        <div class="apartments-grid">
+
+            <div class="apartment-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/NXKiXroo-ME" title="G1" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3>G1 - Interior</h3><span class="card-badge">Nature</span></div>
+                    <div class="card-location">📍 6km Interior, Open Air</div>
+                    <div class="card-features"><span>🛏️ 1 BR</span><span>👥 2 Guests</span><span>🌿 Nature</span><span>🤫 Quiet</span></div>
+                    <div class="card-footer"><div><div class="price">$155 <span>/ night</span></div></div></div>
+                </div>
+            </div>
+
+            <div class="apartment-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/bsB4DoDIqO0" title="G2" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3>G2 - Interior</h3><span class="card-badge">Nature</span></div>
+                    <div class="card-location">📍 6km Interior, Open Air</div>
+                    <div class="card-features"><span>🛏️ 1 BR</span><span>👥 2 Guests</span><span>🌿 Nature</span><span>🤫 Quiet</span></div>
+                    <div class="card-footer"><div><div class="price">Ask <span>for price</span></div></div></div>
+                </div>
+            </div>
+
+            <div class="apartment-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/GJJFUBGjuYo" title="DVP2" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3>DVP2</h3><span class="card-badge">Simple</span></div>
+                    <div class="card-location">📍 Old Juan Dolio, Near Center</div>
+                    <div class="card-features"><span>🛏️ Studio</span><span>👥 2 Guests</span><span>🚶 Central</span></div>
+                    <div class="card-footer"><div><div class="price">$155 <span>/ night</span></div></div></div>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <!-- CTA -->
     <section class="cta-section">
-        <h2>Need help choosing?</h2>
-        <p>Tell us your dates, budget, and preferences — André will personally recommend the perfect apartment for you.</p>
+        <h2>Questions or need help choosing?</h2>
+        <p>Tell us your dates, budget, and preferences — André will personally recommend the perfect apartment.</p>
         <div class="cta-box">
             💬 <strong>Use the chat below</strong> — available 24/7 in EN/DE/NL/ES
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <a href="index.html" class="logo">Guest House <span>Holland</span></a>
-        <p style="margin: 1rem 0; opacity: 0.7;">Juan Dolio, Dominican Republic • Since 2004</p>
-        <p>
-            <a href="index.html">Home</a> · 
-            <a href="tours.html">Tours</a> · 
-            <a href="blog.html">Blog</a>
-        </p>
-        <p style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.5;">
-            Powered by <a href="https://chatproai.io">ChatPro AI</a>
-        </p>
+        <p style="margin: 1rem 0; opacity: 0.7;">Juan Dolio, Dominican Republic • Since 1995</p>
+        <p><a href="index.html">Home</a> · <a href="tours.html">Tours</a> · <a href="blog.html">Blog</a></p>
+        <p style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.5;">Powered by <a href="https://chatproai.io">ChatPro AI</a></p>
     </footer>
 
-    <!-- ChatPro AI Bot -->
-    <!-- <script src="https://widget.chatproai.io/guesthouse-holland.js"></script> -->
 </body>
 </html>
