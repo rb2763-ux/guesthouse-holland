@@ -322,29 +322,43 @@
             box-shadow: 0 20px 60px rgba(0,0,0,0.15);
         }
 
+        .badges-row {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            justify-content: center;
+            align-items: stretch;
+        }
+
         .about-image .eco-badge {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
             background: var(--primary);
             color: white;
-            padding: 1.2rem 1.5rem;
+            padding: 1rem 1.2rem;
             border-radius: 8px;
             text-align: center;
             box-shadow: 0 10px 30px rgba(26,95,122,0.4);
-            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .eco-badge .number {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
         }
 
         .eco-badge .text {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+
+        .booking-badge {
+            height: 90px;
+            width: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
 
         .about-content h2 {
@@ -780,20 +794,25 @@
                 flex-direction: column;
             }
             
-            /* ECO Badge auf Mobile: links unten statt rechts, damit Dre's Gesicht sichtbar bleibt */
+            /* Badges unter dem Bild - responsive */
+            .badges-row {
+                gap: 0.5rem;
+            }
+            
             .about-image .eco-badge {
-                bottom: 10px;
-                right: auto;
-                left: 10px;
-                padding: 0.8rem 1rem;
+                padding: 0.6rem 0.8rem;
             }
             
             .eco-badge .number {
-                font-size: 1.8rem;
+                font-size: 1.4rem;
             }
             
             .eco-badge .text {
-                font-size: 0.65rem;
+                font-size: 0.55rem;
+            }
+            
+            .booking-badge {
+                height: 60px;
             }
         }
     </style>
@@ -907,9 +926,12 @@ nav.scrolled .lang-current{color:var(--text)}
         <div class="about-grid">
             <div class="about-image">
                 <img src="images/andre-profile.jpg" alt="Dre (Dre Broeders) - Guest House Holland" style="border-radius: 12px;">
-                <div class="eco-badge">
-                    <div class="number">#001</div>
-                    <div class="text">ECO-Tourguide</div>
+                <div class="badges-row">
+                    <div class="eco-badge">
+                        <div class="number">#001</div>
+                        <div class="text">ECO-Tourguide</div>
+                    </div>
+                    <img src="images/booking-award-2026.png" alt="Booking.com Traveller Review Award 2026 - 8.2" class="booking-badge">
                 </div>
             </div>
             <div class="about-content">
