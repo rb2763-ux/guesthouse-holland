@@ -745,28 +745,7 @@
         }
 
         /* WhatsApp Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            box-shadow: 0 5px 20px rgba(37,211,102,0.4);
-            z-index: 999;
-            transition: transform 0.3s;
-            text-decoration: none;
-        }
 
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
 
         /* Responsive */
         @media (max-width: 968px) {
@@ -1192,17 +1171,6 @@
     </footer>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/18093995766" class="whatsapp-float" target="_blank">
-        💬
-    </a>
-
-    <!-- Navigation Scroll Effect -->
-    <script>
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('scrolled');
-            } else {
                 nav.classList.remove('scrolled');
             }
         });
