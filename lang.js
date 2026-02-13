@@ -6,7 +6,7 @@ const TRANSLATIONS = {
   en: {
     // Hero
     hero_title: "Your Home on the Caribbean Beach",
-    hero_subtitle: "Discover Juan Dolio with André — 30+ years of experience, 30+ apartments, and the personal service you deserve.",
+    hero_subtitle: "Discover Juan Dolio with Dre — 30+ years of experience, 30+ apartments, and the personal service you deserve.",
     // About
     about_title: "Welcome to Guest House Holland",
     // Services
@@ -30,7 +30,7 @@ const TRANSLATIONS = {
   },
   de: {
     hero_title: "Ihr Zuhause am karibischen Strand",
-    hero_subtitle: "Entdecken Sie Juan Dolio mit André — über 30 Jahre Erfahrung, 30+ Apartments und der persönliche Service, den Sie verdienen.",
+    hero_subtitle: "Entdecken Sie Juan Dolio mit Dre — über 30 Jahre Erfahrung, 30+ Apartments und der persönliche Service, den Sie verdienen.",
     about_title: "Willkommen bei Guest House Holland",
     services_label: "Unsere Services",
     services_title: "Alles für Ihren perfekten Urlaub",
@@ -48,7 +48,7 @@ const TRANSLATIONS = {
   },
   nl: {
     hero_title: "Uw Thuis aan het Caribische Strand",
-    hero_subtitle: "Ontdek Juan Dolio met André — 30+ jaar ervaring, 30+ appartementen en de persoonlijke service die u verdient.",
+    hero_subtitle: "Ontdek Juan Dolio met Dre — 30+ jaar ervaring, 30+ appartementen en de persoonlijke service die u verdient.",
     about_title: "Welkom bij Guest House Holland",
     services_label: "Onze Diensten",
     services_title: "Alles voor uw perfecte vakantie",
@@ -66,7 +66,7 @@ const TRANSLATIONS = {
   },
   es: {
     hero_title: "Tu Hogar en la Playa del Caribe",
-    hero_subtitle: "Descubre Juan Dolio con André — más de 30 años de experiencia, 30+ apartamentos y el servicio personal que mereces.",
+    hero_subtitle: "Descubre Juan Dolio con Dre — más de 30 años de experiencia, 30+ apartamentos y el servicio personal que mereces.",
     about_title: "Bienvenido a Guest House Holland",
     services_label: "Nuestros Servicios",
     services_title: "Todo para tus vacaciones perfectas",
@@ -84,7 +84,7 @@ const TRANSLATIONS = {
   },
   fr: {
     hero_title: "Votre Maison sur la Plage des Caraïbes",
-    hero_subtitle: "Découvrez Juan Dolio avec André — plus de 30 ans d'expérience, 30+ appartements et le service personnalisé que vous méritez.",
+    hero_subtitle: "Découvrez Juan Dolio avec Dre — plus de 30 ans d'expérience, 30+ appartements et le service personnalisé que vous méritez.",
     about_title: "Bienvenue chez Guest House Holland",
     services_label: "Nos Services",
     services_title: "Tout pour vos vacances parfaites",
@@ -102,7 +102,7 @@ const TRANSLATIONS = {
   },
   pt: {
     hero_title: "Sua Casa na Praia do Caribe",
-    hero_subtitle: "Descubra Juan Dolio com André — mais de 30 anos de experiência, 30+ apartamentos e o serviço pessoal que você merece.",
+    hero_subtitle: "Descubra Juan Dolio com Dre — mais de 30 anos de experiência, 30+ apartamentos e o serviço pessoal que você merece.",
     about_title: "Bem-vindo ao Guest House Holland",
     services_label: "Nossos Serviços",
     services_title: "Tudo para suas férias perfeitas",
@@ -120,7 +120,7 @@ const TRANSLATIONS = {
   },
   it: {
     hero_title: "La Tua Casa sulla Spiaggia dei Caraibi",
-    hero_subtitle: "Scopri Juan Dolio con André — oltre 30 anni di esperienza, 30+ appartamenti e il servizio personale che meriti.",
+    hero_subtitle: "Scopri Juan Dolio con Dre — oltre 30 anni di esperienza, 30+ appartamenti e il servizio personale che meriti.",
     about_title: "Benvenuto al Guest House Holland",
     services_label: "I Nostri Servizi",
     services_title: "Tutto per la tua vacanza perfetta",
