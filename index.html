@@ -57,6 +57,10 @@
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(0,0,0,0.05);
         }
+        
+        nav.hidden {
+            transform: translateY(-100%);
+        }
 
         .logo {
             font-family: 'Playfair Display', serif;
@@ -1216,18 +1220,34 @@ nav.scrolled .lang-current{color:var(--text)}
         </div>
     </footer>
 
-    <!-- WhatsApp Float Button -->
+    <!-- Navigation scroll behavior -->
+    <script>
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            // Add/remove scrolled class for background
+            if (currentScroll > 50) {
+                nav.classList.add('scrolled');
+            } else {
                 nav.classList.remove('scrolled');
             }
+            
+            // Hide/show nav on scroll
+            if (currentScroll > lastScroll && currentScroll > 200) {
+                // Scrolling down & past hero
+                nav.classList.add('hidden');
+            } else {
+                // Scrolling up
+                nav.classList.remove('hidden');
+            }
+            
+            lastScroll = currentScroll;
         });
     </script>
-
-    <!-- ChatBot Placeholder -->
-    <script>
-        // ChatPro AI Bot komt hier
-        // TODO: Bot integreren
-    </script>
 <script src="https://www.chatproai.io/widgets/ghh-chat.js"></script>
-<script src="lang.js?v=7"></script>
+<script src="lang.js?v=8"></script>
 </body>
 </html>
