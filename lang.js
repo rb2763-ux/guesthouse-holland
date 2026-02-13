@@ -138,6 +138,30 @@ const TRANSLATIONS = {
   }
 };
 
+// Language config
+const LANG_CONFIG = {
+  en: { name: 'English', flag: 'gb', code: 'EN' },
+  de: { name: 'Deutsch', flag: 'de', code: 'DE' },
+  nl: { name: 'Nederlands', flag: 'nl', code: 'NL' },
+  es: { name: 'Español', flag: 'es', code: 'ES' },
+  fr: { name: 'Français', flag: 'fr', code: 'FR' },
+  pt: { name: 'Português', flag: 'br', code: 'PT' },
+  it: { name: 'Italiano', flag: 'it', code: 'IT' }
+};
+
+// Toggle dropdown
+function toggleLangDropdown() {
+  document.getElementById('langDropdown').classList.toggle('open');
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+  const dropdown = document.getElementById('langDropdown');
+  if (dropdown && !dropdown.contains(e.target)) {
+    dropdown.classList.remove('open');
+  }
+});
+
 // Language switcher
 function setLanguage(lang) {
   if (!TRANSLATIONS[lang]) lang = 'en';
@@ -152,10 +176,21 @@ function setLanguage(lang) {
     }
   });
   
-  // Update active state in language selector
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
+  // Update dropdown current display
+  const config = LANG_CONFIG[lang];
+  const currentFlag = document.getElementById('currentFlag');
+  const currentLang = document.getElementById('currentLang');
+  if (currentFlag) currentFlag.src = `https://flagcdn.com/w40/${config.flag}.png`;
+  if (currentLang) currentLang.textContent = config.code;
+  
+  // Update active state in dropdown
+  document.querySelectorAll('.lang-option').forEach(opt => {
+    opt.classList.toggle('active', opt.dataset.lang === lang);
   });
+  
+  // Close dropdown
+  const dropdown = document.getElementById('langDropdown');
+  if (dropdown) dropdown.classList.remove('open');
 }
 
 // Auto-detect language

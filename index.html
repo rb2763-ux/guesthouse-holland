@@ -778,20 +778,23 @@
         }
     </style>
 <style>
-/* Language Switcher */
-.lang-switcher{position:fixed;top:85px;right:20px;z-index:999;display:flex;gap:8px;background:rgba(255,255,255,0.95);padding:10px 15px;border-radius:30px;box-shadow:0 2px 15px rgba(0,0,0,0.2)}.lang-btn{background:none;border:none;cursor:pointer;font-size:22px;opacity:0.6;transition:all 0.2s;padding:4px}.lang-btn:hover{opacity:1;transform:scale(1.2)}.lang-btn.active{opacity:1;transform:scale(1.1)}@media(max-width:600px){.lang-switcher{top:75px;right:10px;padding:8px 12px;gap:6px}.lang-btn{font-size:18px}}
+/* Language Dropdown */
+.lang-dropdown{position:relative;display:inline-block}
+.lang-current{display:flex;align-items:center;gap:6px;background:transparent;border:none;cursor:pointer;color:inherit;font-size:0.9rem;font-weight:500;padding:0.5rem 0.75rem;border-radius:4px;transition:all 0.2s}
+.lang-current:hover{background:rgba(255,255,255,0.1)}
+.lang-current img{width:20px;height:14px;border-radius:2px;object-fit:cover}
+.lang-current svg{width:12px;height:12px;transition:transform 0.2s}
+.lang-dropdown.open .lang-current svg{transform:rotate(180deg)}
+.lang-menu{position:absolute;top:100%;right:0;background:white;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);min-width:160px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:all 0.2s;z-index:1001;overflow:hidden}
+.lang-dropdown.open .lang-menu{opacity:1;visibility:visible;transform:translateY(5px)}
+.lang-option{display:flex;align-items:center;gap:10px;padding:10px 15px;cursor:pointer;color:#333;font-size:0.9rem;transition:background 0.2s}
+.lang-option:hover{background:#f5f5f5}
+.lang-option.active{background:#e8f4f8;font-weight:600}
+.lang-option img{width:24px;height:16px;border-radius:2px;object-fit:cover;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
+nav.scrolled .lang-current{color:var(--text)}
 </style>
 </head>
 <body>
-<div class="lang-switcher">
-  <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">🇬🇧</button>
-  <button class="lang-btn" data-lang="de" onclick="setLanguage('de')">🇩🇪</button>
-  <button class="lang-btn" data-lang="nl" onclick="setLanguage('nl')">🇳🇱</button>
-  <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">🇪🇸</button>
-  <button class="lang-btn" data-lang="fr" onclick="setLanguage('fr')">🇫🇷</button>
-  <button class="lang-btn" data-lang="pt" onclick="setLanguage('pt')">🇧🇷</button>
-  <button class="lang-btn" data-lang="it" onclick="setLanguage('it')">🇮🇹</button>
-</div>
     <!-- Navigation -->
     <nav>
         <a href="index.html" class="logo">Guest House <span>Holland</span></a>
@@ -801,6 +804,36 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li class="lang-dropdown" id="langDropdown">
+                <button class="lang-current" onclick="toggleLangDropdown()">
+                    <img src="https://flagcdn.com/w40/gb.png" alt="" id="currentFlag">
+                    <span id="currentLang">EN</span>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+                </button>
+                <div class="lang-menu">
+                    <div class="lang-option" data-lang="en" onclick="setLanguage('en')">
+                        <img src="https://flagcdn.com/w40/gb.png" alt="English"> English
+                    </div>
+                    <div class="lang-option" data-lang="de" onclick="setLanguage('de')">
+                        <img src="https://flagcdn.com/w40/de.png" alt="Deutsch"> Deutsch
+                    </div>
+                    <div class="lang-option" data-lang="nl" onclick="setLanguage('nl')">
+                        <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands"> Nederlands
+                    </div>
+                    <div class="lang-option" data-lang="es" onclick="setLanguage('es')">
+                        <img src="https://flagcdn.com/w40/es.png" alt="Español"> Español
+                    </div>
+                    <div class="lang-option" data-lang="fr" onclick="setLanguage('fr')">
+                        <img src="https://flagcdn.com/w40/fr.png" alt="Français"> Français
+                    </div>
+                    <div class="lang-option" data-lang="pt" onclick="setLanguage('pt')">
+                        <img src="https://flagcdn.com/w40/br.png" alt="Português"> Português
+                    </div>
+                    <div class="lang-option" data-lang="it" onclick="setLanguage('it')">
+                        <img src="https://flagcdn.com/w40/it.png" alt="Italiano"> Italiano
+                    </div>
+                </div>
+            </li>
         </ul>
     </nav>
 
@@ -1195,6 +1228,6 @@
         // TODO: Bot integreren
     </script>
 <script src="https://www.chatproai.io/widgets/ghh-chat.js"></script>
-<script src="lang.js?v=3"></script>
+<script src="lang.js?v=4"></script>
 </body>
 </html>
