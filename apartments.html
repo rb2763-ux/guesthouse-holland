@@ -9,60 +9,71 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
-            font-family: Georgia, 'Times New Roman', serif; 
+            font-family: 'Inter', Georgia, sans-serif; 
             color: #333; 
             line-height: 1.7; 
             background: #fff;
         }
         
-        /* Header - petrol blue like main site */
+        /* Header */
         header {
-            background: #1a5f7a;
+            background: linear-gradient(135deg, #1a5f7a 0%, #134b61 100%);
             color: white;
-            padding: 1.5rem 2rem;
+            padding: 2rem;
+            text-align: center;
         }
         header h1 { 
-            font-size: 2rem; 
-            font-weight: normal;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
+            font-size: 2.2rem; 
+            font-weight: 600;
+            margin-bottom: 0.5rem;
         }
         header p { 
             opacity: 0.9; 
             font-size: 1.1rem;
-            text-align: center;
-            margin-top: 0.5rem;
         }
+        
         .contact-bar {
-            background: #f5f5f5;
+            background: #f8f9fa;
             padding: 1rem 2rem;
             text-align: center;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #e0e0e0;
         }
         .contact-bar a {
             color: #1a5f7a;
             text-decoration: none;
             margin: 0 1rem;
+            font-weight: 500;
         }
         .contact-bar a:hover { text-decoration: underline; }
         
-        /* Main content */
+        /* Navigation */
+        .nav-back {
+            background: #1a5f7a;
+            padding: 0.75rem 2rem;
+            text-align: left;
+        }
+        .nav-back a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .nav-back a:hover { text-decoration: underline; }
+        
+        /* Main */
         main {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
         }
+        
         .intro {
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             padding-bottom: 2rem;
             border-bottom: 1px solid #e0e0e0;
         }
         .intro h2 {
-            font-size: 1.5rem;
-            font-weight: normal;
+            font-size: 1.6rem;
             color: #1a5f7a;
             margin-bottom: 1rem;
         }
@@ -72,26 +83,42 @@
             margin: 0 auto;
         }
         
-        /* Apartments grid - simple, clean */
+        /* Category */
+        .category {
+            margin: 2.5rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #1a5f7a;
+        }
+        .category h2 {
+            font-size: 1.4rem;
+            color: #1a5f7a;
+        }
+        
+        /* Apartments Grid */
         .apartments {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
         }
+        
         .apartment {
             background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
             overflow: hidden;
+            transition: all 0.3s;
         }
         .apartment:hover {
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
         }
+        
         .apartment-image {
             position: relative;
             height: 200px;
             overflow: hidden;
-            background: #eee;
+            background: #f0f0f0;
         }
         .apartment-image img {
             width: 100%;
@@ -102,103 +129,83 @@
             position: absolute;
             bottom: 10px;
             left: 10px;
-            background: rgba(0,0,0,0.7);
+            background: rgba(0,0,0,0.8);
             color: white;
-            padding: 5px 12px;
-            border-radius: 3px;
-            font-size: 0.85rem;
+            padding: 6px 12px;
+            border-radius: 4px;
             text-decoration: none;
+            font-size: 0.85rem;
+            transition: background 0.2s;
         }
-        .video-link:hover { background: rgba(0,0,0,0.9); }
+        .video-link:hover { background: #1a5f7a; }
+        
         .apartment-info {
             padding: 1.25rem;
         }
         .apartment-info h3 {
             font-size: 1.2rem;
-            font-weight: normal;
             color: #1a5f7a;
             margin-bottom: 0.5rem;
         }
-        .apartment-info .details {
+        .details {
             color: #666;
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
         }
-        .apartment-info .price {
-            font-size: 1.1rem;
+        .price {
+            font-weight: 600;
             color: #333;
+            font-size: 1.1rem;
             margin-bottom: 1rem;
         }
-        .whatsapp-btn {
-            display: inline-block;
-            background: #25D366;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 0.95rem;
-        }
-        .whatsapp-btn:hover { background: #1da851; }
-        
-        /* Category headers */
-        .category {
-            margin-top: 3rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #1a5f7a;
-        }
-        .category h2 {
-            font-size: 1.3rem;
+        .price-note {
+            font-size: 0.8rem;
+            color: #888;
             font-weight: normal;
-            color: #1a5f7a;
         }
+        
+        .chat-btn {
+            background: #1a5f7a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            width: 100%;
+            transition: background 0.2s;
+        }
+        .chat-btn:hover { background: #134b61; }
         
         /* Footer */
         footer {
-            background: #f5f0e6;
+            background: #1a1a1a;
+            color: white;
             padding: 2rem;
             text-align: center;
             margin-top: 3rem;
-            border-top: 1px solid #ddd;
         }
-        footer p { color: #666; margin-bottom: 0.5rem; }
-        footer a { color: #1a5f7a; }
+        footer a { color: #c9a959; }
         
-        /* Chatbot placeholder - bottom right */
-        .chatbot-placeholder {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            background: #1a5f7a;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: transform 0.2s;
+        /* Language Dropdown */
+        .lang-dropdown{position:fixed;top:15px;right:20px;z-index:1001}
+        .lang-current{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.95);border:none;cursor:pointer;color:#333;font-size:0.9rem;font-weight:500;padding:8px 12px;border-radius:20px;box-shadow:0 2px 10px rgba(0,0,0,0.15);transition:all 0.2s}
+        .lang-current:hover{background:white;box-shadow:0 4px 15px rgba(0,0,0,0.2)}
+        .lang-current img{width:20px;height:14px;border-radius:2px;object-fit:cover}
+        .lang-current svg{width:12px;height:12px;transition:transform 0.2s}
+        .lang-dropdown.open .lang-current svg{transform:rotate(180deg)}
+        .lang-menu{position:absolute;top:100%;right:0;margin-top:5px;background:white;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);min-width:160px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:all 0.2s;overflow:hidden}
+        .lang-dropdown.open .lang-menu{opacity:1;visibility:visible;transform:translateY(0)}
+        .lang-option{display:flex;align-items:center;gap:10px;padding:10px 15px;cursor:pointer;color:#333;font-size:0.9rem;transition:background 0.2s}
+        .lang-option:hover{background:#f5f5f5}
+        .lang-option.active{background:#e8f4f8;font-weight:600}
+        .lang-option img{width:24px;height:16px;border-radius:2px;object-fit:cover;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
+        
+        @media(max-width:600px) {
+            .apartments { grid-template-columns: 1fr; }
+            .contact-bar a { display: block; margin: 0.5rem 0; }
         }
-        .chatbot-placeholder:hover { transform: scale(1.1); }
     </style>
-<style>
-/* Language Dropdown */
-.lang-dropdown{position:fixed;top:15px;right:20px;z-index:1001}
-.lang-current{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.95);border:none;cursor:pointer;color:#333;font-size:0.9rem;font-weight:500;padding:8px 12px;border-radius:20px;box-shadow:0 2px 10px rgba(0,0,0,0.15);transition:all 0.2s}
-.lang-current:hover{background:white;box-shadow:0 4px 15px rgba(0,0,0,0.2)}
-.lang-current img{width:20px;height:14px;border-radius:2px;object-fit:cover}
-.lang-current svg{width:12px;height:12px;transition:transform 0.2s}
-.lang-dropdown.open .lang-current svg{transform:rotate(180deg)}
-.lang-menu{position:absolute;top:100%;right:0;margin-top:5px;background:white;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);min-width:160px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:all 0.2s;overflow:hidden}
-.lang-dropdown.open .lang-menu{opacity:1;visibility:visible;transform:translateY(0)}
-.lang-option{display:flex;align-items:center;gap:10px;padding:10px 15px;cursor:pointer;color:#333;font-size:0.9rem;transition:background 0.2s}
-.lang-option:hover{background:#f5f5f5}
-.lang-option.active{background:#e8f4f8;font-weight:600}
-.lang-option img{width:24px;height:16px;border-radius:2px;object-fit:cover;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
-</style>
 </head>
 <body>
 <div class="lang-dropdown" id="langDropdown">
@@ -217,341 +224,335 @@
         <div class="lang-option" data-lang="it" onclick="setLanguage('it')"><img src="https://flagcdn.com/w40/it.png" alt=""> Italiano</div>
     </div>
 </div>
-    <header>
-        <h1>🏠 Our Apartments</h1>
-        <p>Guest House Holland — Juan Dolio, Dominican Republic</p>
-    </header>
-    
-    <div class="contact-bar">
-        <a href="mailto:drebroeders@gmail.com">✉ drebroeders@gmail.com</a>
-        <a href="tel:+18093995766">📞 +1 809 399 5766</a>
-        <a href="https://wa.me/18093995766">💬 WhatsApp</a>
+
+<div class="nav-back">
+    <a href="index.html">← Back to Home</a>
+</div>
+
+<header>
+    <h1>Our Apartments</h1>
+    <p>30+ apartments in Juan Dolio — from $30/night</p>
+</header>
+
+<div class="contact-bar">
+    <a href="mailto:drebroeders@gmail.com">✉ drebroeders@gmail.com</a>
+    <a href="tel:+18093995766">📞 +1 809 399 5766</a>
+    <a href="https://wa.me/18093995766">💬 WhatsApp</a>
+</div>
+
+<main>
+    <div class="intro">
+        <h2>Find Your Perfect Caribbean Home</h2>
+        <p>Choose from over 30 apartments in Juan Dolio. Beach access, pools, fully equipped kitchens. 
+           Short-term or long-term stays available. Contact André for personalized recommendations.</p>
     </div>
-    
-    <main>
-        <div class="intro">
-            <h2>Find Your Perfect Caribbean Getaway</h2>
-            <p>Choose from over 30 apartments in Juan Dolio. Beach access, pools, fully equipped kitchens. 
-               Short-term or long-term stays available. Contact André for personalized recommendations.</p>
-        </div>
 
-        <div class="category">
-            <h2>🏖️ Beachfront Apartments</h2>
-        </div>
-        <div class="apartments">
-            <div class="apartment">
-                <div class="apartment-image">
-                    <img src="https://img.youtube.com/vi/7qVeVrqwvkQ/hqdefault.jpg" alt="Michael Apartment" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=400&h=250&fit=crop'">
-                    <a href="https://youtube.com/watch?v=7qVeVrqwvkQ" target="_blank" class="video-link">▶ Video Tour</a>
-                </div>
-                <div class="apartment-info">
-                    <h3>Michael</h3>
-                    <p class="details">Beachfront • 1 Bedroom • Pool Access</p>
-                    <p class="price">From $200/week</p>
-                    <button onclick="openChat(this)" class="chat-btn" data-apartment="APARTMENT_NAME">💬 Chat with André</button>
-                </div>
-            </div>
-            
-            <div class="apartment">
-                <div class="apartment-image">
-                    <img src="https://img.youtube.com/vi/lHgLrPwOVzE/hqdefault.jpg" alt="Apartment 152" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=400&h=250&fit=crop'">
-                    <a href="https://youtube.com/watch?v=lHgLrPwOVzE" target="_blank" class="video-link">▶ Video Tour</a>
-                </div>
-                <div class="apartment-info">
-                    <h3>Apartment 152</h3>
-                    <p class="details">Ocean View • 1 Bedroom • Modern Kitchen</p>
-                    <p class="price">From $180/week</p>
-                    <button onclick="openChat(this)" class="chat-btn" data-apartment="APARTMENT_NAME">💬 Chat with André</button>
-                </div>
-            </div>
-            
-            <div class="apartment">
-                <div class="apartment-image">
-                    <img src="https://img.youtube.com/vi/IHGWKP_SPMY/hqdefault.jpg" alt="Apartment 153" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&h=250&fit=crop'">
-                    <a href="https://youtube.com/watch?v=IHGWKP_SPMY" target="_blank" class="video-link">▶ Video Tour</a>
-                </div>
-                <div class="apartment-info">
-                    <h3>Apartment 153</h3>
-                    <p class="details">Beach Access • 1 Bedroom • Terrace</p>
-                    <p class="price">From $180/week</p>
-                    <button onclick="openChat(this)" class="chat-btn" data-apartment="APARTMENT_NAME">💬 Chat with André</button>
-                </div>
-            </div>
-            
-            <div class="apartment">
-                <div class="apartment-image">
-                    <img src="https://img.youtube.com/vi/ABC123BEACH/hqdefault.jpg" alt="T3 Apartment" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400&h=250&fit=crop'">
-                    <a href="#" class="video-link">▶ Video Tour</a>
-                </div>
-                <div class="apartment-info">
-                    <h3>T3</h3>
-                    <p class="details">Beachfront • Studio • Great Value</p>
-                    <p class="price">From $150/week</p>
-                    <button onclick="openChat(this)" class="chat-btn" data-apartment="APARTMENT_NAME">💬 Chat with André</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="category">
-            <h2>⭐ Premium Apartments</h2>
-        </div>
-        <div class="apartments">
-            <div class="apartment">
-                <div class="apartment-image">
-                    <img src="https://img.youtube.com/vi/N1q37BxMWiA/hqdefault.jpg" alt="Valentine Tower A3" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=250&fit=crop'">
-                    <a href="https://youtube.com/watch?v=N1q37BxMWiA" target="_blank" class="video-link">▶ Video Tour</a>
-                </div>
-                <div class="apartment-info">
-                    <h3>Valentine Tower A3</h3>
-                    <p class="details">Luxury • 2 Bedrooms • Panoramic View</p>
-                    <p class="price">From $350/week</p>
-                    <button onclick="openChat(this)" class="chat-btn" data-apartment="APARTMENT_NAME">💬 Chat with André</button>
-                </div>
-            </div>
-            
-            <div class="apartment">
-                <div class="apartment-image">
-                    <img src="https://img.youtube.com/vi/KxM7vFLQD6w/hqdefault.jpg" alt="Solano" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400&h=250&fit=crop'">
-                    <a href="https://youtube.com/watch?v=KxM7vFLQD6w" target="_blank" class="video-link">▶ Video Tour</a>
-                </div>
-                <div class="apartment-info">
-                    <h3>Solano</h3>
-                    <p class="details">Premium • 2 Bedrooms • Private Pool</p>
-                    <p class="price">From $400/week</p>
-                    <button onclick="openChat(this)" class="chat-btn" data-apartment="APARTMENT_NAME">💬 Chat with André</button>
-                </div>
-            </div>
-            
-            <div class="apartment">
-                <div class="apartment-image">
-                    <img src="https://img.youtube.com/vi/JACUZZI166/hqdefault.jpg" alt="166 with Jacuzzi" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=400&h=250&fit=crop'">
-                    <a href="#" class="video-link">▶ Video Tour</a>
-                </div>
-                <div class="apartment-info">
-                    <h3>Apartment 166</h3>
-                    <p class="details">Luxury • Jacuzzi • 2 Bedrooms</p>
-                    <p class="price">From $450/week</p>
-                    <button onclick="openChat(this)" class="chat-btn" data-apartment="APARTMENT_NAME">💬 Chat with André</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="category">
-            <h2>🏠 Standard Apartments</h2>
-        </div>
-        <div class="apartments">
-            <div class="apartment">
-                <div class="apartment-image">
-                    <img src="https://img.youtube.com/vi/yiUBixlBG7E/hqdefault.jpg" alt="Antoinetta 2" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&h=250&fit=crop'">
-                    <a href="https://youtube.com/watch?v=yiUBixlBG7E" target="_blank" class="video-link">▶ Video Tour</a>
-                </div>
-                <div class="apartment-info">
-                    <h3>Antoinetta 2</h3>
-                    <p class="details">Cozy • 1 Bedroom • Central Location</p>
-                    <p class="price">From $175/week</p>
-                    <button onclick="openChat(this)" class="chat-btn" data-apartment="APARTMENT_NAME">💬 Chat with André</button>
-                </div>
-            </div>
-            
-            <div class="apartment">
-                <div class="apartment-image">
-                    <img src="https://img.youtube.com/vi/lV3mGS3t1a4/hqdefault.jpg" alt="M6" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&h=250&fit=crop'">
-                    <a href="https://youtube.com/watch?v=lV3mGS3t1a4" target="_blank" class="video-link">▶ Video Tour</a>
-                </div>
-                <div class="apartment-info">
-                    <h3>M6</h3>
-                    <p class="details">Spacious • 1 Bedroom • Pool</p>
-                    <p class="price">From $160/week</p>
-                    <button onclick="openChat(this)" class="chat-btn" data-apartment="APARTMENT_NAME">💬 Chat with André</button>
-                </div>
-            </div>
-            
-            <div class="apartment">
-                <div class="apartment-image">
-                    <img src="https://img.youtube.com/vi/sO9SyC7zVFw/hqdefault.jpg" alt="M3" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&h=250&fit=crop'">
-                    <a href="https://youtube.com/watch?v=sO9SyC7zVFw" target="_blank" class="video-link">▶ Video Tour</a>
-                </div>
-                <div class="apartment-info">
-                    <h3>M3</h3>
-                    <p class="details">Comfortable • 1 Bedroom • Quiet Area</p>
-                    <p class="price">From $150/week</p>
-                    <button onclick="openChat(this)" class="chat-btn" data-apartment="APARTMENT_NAME">💬 Chat with André</button>
-                </div>
-            </div>
-            
-            <div class="apartment">
-                <div class="apartment-image">
-                    <img src="https://img.youtube.com/vi/M7VIDEO/hqdefault.jpg" alt="M7" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=250&fit=crop'">
-                    <a href="#" class="video-link">▶ Video Tour</a>
-                </div>
-                <div class="apartment-info">
-                    <h3>M7</h3>
-                    <p class="details">Modern • 1 Bedroom • Great Value</p>
-                    <p class="price">From $150/week</p>
-                    <button onclick="openChat(this)" class="chat-btn" data-apartment="APARTMENT_NAME">💬 Chat with André</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="category">
-            <h2>💰 Budget-Friendly & Long-Term</h2>
-        </div>
-        <div class="apartments">
-            <div class="apartment">
-                <div class="apartment-image">
-                    <img src="https://img.youtube.com/vi/rYWqRc1v3nQ/hqdefault.jpg" alt="TCarl" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&h=250&fit=crop'">
-                    <a href="https://youtube.com/watch?v=rYWqRc1v3nQ" target="_blank" class="video-link">▶ Video Tour</a>
-                </div>
-                <div class="apartment-info">
-                    <h3>TCarl</h3>
-                    <p class="details">Budget • Studio • Long-term Welcome</p>
-                    <p class="price">From $120/week • $400/month</p>
-                    <button onclick="openChat(this)" class="chat-btn" data-apartment="APARTMENT_NAME">💬 Chat with André</button>
-                </div>
-            </div>
-            
-            <div class="apartment">
-                <div class="apartment-image">
-                    <img src="https://img.youtube.com/vi/STUDIOCENTER/hqdefault.jpg" alt="Studio Center" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=400&h=250&fit=crop'">
-                    <a href="#" class="video-link">▶ Video Tour</a>
-                </div>
-                <div class="apartment-info">
-                    <h3>Studio Center</h3>
-                    <p class="details">Compact • Studio • Central</p>
-                    <p class="price">From $100/week • $350/month</p>
-                    <button onclick="openChat(this)" class="chat-btn" data-apartment="APARTMENT_NAME">💬 Chat with André</button>
-                </div>
-            </div>
-            
-            <div class="apartment">
-                <div class="apartment-image">
-                    <img src="https://img.youtube.com/vi/G1VIDEO/hqdefault.jpg" alt="G1" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&h=250&fit=crop'">
-                    <a href="#" class="video-link">▶ Video Tour</a>
-                </div>
-                <div class="apartment-info">
-                    <h3>G1</h3>
-                    <p class="details">Simple • Studio • Great for Singles</p>
-                    <p class="price">From $110/week</p>
-                    <button onclick="openChat(this)" class="chat-btn" data-apartment="APARTMENT_NAME">💬 Chat with André</button>
-                </div>
-            </div>
-            
-            <div class="apartment">
-                <div class="apartment-image">
-                    <img src="https://img.youtube.com/vi/G2VIDEO/hqdefault.jpg" alt="G2" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=400&h=250&fit=crop'">
-                    <a href="#" class="video-link">▶ Video Tour</a>
-                </div>
-                <div class="apartment-info">
-                    <h3>G2</h3>
-                    <p class="details">Simple • Studio • Budget Pick</p>
-                    <p class="price">From $110/week</p>
-                    <button onclick="openChat(this)" class="chat-btn" data-apartment="APARTMENT_NAME">💬 Chat with André</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="category">
-            <h2>🏌️ Special Properties</h2>
-        </div>
-        <div class="apartments">
-            <div class="apartment">
-                <div class="apartment-image">
-                    <img src="https://img.youtube.com/vi/GUV1GOLF/hqdefault.jpg" alt="GUV1 Golf" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400&h=250&fit=crop'">
-                    <a href="#" class="video-link">▶ Video Tour</a>
-                </div>
-                <div class="apartment-info">
-                    <h3>GUV1 Golf</h3>
-                    <p class="details">Golf Course View • 2 Bedrooms</p>
-                    <p class="price">From $280/week</p>
-                    <button onclick="openChat(this)" class="chat-btn" data-apartment="APARTMENT_NAME">💬 Chat with André</button>
-                </div>
-            </div>
-            
-            <div class="apartment">
-                <div class="apartment-image">
-                    <img src="https://img.youtube.com/vi/MAR1VIDEO/hqdefault.jpg" alt="MAR1" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&h=250&fit=crop'">
-                    <a href="#" class="video-link">▶ Video Tour</a>
-                </div>
-                <div class="apartment-info">
-                    <h3>MAR1</h3>
-                    <p class="details">Marina View • 1 Bedroom • Modern</p>
-                    <p class="price">From $220/week</p>
-                    <button onclick="openChat(this)" class="chat-btn" data-apartment="APARTMENT_NAME">💬 Chat with André</button>
-                </div>
-            </div>
-            
-            <div class="apartment">
-                <div class="apartment-image">
-                    <img src="https://img.youtube.com/vi/fUYG3KK0IKc/hqdefault.jpg" alt="Isaia" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=250&fit=crop'">
-                    <a href="https://youtube.com/watch?v=fUYG3KK0IKc" target="_blank" class="video-link">▶ Video Tour</a>
-                </div>
-                <div class="apartment-info">
-                    <h3>Isaia</h3>
-                    <p class="details">Unique • 1 Bedroom • Character</p>
-                    <p class="price">From $170/week</p>
-                    <button onclick="openChat(this)" class="chat-btn" data-apartment="APARTMENT_NAME">💬 Chat with André</button>
-                </div>
-            </div>
-        </div>
-    </main>
-    
-    <footer>
-        <p><strong>Guest House Holland</strong> — Your home in the Caribbean since 1995</p>
-        <p>Residencial Marie Michell No. 104, Juan Dolio, Dominican Republic</p>
-        <p>
-            <a href="mailto:drebroeders@gmail.com">drebroeders@gmail.com</a> • 
-            <a href="tel:+18093995766">+1 809 399 5766</a> •
-            <a href="https://wa.me/18093995766">WhatsApp</a>
-        </p>
-        <p style="margin-top: 1rem; font-size: 0.9rem; color: #999;">
-            Powered by <a href="https://chatproai.io" style="color: #999;">ChatPro AI</a>
-        </p>
-    </footer>
-    
-    <!-- ChatPro AI Bot Widget Placeholder -->
-    <div class="chatbot-placeholder" title="Chat with us">
-        💬
+    <!-- PREMIUM & LUXURY -->
+    <div class="category">
+        <h2>⭐ Premium & Luxury</h2>
     </div>
-    
-    <!-- ChatPro AI Widget will be embedded here -->
-    <!-- <script src="https://widget.chatproai.io/guesthouse-holland.js"></script> -->
+    <div class="apartments">
+        <div class="apartment">
+            <div class="apartment-image">
+                <img src="https://img.youtube.com/vi/dHjHjycddIo/hqdefault.jpg" alt="Solano">
+                <a href="https://youtube.com/watch?v=dHjHjycddIo" target="_blank" class="video-link">▶ Video Tour</a>
+            </div>
+            <div class="apartment-info">
+                <h3>Solano</h3>
+                <p class="details">2 Bedrooms • 4 Guests • Private Pool • Beachfront</p>
+                <p class="price">$90/night <span class="price-note">or $1,135/2 weeks</span></p>
+                <button onclick="openChat('Solano')" class="chat-btn">💬 Chat with André</button>
+            </div>
+        </div>
+        
+        <div class="apartment">
+            <div class="apartment-image">
+                <img src="https://img.youtube.com/vi/eSGFSD3FlZs/hqdefault.jpg" alt="Valentine Tower A3">
+                <a href="https://youtube.com/watch?v=eSGFSD3FlZs" target="_blank" class="video-link">▶ Video Tour</a>
+            </div>
+            <div class="apartment-info">
+                <h3>Valentine Tower A3</h3>
+                <p class="details">2 Bedrooms • 4 Guests • Panorama View • Luxury</p>
+                <p class="price">$1,300/month</p>
+                <button onclick="openChat('Valentine Tower A3')" class="chat-btn">💬 Chat with André</button>
+            </div>
+        </div>
+        
+        <div class="apartment">
+            <div class="apartment-image">
+                <img src="https://img.youtube.com/vi/IdGHo2pZ1QY/hqdefault.jpg" alt="Apartment 166">
+                <a href="https://youtube.com/watch?v=IdGHo2pZ1QY" target="_blank" class="video-link">▶ Video Tour</a>
+            </div>
+            <div class="apartment-info">
+                <h3>Apartment 166</h3>
+                <p class="details">Studio • 2 Guests • Jacuzzi • Near Beach</p>
+                <p class="price">Price on request</p>
+                <button onclick="openChat('Apartment 166')" class="chat-btn">💬 Chat with André</button>
+            </div>
+        </div>
+        
+        <div class="apartment">
+            <div class="apartment-image">
+                <img src="https://img.youtube.com/vi/HSDxpdslYfo/hqdefault.jpg" alt="GUV1 Guavaberry Golf">
+                <a href="https://youtube.com/watch?v=HSDxpdslYfo" target="_blank" class="video-link">▶ Video Tour</a>
+            </div>
+            <div class="apartment-info">
+                <h3>GUV1 Guavaberry Golf</h3>
+                <p class="details">2 Bedrooms • 4 Guests • Golf Course View • Pool</p>
+                <p class="price">Price on request</p>
+                <button onclick="openChat('GUV1 Guavaberry Golf')" class="chat-btn">💬 Chat with André</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BEACH APARTMENTS -->
+    <div class="category">
+        <h2>🏖️ Beach Apartments</h2>
+    </div>
+    <div class="apartments">
+        <div class="apartment">
+            <div class="apartment-image">
+                <img src="https://img.youtube.com/vi/QwPU90XXJAQ/hqdefault.jpg" alt="Antoinetta 2">
+                <a href="https://youtube.com/watch?v=QwPU90XXJAQ" target="_blank" class="video-link">▶ Video Tour</a>
+            </div>
+            <div class="apartment-info">
+                <h3>Antoinetta 2</h3>
+                <p class="details">Studio • 2 Guests • 80m to Beach • AC & WiFi</p>
+                <p class="price">$50/night <span class="price-note">or $750/month</span></p>
+                <button onclick="openChat('Antoinetta 2')" class="chat-btn">💬 Chat with André</button>
+            </div>
+        </div>
+        
+        <div class="apartment">
+            <div class="apartment-image">
+                <img src="https://img.youtube.com/vi/0Dhkp6_zKqE/hqdefault.jpg" alt="Antoinetta 1">
+                <a href="https://youtube.com/watch?v=0Dhkp6_zKqE" target="_blank" class="video-link">▶ Video Tour</a>
+            </div>
+            <div class="apartment-info">
+                <h3>Antoinetta 1</h3>
+                <p class="details">1 Bedroom • 4 Guests • Near Beach • AC & WiFi</p>
+                <p class="price">Price on request</p>
+                <button onclick="openChat('Antoinetta 1')" class="chat-btn">💬 Chat with André</button>
+            </div>
+        </div>
+        
+        <div class="apartment">
+            <div class="apartment-image">
+                <img src="https://img.youtube.com/vi/KO6ZrUFlbdw/hqdefault.jpg" alt="M6">
+                <a href="https://youtube.com/watch?v=KO6ZrUFlbdw" target="_blank" class="video-link">▶ Video Tour</a>
+            </div>
+            <div class="apartment-info">
+                <h3>M6</h3>
+                <p class="details">1 Bedroom • 2 Guests • Pool • Near Beach</p>
+                <p class="price">$45/night <span class="price-note">or $600/month</span></p>
+                <button onclick="openChat('M6')" class="chat-btn">💬 Chat with André</button>
+            </div>
+        </div>
+        
+        <div class="apartment">
+            <div class="apartment-image">
+                <img src="https://img.youtube.com/vi/HHfdQQVbw6c/hqdefault.jpg" alt="M3">
+                <a href="https://youtube.com/watch?v=HHfdQQVbw6c" target="_blank" class="video-link">▶ Video Tour</a>
+            </div>
+            <div class="apartment-info">
+                <h3>M3</h3>
+                <p class="details">1 Bedroom • 2 Guests • 60m to Beach • AC & WiFi</p>
+                <p class="price">$36/night <span class="price-note">or $550/month</span></p>
+                <button onclick="openChat('M3')" class="chat-btn">💬 Chat with André</button>
+            </div>
+        </div>
+        
+        <div class="apartment">
+            <div class="apartment-image">
+                <img src="https://img.youtube.com/vi/1holz72_Nnw/hqdefault.jpg" alt="VAL.B8">
+                <a href="https://youtube.com/watch?v=1holz72_Nnw" target="_blank" class="video-link">▶ Video Tour</a>
+            </div>
+            <div class="apartment-info">
+                <h3>VAL.B8</h3>
+                <p class="details">Studio • 2 Guests • 80m to Beach • Modern</p>
+                <p class="price">Price on request</p>
+                <button onclick="openChat('VAL.B8')" class="chat-btn">💬 Chat with André</button>
+            </div>
+        </div>
+        
+        <div class="apartment">
+            <div class="apartment-image">
+                <img src="https://img.youtube.com/vi/RqXs9j_daZA/hqdefault.jpg" alt="Apartment 152">
+                <a href="https://youtube.com/watch?v=RqXs9j_daZA" target="_blank" class="video-link">▶ Video Tour</a>
+            </div>
+            <div class="apartment-info">
+                <h3>Apartment 152</h3>
+                <p class="details">Studio • 2 Guests • Near Beach • AC & WiFi</p>
+                <p class="price">Price on request</p>
+                <button onclick="openChat('Apartment 152')" class="chat-btn">💬 Chat with André</button>
+            </div>
+        </div>
+        
+        <div class="apartment">
+            <div class="apartment-image">
+                <img src="https://img.youtube.com/vi/pxvkW5QaPwI/hqdefault.jpg" alt="Apartment 153">
+                <a href="https://youtube.com/watch?v=pxvkW5QaPwI" target="_blank" class="video-link">▶ Video Tour</a>
+            </div>
+            <div class="apartment-info">
+                <h3>Apartment 153</h3>
+                <p class="details">2 Bedrooms • 4 Guests • Spacious • Near Beach</p>
+                <p class="price">Price on request</p>
+                <button onclick="openChat('Apartment 153')" class="chat-btn">💬 Chat with André</button>
+            </div>
+        </div>
+        
+        <div class="apartment">
+            <div class="apartment-image">
+                <img src="https://img.youtube.com/vi/qIll8Vk-Hig/hqdefault.jpg" alt="T3 Beach Studio">
+                <a href="https://youtube.com/watch?v=qIll8Vk-Hig" target="_blank" class="video-link">▶ Video Tour</a>
+            </div>
+            <div class="apartment-info">
+                <h3>T3 Beach Studio</h3>
+                <p class="details">Studio • 2 Guests • Beachfront • Old Juan Dolio</p>
+                <p class="price">Price on request</p>
+                <button onclick="openChat('T3 Beach Studio')" class="chat-btn">💬 Chat with André</button>
+            </div>
+        </div>
+        
+        <div class="apartment">
+            <div class="apartment-image">
+                <img src="https://img.youtube.com/vi/7LWRKCzxER0/hqdefault.jpg" alt="Michael Beach House">
+                <a href="https://youtube.com/watch?v=7LWRKCzxER0" target="_blank" class="video-link">▶ Video Tour</a>
+            </div>
+            <div class="apartment-info">
+                <h3>Michael Beach House</h3>
+                <p class="details">1 Bedroom • 2 Guests • Beach House</p>
+                <p class="price">$32/night</p>
+                <button onclick="openChat('Michael Beach House')" class="chat-btn">💬 Chat with André</button>
+            </div>
+        </div>
+        
+        <div class="apartment">
+            <div class="apartment-image">
+                <img src="https://img.youtube.com/vi/sEMu3kcqllM/hqdefault.jpg" alt="MAR1">
+                <a href="https://youtube.com/watch?v=sEMu3kcqllM" target="_blank" class="video-link">▶ Video Tour</a>
+            </div>
+            <div class="apartment-info">
+                <h3>MAR1</h3>
+                <p class="details">1 Bedroom • 2 Guests • AC & WiFi</p>
+                <p class="price">Price on request</p>
+                <button onclick="openChat('MAR1')" class="chat-btn">💬 Chat with André</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BUDGET & LONG-TERM -->
+    <div class="category">
+        <h2>💰 Budget & Long-Term</h2>
+    </div>
+    <div class="apartments">
+        <div class="apartment">
+            <div class="apartment-image">
+                <img src="https://img.youtube.com/vi/pzYtW9kf2aA/hqdefault.jpg" alt="M7">
+                <a href="https://youtube.com/watch?v=pzYtW9kf2aA" target="_blank" class="video-link">▶ Video Tour</a>
+            </div>
+            <div class="apartment-info">
+                <h3>M7</h3>
+                <p class="details">Studio • 2 Guests • Ideal for Long-Term</p>
+                <p class="price">$530/month</p>
+                <button onclick="openChat('M7')" class="chat-btn">💬 Chat with André</button>
+            </div>
+        </div>
+        
+        <div class="apartment">
+            <div class="apartment-image">
+                <img src="https://img.youtube.com/vi/etswjqMja78/hqdefault.jpg" alt="Studio Center">
+                <a href="https://youtube.com/watch?v=etswjqMja78" target="_blank" class="video-link">▶ Video Tour</a>
+            </div>
+            <div class="apartment-info">
+                <h3>Studio Center</h3>
+                <p class="details">Studio • 2 Guests • Central • Old Juan Dolio</p>
+                <p class="price">$350/month</p>
+                <button onclick="openChat('Studio Center')" class="chat-btn">💬 Chat with André</button>
+            </div>
+        </div>
+        
+        <div class="apartment">
+            <div class="apartment-image">
+                <img src="https://img.youtube.com/vi/JgpS8gOGDtw/hqdefault.jpg" alt="Beach & Center Apt">
+                <a href="https://youtube.com/watch?v=JgpS8gOGDtw" target="_blank" class="video-link">▶ Video Tour</a>
+            </div>
+            <div class="apartment-info">
+                <h3>Beach & Center Apt</h3>
+                <p class="details">1 Bedroom • 2 Guests • Beach & Center</p>
+                <p class="price">$38/night</p>
+                <button onclick="openChat('Beach & Center Apt')" class="chat-btn">💬 Chat with André</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- INTERIOR / NATURE -->
+    <div class="category">
+        <h2>🌿 Interior / Nature</h2>
+    </div>
+    <div class="apartments">
+        <div class="apartment">
+            <div class="apartment-image">
+                <img src="https://img.youtube.com/vi/NXKiXroo-ME/hqdefault.jpg" alt="G1 Interior">
+                <a href="https://youtube.com/watch?v=NXKiXroo-ME" target="_blank" class="video-link">▶ Video Tour</a>
+            </div>
+            <div class="apartment-info">
+                <h3>G1 Interior</h3>
+                <p class="details">1 Bedroom • 2 Guests • 6km Inland • Nature & Peace</p>
+                <p class="price">$155/night</p>
+                <button onclick="openChat('G1 Interior')" class="chat-btn">💬 Chat with André</button>
+            </div>
+        </div>
+        
+        <div class="apartment">
+            <div class="apartment-image">
+                <img src="https://img.youtube.com/vi/bsB4DoDIqO0/hqdefault.jpg" alt="G2 Interior">
+                <a href="https://youtube.com/watch?v=bsB4DoDIqO0" target="_blank" class="video-link">▶ Video Tour</a>
+            </div>
+            <div class="apartment-info">
+                <h3>G2 Interior</h3>
+                <p class="details">1 Bedroom • 2 Guests • 6km Inland • Nature</p>
+                <p class="price">Price on request</p>
+                <button onclick="openChat('G2 Interior')" class="chat-btn">💬 Chat with André</button>
+            </div>
+        </div>
+        
+        <div class="apartment">
+            <div class="apartment-image">
+                <img src="https://img.youtube.com/vi/GJJFUBGjuYo/hqdefault.jpg" alt="DVP2">
+                <a href="https://youtube.com/watch?v=GJJFUBGjuYo" target="_blank" class="video-link">▶ Video Tour</a>
+            </div>
+            <div class="apartment-info">
+                <h3>DVP2</h3>
+                <p class="details">Studio • 2 Guests • Old Juan Dolio • Central</p>
+                <p class="price">$155/night</p>
+                <button onclick="openChat('DVP2')" class="chat-btn">💬 Chat with André</button>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 8px;">
+        <h3 style="color: #1a5f7a; margin-bottom: 1rem;">Looking for something specific?</h3>
+        <p style="color: #666; margin-bottom: 1.5rem;">André has 30+ apartments available. Tell him what you need!</p>
+        <a href="https://wa.me/18093995766" style="display: inline-block; background: #25D366; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 600;">💬 WhatsApp André</a>
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 Guest House Holland | Juan Dolio, Dominican Republic</p>
+    <p><a href="index.html">Home</a> • <a href="tours.html">Tours</a> • <a href="blog.html">Blog</a></p>
+</footer>
+
 <script src="https://www.chatproai.io/widgets/ghh-chat.js"></script>
-<script src="lang.js?v=5"></script>
-</body>
-</html>
-
-<style>
-.chat-btn {
-    display: inline-block;
-    background: #1a5f7a;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-size: 0.95rem;
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
-}
-.chat-btn:hover { background: #134b61; }
-</style>
-
+<script src="lang.js?v=6"></script>
 <script>
-function openChat(btn) {
-    // Scroll to bottom where the chatbot is, or open chat widget
-    const chatWidget = document.querySelector('.chat-widget') || document.querySelector('#chatbot');
-    if (chatWidget) {
-        chatWidget.scrollIntoView({ behavior: 'smooth' });
-        // If there's an input, focus it
-        const input = chatWidget.querySelector('input');
-        if (input) {
-            setTimeout(() => {
-                input.focus();
-                input.value = "Hi, I'm interested in " + (btn.closest('.apartment-info')?.querySelector('h3')?.textContent || 'an apartment');
-            }, 500);
-        }
+function openChat(apartmentName) {
+    if (window.GHHChat) {
+        window.GHHChat.open(`Hi! I'm interested in the ${apartmentName} apartment.`);
     } else {
-        // Fallback - go to main page with chat
-        window.location.href = '/?chat=open';
+        window.open(`https://wa.me/18093995766?text=Hi! I'm interested in the ${apartmentName} apartment.`, '_blank');
     }
 }
 </script>
+</body>
+</html>
