@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Wonders: An Eco-Guide's Journey Through the Dominican Republic | Guest House Holland</title>
+    <meta name="description" content="From hidden waterfalls to cloud forests, André shares his favorite natural wonders in the Dominican Republic after 30+ years as the country's first certified ECO-Tourguide.">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a5f7a;
+            --secondary: #c9a227;
+            --dark: #1a1a1a;
+            --light: #f8f8f8;
+            --text: #333;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.8;
+        }
+        
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: white;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            text-decoration: none;
+        }
+        
+        .logo span { color: var(--secondary); }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover { color: var(--primary); }
+        
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover { background: #154d63; }
+        
+        .article-hero {
+            padding: 8rem 5% 4rem;
+            background: linear-gradient(135deg, var(--primary) 0%, #0d3d4d 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .article-hero .category {
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .article-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            max-width: 800px;
+            margin: 0 auto 1rem;
+            line-height: 1.2;
+        }
+        
+        .article-hero .meta {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+        
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 5%;
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .article-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin: 2.5rem 0 1rem;
+        }
+        
+        .article-content h3 {
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin: 2rem 0 0.8rem;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(26,95,122,0.1) 0%, rgba(201,162,39,0.1) 100%);
+            border-left: 4px solid var(--secondary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .highlight-box strong {
+            color: var(--primary);
+        }
+        
+        .article-content ul {
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+        
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .cta-section {
+            background: var(--light);
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .cta-section h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+        }
+        
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 2rem;
+            background: var(--light);
+            border-radius: 12px;
+            margin: 3rem 0;
+        }
+        
+        .author-box img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .author-box h4 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 0.3rem;
+        }
+        
+        .author-box p {
+            margin: 0;
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 5%;
+            text-align: center;
+        }
+        
+        footer a { color: var(--secondary); }
+        
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .article-hero h1 { font-size: 2rem; }
+            .author-box { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Guest House <span>Holland</span></a>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/tours.html">Tours</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/gallery.html">Gallery</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+        <a href="https://www.booking.com/hotel/do/guest-house-holland.en.html" class="btn" target="_blank">Book Now</a>
+    </nav>
+
+    <section class="article-hero">
+        <p class="category">🌿 Nature & Eco-Tourism</p>
+        <h1>Natural Wonders: An Eco-Guide's Journey Through the Dominican Republic</h1>
+        <p class="meta">By André (Dre) Broeders • February 27, 2026 • 6 min read</p>
+    </section>
+
+    <article class="article-content">
+        <p>When I received my ECO-Tourguide certification — number 001 — back in the 1990s, I had no idea it would define my life for the next three decades. Now at 80, I've explored every corner of this incredible island, and I can tell you with certainty: the Dominican Republic is one of the most biodiverse places on Earth, and most visitors only scratch the surface.</p>
+
+        <p>Forget the all-inclusive resort pools for a moment. Let me show you the real natural treasures of this country — the places where I still find wonder after all these years.</p>
+
+        <h2>The Samana Peninsula: Where Whales Come to Play</h2>
+
+        <p>Every January through March, over 3,000 humpback whales migrate to Samana Bay to mate and give birth. I've witnessed this spectacle dozens of times, and it never fails to move me. Watching a 40-ton creature breach the surface, sometimes close enough to feel the spray, reminds you how small we humans really are.</p>
+
+        <div class="highlight-box">
+            <strong>🐋 Eco-Tourism Tip:</strong> Choose whale watching operators who follow the regulations — staying at least 50 meters from the whales and limiting boat traffic. The whales have been coming here for thousands of years; we're just visitors in their nursery.
+        </div>
+
+        <p>But Samana offers more than whales. El Limón waterfall, hidden in the mountains, requires a horseback ride or hike through lush tropical forest. The 50-meter cascade crashes into a natural swimming pool so pristine, you'll question if it's real.</p>
+
+        <h2>Los Haitises National Park: The Dominican Jurassic Park</h2>
+
+        <p>If there's one place that takes your breath away, it's Los Haitises. Imagine hundreds of limestone mogotes (small mountains) rising from mangrove channels, covered in rainforest so thick you can hear the birds before you see anything. The Taíno people left petroglyphs in the caves here over 1,000 years ago — some still marked with ceremonial offerings.</p>
+
+        <p>I've guided groups through these waters countless times, and I always point out:</p>
+        <ul>
+            <li><strong>The Boca del Infierno (Hell's Mouth):</strong> A cave where frigate birds nest in the thousands</li>
+            <li><strong>Cave of the Swallows:</strong> Ancient Taíno drawings still visible on the walls</li>
+            <li><strong>The mangrove nurseries:</strong> Where fish and crustaceans begin their lives before heading to open sea</li>
+        </ul>
+
+        <h2>The Central Highlands: Cloud Forests and the Caribbean's Highest Peak</h2>
+
+        <p>Most tourists don't know that the Dominican Republic has mountains reaching nearly 3,100 meters. Pico Duarte isn't just the Caribbean's highest peak — it's surrounded by pine forests that feel more like the Alps than the tropics.</p>
+
+        <p>In Jarabacoa and Constanza, the temperatures drop to near-freezing at night. Yes, in the Caribbean! The cloud forests here harbor species found nowhere else on Earth: the Hispaniolan pine, endemic orchids, and if you're patient, the endangered Hispaniolan hutia — a native rodent that's been here longer than humans.</p>
+
+        <h2>The Dry Southwest: A Different World</h2>
+
+        <p>Most visitors never venture to the southwest, and that's a shame. Lake Enriquillo, the Caribbean's largest lake and lowest point, hosts American crocodiles, rhinoceros iguanas, and flamingos. Yes, flamingos in the Dominican Republic!</p>
+
+        <p>The drive through the Bahoruco mountains reveals landscapes that shift from cactus desert to cloud forest within an hour. It's geological time-travel, and it reminds you that this island has seen everything — from the dinosaurs to today.</p>
+
+        <h2>Why Eco-Tourism Matters More Than Ever</h2>
+
+        <p>In my 30+ years here, I've watched coral reefs bleach, forests shrink, and species disappear. But I've also seen hope: communities that protect their mangroves, young Dominicans becoming nature guides, and visitors who care about leaving places better than they found them.</p>
+
+        <p>When you choose eco-tourism, you're voting with your wallet. You're telling the world that nature has value beyond what can be extracted from it. That's why I still guide, at 80, whenever I can.</p>
+
+        <div class="cta-section">
+            <h3>Experience the Real Dominican Republic</h3>
+            <p>I don't guide as often as I used to, but I'm happy to recommend responsible tour operators and share tips for your nature adventures.</p>
+            <a href="/contact.html" class="btn">Ask Dre</a>
+        </div>
+
+        <div class="author-box">
+            <img src="/images/dre-portrait.jpg" alt="André (Dre) Broeders" onerror="this.style.display='none'">
+            <div>
+                <h4>André "Dre" Broeders</h4>
+                <p>ECO-Tourguide #001, Dominican Republic. Born in the Netherlands, home in the Caribbean for over 30 years. Owner of Guest House Holland and eternal advocate for sustainable tourism.</p>
+            </div>
+        </div>
+
+        <p><em>Want more insider knowledge about the Dominican Republic? Browse our <a href="/blog.html">blog</a> or book a stay at <a href="/">Guest House Holland</a> — your authentic Caribbean home base.</em></p>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 Guest House Holland • Boca Chica, Dominican Republic</p>
+        <p><a href="/contact.html">Contact</a> | <a href="/blog.html">Blog</a> | <a href="https://www.booking.com/hotel/do/guest-house-holland.en.html" target="_blank">Book on Booking.com</a></p>
+    </footer>
+</body>
+</html>
