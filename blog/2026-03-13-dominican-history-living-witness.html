@@ -45,7 +45,9 @@
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            background: transparent;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
             transition: all 0.3s ease;
         }
 
@@ -63,13 +65,9 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             font-weight: 700;
-            color: white;
+            color: var(--primary);
             text-decoration: none;
             transition: color 0.3s;
-        }
-
-        nav.scrolled .logo {
-            color: var(--primary);
         }
 
         .logo span {
@@ -84,22 +82,14 @@
 
         .nav-links a {
             text-decoration: none;
-            color: rgba(255,255,255,0.9);
+            color: var(--text);
             font-size: 0.9rem;
             font-weight: 500;
             letter-spacing: 0.5px;
             transition: color 0.3s;
         }
 
-        nav.scrolled .nav-links a {
-            color: var(--text);
-        }
-
         .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        nav.scrolled .nav-links a:hover {
             color: var(--primary);
         }
 
