@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5XC4KSB7N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-C5XC4KSB7N');
+    </script>
+    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natural Wonders: An Eco-Guide's Journey Through the Dominican Republic | Guest House Holland</title>
@@ -286,7 +296,7 @@
         <h3 style="font-family: 'Playfair Display', serif; color: var(--primary); margin: 0 0 1rem; font-size: 1.5rem;">Experience Authentic Dominican Republic</h3>
         <p style="margin: 0 0 1.5rem; color: #333; line-height: 1.6;">30+ years of eco-tourism expertise, Caribbean hospitality, and local knowledge — discover what makes Guest House Holland special.</p>
         <a href="https://www.guesthouseholland.com" 
-           style="display: inline-block; padding: 0.75rem 2rem; background: var(--primary); color: white; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 1rem; transition: transform 0.2s; cursor: pointer;"
+           style="display: inline-block; padding: 0.75rem 2rem; background: var(--primary); color: white; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 1rem; transition: transform 0.2s; cursor: pointer;" onclick="gtag(\'event\', \'cta_click\', {\'event_category\': \'CTA\', \'event_label\': \'Visit GHH from Blog\', \'page_title\': document.title})"
            onmouseover="this.style.transform='scale(1.05)'"
            onmouseout="this.style.transform='scale(1)'">
             Visit Guest House Holland →
@@ -298,5 +308,48 @@
         <p>&copy; 2026 Guest House Holland • Boca Chica, Dominican Republic</p>
         <p><a href="../contact.html">Contact</a> | <a href="../blog.html">Blog</a> | <a href="https://www.booking.com/hotel/do/guest-house-holland.en.html" target="_blank">Book on Booking.com</a></p>
     </footer>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieBanner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: rgba(26, 95, 122, 0.98); color: white; padding: 1.25rem 1.5rem; box-shadow: 0 -4px 20px rgba(0,0,0,0.3); z-index: 10000; font-family: 'Inter', sans-serif; backdrop-filter: blur(10px);">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;">
+            <p style="margin: 0; flex: 1; min-width: 250px; font-size: 0.95rem; line-height: 1.5;">
+                🍪 We use cookies to analyze site traffic and improve your experience. Your data is never sold or shared.
+            </p>
+            <div style="display: flex; gap: 0.75rem; flex-shrink: 0;">
+                <button onclick="acceptCookies()" style="padding: 0.65rem 1.75rem; background: white; color: #1a5f7a; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 0.95rem; transition: all 0.2s; font-family: 'Inter', sans-serif;">
+                    Accept
+                </button>
+                <button onclick="rejectCookies()" style="padding: 0.65rem 1.75rem; background: transparent; color: white; border: 2px solid white; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 0.95rem; transition: all 0.2s; font-family: 'Inter', sans-serif;">
+                    Reject
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check if user already made a choice
+        const cookieConsent = localStorage.getItem('cookieConsent');
+        
+        if (!cookieConsent) {
+            // Show banner if no choice was made
+            document.getElementById('cookieBanner').style.display = 'block';
+        } else if (cookieConsent === 'rejected') {
+            // Disable GA4 if previously rejected
+            window['ga-disable-G-C5XC4KSB7N'] = true;
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').style.display = 'none';
+            // GA4 already loaded, no action needed
+        }
+
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            document.getElementById('cookieBanner').style.display = 'none';
+            // Disable GA4
+            window['ga-disable-G-C5XC4KSB7N'] = true;
+        }
+    </script>
+
 </body>
 </html>
