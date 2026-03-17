@@ -52,9 +52,11 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--dark);
             text-decoration: none;
         }
+        
+        .logo span { color: var(--secondary); }
         
         .nav-links {
             display: flex;
@@ -63,34 +65,34 @@
         }
         
         .nav-links a {
-            color: var(--text);
             text-decoration: none;
+            color: var(--dark);
             font-weight: 500;
             transition: color 0.3s;
         }
         
-        .nav-links a:hover { color: var(--primary); }
+        .nav-links a:hover { color: var(--secondary); }
         
-        .hero {
+        .article-hero {
             height: 60vh;
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                        url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1200') center/cover;
+                        url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1920') center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-            margin-top: 80px;
+            padding-top: 80px;
         }
         
-        .hero h1 {
+        .article-hero h1 {
             font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
             margin-bottom: 1rem;
             max-width: 900px;
         }
         
-        .hero-meta {
+        .article-hero .meta {
             font-size: 1.1rem;
             opacity: 0.9;
         }
@@ -143,29 +145,36 @@
             text-align: center;
         }
         
+        footer a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
+            .article-hero h1 { font-size: 2rem; }
             .nav-links { display: none; }
-            .content { padding: 0 1rem; }
+            article { padding: 0 1rem; }
         }
     </style>
 </head>
 <body>
     <nav>
-        <a href="/" class="logo">Guest House Holland</a>
+        <a href="../index.html" class="logo">Guest House <span>Holland</span></a>
         <ul class="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/blog.html">Blog</a></li>
-            <li><a href="/#contact">Contact</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../apartments.html">Apartments</a></li>
+            <li><a href="../tours.html">Tours</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <div class="hero">
+    <section class="article-hero">
         <div>
             <h1>Eco-Tourism in the Dominican Republic</h1>
-            <p class="hero-meta">By André de Broeders • ECO-Tourguide #001 • March 17, 2026</p>
+            <p class="meta">By André de Broeders • ECO-Tourguide #001 • March 17, 2026</p>
         </div>
-    </div>
+    </section>
 
     <article class="content">
         <p>When I arrived in the Dominican Republic over 30 years ago, the concept of eco-tourism was virtually unknown here. Today, as the country's first certified ECO-Tourguide (certificate #001), I've witnessed the transformation of how we approach sustainable travel in this Caribbean paradise.</p>
