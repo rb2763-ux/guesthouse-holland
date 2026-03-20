@@ -255,17 +255,6 @@
 
     <section class="blog-section">
         <div class="blog-grid">
-            <!-- Blog Post: Eco-Tourism - NEW (Mar 17, 2026) -->
-            <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=400" alt="Eco-Tourism Dominican Republic">
-                <div class="blog-card-content">
-                    <span class="category">🌿 Eco-Tourism</span>
-                    <h3>Eco-Tourism in the Dominican Republic: A Guide from ECO-Tourguide #001</h3>
-                    <p>Discover sustainable travel through the eyes of the country's first certified ECO-Tourguide. 30+ years of protecting paradise while sharing its wonders with responsible travelers.</p>
-                    <a href="blog/2026-03-17-eco-tourism-dominican-republic.html">Read More →</a>
-                </div>
-            </article>
-
             <!-- Blog Post: Dominican History - NEW (Mar 13, 2026) -->
             <article class="blog-card">
                 <img src="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=400" alt="Dominican Republic History">
