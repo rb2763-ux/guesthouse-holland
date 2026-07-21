@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5XC4KSB7N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-C5XC4KSB7N');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Restaurants and Local Lunch Spots in Juan Dolio | Guest House Holland</title>
+    <meta name="description" content="Skip the tourist menus. Dre's guide to the family-run restaurants and hidden lunch spots in Juan Dolio where locals actually eat — and why the midday meal is the best one.">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a5f7a;
+            --secondary: #c9a227;
+            --dark: #1a1a1a;
+            --light: #f8f8f8;
+            --text: #333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: white;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+
+        .article-hero {
+            padding-top: 100px;
+            min-height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.52), rgba(0,0,0,0.52)),
+                        url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .article-hero { padding-top: 120px; }
+            .nav-links { display: none; }
+        }
+
+        .hero-content { max-width: 800px; padding: 2rem; }
+
+        .article-tag {
+            display: inline-block;
+            background: #e67e22;
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-meta { font-size: 0.95rem; opacity: 0.85; }
+
+        .article-body {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .article-body h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin: 2.5rem 0 1rem;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: var(--light);
+            border-left: 4px solid var(--secondary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box p { margin: 0; font-style: italic; color: #555; }
+
+        .tip-box {
+            background: #e8f4f8;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .tip-box strong { color: var(--primary); display: block; margin-bottom: 0.5rem; }
+
+        .food-list {
+            background: #fef9f0;
+            border-left: 4px solid var(--secondary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .food-list ul { margin: 0.5rem 0 0 1.2rem; }
+        .food-list li { margin-bottom: 0.4rem; font-size: 1.02rem; }
+
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+        }
+
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .cta-block {
+            background: #2c1654;
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-block h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-block p { margin-bottom: 1.5rem; opacity: 0.9; }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .cta-btn:hover { transform: translateY(-2px); }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        #cookie-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: rgba(26,26,26,0.97);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 9999;
+            font-size: 0.9rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        #cookie-banner a { color: var(--secondary); }
+
+        #cookie-accept {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">Guest House Holland</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#about">About Dre</a>
+            <a href="/tours.html">Tours</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="article-hero">
+        <div class="hero-content">
+            <span class="article-tag">🍽️ Food & Restaurants</span>
+            <h1>Family Restaurants and Local Lunch Spots in Juan Dolio</h1>
+            <p class="hero-meta">By Dre · July 21, 2026 · 5 min read</p>
+        </div>
+    </section>
+
+    <article class="article-body">
+
+        <div class="author-box">
+            <img src="/images/andre-profile.jpg" alt="Dre - 🌿 ECO-Tourguide #001" class="author-avatar">
+            <div class="author-info">
+                <h4 style="font-size:1.1rem;">Dre — <span style="color:#27ae60;font-weight:700;font-family:'Inter',sans-serif;font-size:1rem;">🌿 ECO-Tourguide #001</span></h4>
+                <p>I've eaten at nearly every place worth eating at in Juan Dolio over the years. I know which family kitchens have been feeding the neighbourhood for decades, and I know which tourist-facing menus are charging three times the price for half the flavour. Here's what I actually recommend.</p>
+            </div>
+        </div>
+
+        <p>In the Dominican Republic, lunch is the main event. Not dinner — lunch. Between noon and two in the afternoon, the whole country slows down and eats properly. If you want to understand Dominican food culture, that's the window. And if you want to eat well without spending much, that's when the family restaurants are at their best.</p>
+
+        <p>Juan Dolio has a handful of these places. They don't always have signs. Some are just a house with a few plastic tables out front and a woman cooking in the back. But they serve the real thing: rice, beans, stewed meat, fried plantain, a small salad. The <em>almuerzo</em> — the set lunch — is usually between 200 and 350 pesos. That's roughly three to six euros. You will not leave hungry.</p>
+
+        <h2>What a Dominican Lunch Actually Looks Like</h2>
+
+        <p>The standard plate is called <em>la bandera</em> — the flag. White rice, red beans, and meat. It's the national dish in the sense that it appears on almost every table, every day, across the whole country. The meat varies: chicken, pork, beef, or fish depending on the day and the cook. It comes with <em>tostones</em> (twice-fried green plantain) or <em>maduros</em> (sweet ripe plantain), and sometimes a small portion of salad.</p>
+
+        <p>This is not fancy food. It is not supposed to be. It is honest, filling, and made from ingredients that have been cooked the same way for generations. When it's done well — and in the right family kitchen, it always is — it's one of the best meals you'll have in the Caribbean.</p>
+
+        <div class="highlight-box">
+            <p>"The best food in Juan Dolio is not in any restaurant with a printed menu. It's in the places where the cook decides what's on the plate that day based on what's fresh. That's how it's always been here." — Dre</p>
+        </div>
+
+        <h2>What to Order Beyond the Set Lunch</h2>
+
+        <div class="food-list">
+            <strong style="color: var(--primary);">🍴 Worth trying at local spots:</strong>
+            <ul>
+                <li><strong>Sancocho</strong> — thick stew with multiple meats and root vegetables; usually only on weekends</li>
+                <li><strong>Pescado frito</strong> — whole fried fish, best near the coast; ask what came in that morning</li>
+                <li><strong>Mangú</strong> — mashed green plantain with sautéed onions; classic breakfast but available all day in some places</li>
+                <li><strong>Habichuelas con dulce</strong> — sweet bean dessert; seasonal (Easter), but worth trying if you see it</li>
+                <li><strong>Jugo natural</strong> — fresh-squeezed juice; passion fruit, tamarind, or chinola (passion fruit) are the local favourites</li>
+            </ul>
+        </div>
+
+        <h2>How to Find the Right Places</h2>
+
+        <p>The simplest rule: follow the locals. If you walk past a place at 12:30 and there are Dominican families eating there, sit down. If the tables are empty or the clientele is exclusively tourists, keep walking.</p>
+
+        <p>Look for handwritten menus on a chalkboard or a laminated sheet on the wall. Look for a kitchen you can see or smell from the street. Look for places where the owner is also the cook. These are the indicators that matter more than any review site.</p>
+
+        <div class="tip-box">
+            <strong>💡 Dre's Tip:</strong>
+            Ask for the <em>almuerzo del día</em> — the lunch of the day. Don't ask for a menu. In the best local places, there isn't one. The cook decides what's good that day, and that's what you eat. It's always the right choice.
+        </div>
+
+        <h2>A Note on Price and Tipping</h2>
+
+        <p>Local family restaurants operate on very thin margins. The 250-peso lunch is priced for the neighbourhood, not for tourists. Pay what's asked, and if the food was good, leave a small tip — 50 to 100 pesos is generous and genuinely appreciated. Don't negotiate the price of a family lunch. It's not that kind of transaction.</p>
+
+        <p>At more established restaurants near the beach or the main road, prices will be higher and a 10% service charge is sometimes added automatically. Check the bill before tipping again on top of that.</p>
+
+        <h2>The Difference Between Eating Well and Eating Expensively</h2>
+
+        <p>I've watched visitors spend twenty euros on a mediocre plate of pasta at a beachfront restaurant when a five-minute walk would have taken them to a family kitchen serving the best chicken stew they'd ever tasted for a quarter of the price. The expensive option is not always the better one. In Juan Dolio, it's often the opposite.</p>
+
+        <p>The food culture here is built around feeding people well with what's available locally. That philosophy produces better results than any imported menu concept. Give it a chance and eat where the neighbourhood eats.</p>
+
+        <div class="cta-block">
+            <h3>Eat Where the Locals Eat</h3>
+            <p>Dre knows the spots — and can point you in the right direction when you arrive. Ask about food recommendations when you book your stay or tour.</p>
+            <a href="/contact.html" class="cta-btn">Get in Touch with Dre →</a>
+        </div>
+
+    </article>
+
+    <footer>
+        <p>© 2026 Guest House Holland · Juan Dolio, Dominican Republic · <a href="/blog.html" style="color: var(--secondary);">Back to Blog</a></p>
+    </footer>
+
+    <div id="cookie-banner">
+        <span>We use cookies to improve your experience. <a href="/privacy.html">Learn more</a></span>
+        <button id="cookie-accept" onclick="document.getElementById('cookie-banner').style.display='none'; localStorage.setItem('cookieAccepted','true')">Accept</button>
+    </div>
+    <script>
+        if (localStorage.getItem('cookieAccepted')) {
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
