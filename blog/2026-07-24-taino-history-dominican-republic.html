@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5XC4KSB7N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-C5XC4KSB7N');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Taíno: The First People of Hispaniola | Guest House Holland</title>
+    <meta name="description" content="Before Columbus, before colonisation — the Taíno people shaped the island we now call the Dominican Republic. Dre's guide to understanding their legacy and where to find it today.">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a5f7a;
+            --secondary: #c9a227;
+            --dark: #1a1a1a;
+            --light: #f8f8f8;
+            --text: #333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: white;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+
+        .article-hero {
+            padding-top: 100px;
+            min-height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                        url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1400') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .article-hero { padding-top: 120px; }
+            .nav-links { display: none; }
+        }
+
+        .hero-content { max-width: 800px; padding: 2rem; }
+
+        .article-tag {
+            display: inline-block;
+            background: #7d6608;
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-meta { font-size: 0.95rem; opacity: 0.85; }
+
+        .article-body {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .article-body h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin: 2.5rem 0 1rem;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: var(--light);
+            border-left: 4px solid var(--secondary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box p { margin: 0; font-style: italic; color: #555; }
+
+        .tip-box {
+            background: #e8f4f8;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .tip-box strong { color: var(--primary); display: block; margin-bottom: 0.5rem; }
+
+        .fact-box {
+            background: #f5f0e8;
+            border-left: 4px solid #7d6608;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .fact-box strong { color: #7d6608; display: block; margin-bottom: 0.5rem; }
+        .fact-box ul { margin: 0.5rem 0 0 1.2rem; }
+        .fact-box li { margin-bottom: 0.4rem; font-size: 1.02rem; }
+
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+        }
+
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .cta-block {
+            background: #2c1654;
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-block h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-block p { margin-bottom: 1.5rem; opacity: 0.9; }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .cta-btn:hover { transform: translateY(-2px); }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        #cookie-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: rgba(26,26,26,0.97);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 9999;
+            font-size: 0.9rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        #cookie-banner a { color: var(--secondary); }
+
+        #cookie-accept {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">Guest House Holland</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#about">About Dre</a>
+            <a href="/tours.html">Tours</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="article-hero">
+        <div class="hero-content">
+            <span class="article-tag">🏛️ History</span>
+            <h1>The Taíno: The First People of Hispaniola</h1>
+            <p class="hero-meta">By Dre · July 24, 2026 · 6 min read</p>
+        </div>
+    </section>
+
+    <article class="article-body">
+
+        <div class="author-box">
+            <img src="/images/andre-profile.jpg" alt="Dre - 🌿 ECO-Tourguide #001" class="author-avatar">
+            <div class="author-info">
+                <h4 style="font-size:1.1rem;">Dre — <span style="color:#27ae60;font-weight:700;font-family:'Inter',sans-serif;font-size:1rem;">🌿 ECO-Tourguide #001</span></h4>
+                <p>The longer you live in the Dominican Republic, the more you notice how much of the Taíno world is still here — in the language, the food, the place names, the way people relate to the land. Most visitors never look for it. That's a shame, because it's one of the most interesting layers of this island's story.</p>
+            </div>
+        </div>
+
+        <p>Before Columbus arrived in 1492, before the Spanish built their forts and churches, before the island was called Hispaniola — there were the Taíno. They had been living here for centuries, farming the land, fishing the coasts, building communities across the island they called <em>Ayiti</em> or <em>Quisqueya</em>. Both names are still used today: Haiti on the western side, and Quisqueya as a proud nickname for the Dominican Republic.</p>
+
+        <p>The Taíno were not a primitive people. They were skilled farmers who cultivated cassava, sweet potato, maize, and tobacco. They built <em>bohíos</em> — round thatched houses — in organised villages led by chiefs called <em>caciques</em>. They had a complex spiritual life, a tradition of oral storytelling, and a sophisticated understanding of the land and sea around them.</p>
+
+        <h2>What Happened to the Taíno</h2>
+
+        <p>The story of what followed Columbus's arrival is one of the most devastating in human history. Within fifty years of contact, the Taíno population of Hispaniola — estimated at several hundred thousand before 1492 — had collapsed almost entirely. Disease, forced labour in the gold mines, violence, and the destruction of their food systems combined to produce a catastrophe that left almost no survivors by the mid-1500s.</p>
+
+        <p>For a long time, historians described the Taíno as "extinct." That framing has been challenged in recent decades. Genetic studies and community research have shown that Taíno ancestry persists in the Caribbean population, including in the Dominican Republic. The story is more complicated — and more hopeful — than simple extinction.</p>
+
+        <div class="highlight-box">
+            <p>"When I walk through the countryside here, I see cassava growing the same way it has grown for a thousand years. The Taíno taught this island how to feed itself. That knowledge didn't disappear — it became part of the place." — Dre</p>
+        </div>
+
+        <h2>The Taíno Words You Already Know</h2>
+
+        <p>One of the most striking legacies of the Taíno is linguistic. Dozens of words in everyday Spanish — and through Spanish, in English — come directly from the Taíno language. You have been using them without knowing it.</p>
+
+        <div class="fact-box">
+            <strong>📖 Words from the Taíno language:</strong>
+            <ul>
+                <li><strong>Canoe</strong> — from <em>canoa</em>, the Taíno word for their dugout boats</li>
+                <li><strong>Hurricane</strong> — from <em>huracán</em>, the Taíno storm spirit</li>
+                <li><strong>Hammock</strong> — from <em>hamaca</em>, the woven sleeping net they invented</li>
+                <li><strong>Barbecue</strong> — from <em>barbacoa</em>, their wooden frame for cooking over fire</li>
+                <li><strong>Tobacco</strong> — from <em>tabaco</em>, the rolled leaf they smoked in ceremony</li>
+                <li><strong>Cassava</strong> — from <em>casabe</em>, their staple crop, still eaten across the Caribbean today</li>
+            </ul>
+        </div>
+
+        <h2>Where to Find Taíno History in the DR</h2>
+
+        <p>The most significant Taíno archaeological site in the Dominican Republic is the <strong>Parque Nacional Los Haitises</strong>, on the northeastern coast. The park contains caves with Taíno petroglyphs and pictographs — images carved and painted into rock by people who lived here long before European contact. The cave art includes faces, animals, and ceremonial symbols. It is genuinely moving to stand in front of it.</p>
+
+        <p>The <strong>Museo del Hombre Dominicano</strong> in Santo Domingo has one of the best collections of Taíno artefacts in the Caribbean — <em>cemíes</em> (spiritual figures), pottery, tools, and jewellery. If you spend a day in Santo Domingo, this museum is worth two hours of your time.</p>
+
+        <div class="tip-box">
+            <strong>💡 Dre's Tip:</strong>
+            If you visit Los Haitises, go with a local guide who knows the caves. The park is large and the cave sites are not always well-marked. A good guide will also explain the context — what the images mean, how the Taíno used these spaces — which makes the difference between seeing rock art and actually understanding it.
+        </div>
+
+        <h2>The Taíno in Daily Life Today</h2>
+
+        <p>Beyond the museums and archaeological sites, Taíno influence is woven into ordinary Dominican life in ways most people don't notice. <em>Casabe</em> — the flatbread made from cassava — is still sold at markets and eaten at family tables. The word <em>bohío</em> still describes a simple rural house. Place names across the country come from Taíno: Higüey, Azua, Baní, Cotuí.</p>
+
+        <p>The Taíno relationship with the land — their understanding of which plants heal, which soils grow which crops, how to read the weather from the sea — passed into Dominican agricultural knowledge and has never entirely left. When you eat a plate of <em>yuca</em> or drink a juice made from <em>chinola</em>, you are eating food that the Taíno cultivated on this island for centuries before anyone else arrived.</p>
+
+        <p>That continuity is worth knowing about. It makes the island more interesting, and it gives the history here a depth that goes far beyond the colonial story most visitors encounter.</p>
+
+        <div class="cta-block">
+            <h3>Explore the History Beneath the Surface</h3>
+            <p>Dre can point you toward the sites, the stories, and the places where the island's deeper history is still visible. Ask about history-focused tours when you book your stay.</p>
+            <a href="/contact.html" class="cta-btn">Get in Touch with Dre →</a>
+        </div>
+
+    </article>
+
+    <footer>
+        <p>© 2026 Guest House Holland · Juan Dolio, Dominican Republic · <a href="/blog.html" style="color: var(--secondary);">Back to Blog</a></p>
+    </footer>
+
+    <div id="cookie-banner">
+        <span>We use cookies to improve your experience. <a href="/privacy.html">Learn more</a></span>
+        <button id="cookie-accept" onclick="document.getElementById('cookie-banner').style.display='none'; localStorage.setItem('cookieAccepted','true')">Accept</button>
+    </div>
+    <script>
+        if (localStorage.getItem('cookieAccepted')) {
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
