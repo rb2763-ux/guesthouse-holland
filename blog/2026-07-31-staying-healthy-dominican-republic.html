@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5XC4KSB7N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-C5XC4KSB7N');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staying Healthy in the Dominican Republic: Dre's Honest Guide | Guest House Holland</title>
+    <meta name="description" content="Sun, water, mosquitoes, and the occasional stomach upset — Dre's practical guide to staying healthy in the Dominican Republic, based on decades of living here.">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a5f7a;
+            --secondary: #c9a227;
+            --dark: #1a1a1a;
+            --light: #f8f8f8;
+            --text: #333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: white;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+
+        .article-hero {
+            padding-top: 100px;
+            min-height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1400') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .article-hero { padding-top: 120px; }
+            .nav-links { display: none; }
+        }
+
+        .hero-content { max-width: 800px; padding: 2rem; }
+
+        .article-tag {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-meta { font-size: 0.95rem; opacity: 0.85; }
+
+        .article-body {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .article-body h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin: 2.5rem 0 1rem;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: var(--light);
+            border-left: 4px solid var(--secondary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box p { margin: 0; font-style: italic; color: #555; }
+
+        .tip-box {
+            background: #e8f4f8;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .tip-box strong { color: var(--primary); display: block; margin-bottom: 0.5rem; }
+
+        .checklist-box {
+            background: #f0f7f0;
+            border-left: 4px solid #27ae60;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .checklist-box strong { color: #27ae60; display: block; margin-bottom: 0.5rem; }
+        .checklist-box ul { margin: 0.5rem 0 0 1.2rem; }
+        .checklist-box li { margin-bottom: 0.4rem; font-size: 1.02rem; }
+
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+        }
+
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .cta-block {
+            background: #2c1654;
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-block h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-block p { margin-bottom: 1.5rem; opacity: 0.9; }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .cta-btn:hover { transform: translateY(-2px); }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        #cookie-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: rgba(26,26,26,0.97);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 9999;
+            font-size: 0.9rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        #cookie-banner a { color: var(--secondary); }
+
+        #cookie-accept {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">Guest House Holland</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#about">About Dre</a>
+            <a href="/tours.html">Tours</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="article-hero">
+        <div class="hero-content">
+            <span class="article-tag">💊 Practical Tips</span>
+            <h1>Staying Healthy in the Dominican Republic: Dre's Honest Guide</h1>
+            <p class="hero-meta">By Dre · July 31, 2026 · 6 min read</p>
+        </div>
+    </section>
+
+    <article class="article-body">
+
+        <div class="author-box">
+            <img src="/images/andre-profile.jpg" alt="Dre - 🌿 ECO-Tourguide #001" class="author-avatar">
+            <div class="author-info">
+                <h4 style="font-size:1.1rem;">Dre — <span style="color:#27ae60;font-weight:700;font-family:'Inter',sans-serif;font-size:1rem;">🌿 ECO-Tourguide #001</span></h4>
+                <p>After more than thirty years in the Dominican Republic, I've seen every kind of visitor mistake when it comes to health — and I've made a few of my own in the early days. Most of them are completely avoidable. Here's what I actually tell people before they arrive.</p>
+            </div>
+        </div>
+
+        <p>The Dominican Republic is a safe destination for most travellers, and the vast majority of visitors have no health problems at all. But the tropics are different from northern Europe or North America in ways that catch people off guard — the sun is stronger, the heat is more intense, the water situation is different, and there are a few things that simply don't exist back home. None of it is scary. It just requires a bit of preparation and common sense.</p>
+
+        <h2>The Sun Will Surprise You</h2>
+
+        <p>This is the number one issue I see with visitors, especially in the first few days. The Caribbean sun is not the same as the sun in Germany or the Netherlands. At this latitude, UV radiation is significantly higher, and the heat reflects off the water and sand in ways that amplify the effect. People who would never burn at home get badly sunburned here within two hours on the beach.</p>
+
+        <p>Use SPF 50 or higher, reapply every two hours, and reapply immediately after swimming. Wear a hat and a light long-sleeved shirt if you're going to be outside for more than a couple of hours in the middle of the day. The hours between 11am and 3pm are the most intense — this is a good time to be in the shade, eating lunch, or taking a rest.</p>
+
+        <div class="tip-box">
+            <strong>💡 Dre's Tip:</strong>
+            Don't judge the sun by how hot it feels. On a breezy day near the water, you can be burning without feeling it. I've watched people spend four hours on the beach in a sea breeze and come back looking like lobsters. The breeze is deceptive. The UV doesn't care.
+        </div>
+
+        <h2>Water: What to Drink and What to Avoid</h2>
+
+        <p>Tap water in the Dominican Republic is not safe to drink. This is not a reflection on the country — it's simply the infrastructure reality, and Dominicans themselves don't drink tap water. Bottled water is cheap, widely available, and what everyone uses. At Guest House Holland, we provide filtered drinking water, but whenever you're out and about, buy bottled.</p>
+
+        <p>Ice in restaurants and hotels is generally made from purified water and is safe. Street food ice is more variable — if you're cautious, skip it. Fruit juices made with fresh fruit are usually fine; just make sure they're made with purified water if they're blended drinks.</p>
+
+        <div class="highlight-box">
+            <p>"The water question is the one I get asked most often. My answer is always the same: drink bottled, don't stress about ice in proper restaurants, and wash your hands before you eat. That covers ninety percent of it." — Dre</p>
+        </div>
+
+        <h2>Mosquitoes and How to Deal with Them</h2>
+
+        <p>Mosquitoes are present in the DR, particularly in the evenings and in areas near standing water. The main concern is dengue fever, which is transmitted by the <em>Aedes aegypti</em> mosquito — a daytime biter, unlike the malaria mosquito. Malaria risk in the tourist areas of the DR is very low, but dengue is worth taking seriously.</p>
+
+        <p>The practical response is simple: use insect repellent containing DEET or picaridin, especially in the evenings. Wear long sleeves and trousers if you're going to be outside after dark in areas with vegetation. Make sure your accommodation has screens on the windows or air conditioning — both keep mosquitoes out effectively.</p>
+
+        <div class="checklist-box">
+            <strong>🦟 Mosquito Protection Checklist:</strong>
+            <ul>
+                <li>DEET-based repellent (30–50%) or picaridin — apply to exposed skin</li>
+                <li>Reapply after swimming or heavy sweating</li>
+                <li>Long sleeves and trousers for evening walks in green areas</li>
+                <li>Check that your room has window screens or AC</li>
+                <li>Permethrin-treated clothing for jungle or mangrove excursions</li>
+            </ul>
+        </div>
+
+        <h2>Stomach Upsets: Prevention and Response</h2>
+
+        <p>Some visitors experience mild stomach issues in the first day or two — this is often simply the body adjusting to different food, different bacteria in the environment, and the heat. It usually passes quickly. If it doesn't, or if it's severe, see a doctor.</p>
+
+        <p>To reduce the risk: wash hands frequently, eat at places that look busy and well-maintained, avoid raw shellfish from street vendors, and don't eat fruit that's been pre-cut and sitting out in the heat. None of this means you can't eat street food — I eat street food all the time. It just means being sensible about it.</p>
+
+        <p>Pharmacies (<em>farmacias</em>) are everywhere in the DR and are well-stocked. For minor issues — stomach remedies, rehydration salts, antihistamines, sunburn cream — you can buy what you need without a prescription. The pharmacists are generally helpful and used to dealing with tourists.</p>
+
+        <h2>Before You Travel: What to Sort Out at Home</h2>
+
+        <p>Make sure your travel insurance covers medical treatment abroad — this is non-negotiable. Private medical care in the DR is good in the main cities and tourist areas, but it costs money. With insurance, a visit to a private clinic is straightforward. Without it, it gets complicated.</p>
+
+        <p>Check with your doctor about vaccinations. Hepatitis A is generally recommended for travellers to the Caribbean. Typhoid is sometimes recommended depending on your travel style. Routine vaccinations (tetanus, MMR) should be up to date. No special vaccinations are required to enter the DR.</p>
+
+        <div class="tip-box">
+            <strong>💡 Dre's Tip:</strong>
+            Bring a small travel health kit: rehydration sachets, antihistamine tablets, ibuprofen or paracetamol, antiseptic cream, plasters, and your regular prescription medications with enough supply for the whole trip plus a few extra days. You can buy most things here, but having the basics on hand saves time when you need them.
+        </div>
+
+        <div class="cta-block">
+            <h3>Questions Before You Arrive?</h3>
+            <p>Dre is happy to answer practical questions about what to expect in Juan Dolio and the surrounding area. Get in touch before your trip.</p>
+            <a href="/contact.html" class="cta-btn">Ask Dre →</a>
+        </div>
+
+    </article>
+
+    <footer>
+        <p>© 2026 Guest House Holland · Juan Dolio, Dominican Republic · <a href="/blog.html" style="color: var(--secondary);">Back to Blog</a></p>
+    </footer>
+
+    <div id="cookie-banner">
+        <span>We use cookies to improve your experience. <a href="/privacy.html">Learn more</a></span>
+        <button id="cookie-accept" onclick="document.getElementById('cookie-banner').style.display='none'; localStorage.setItem('cookieAccepted','true')">Accept</button>
+    </div>
+    <script>
+        if (localStorage.getItem('cookieAccepted')) {
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
