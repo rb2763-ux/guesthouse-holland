@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5XC4KSB7N"></script>
+    <!-- Google tag (gtag.js) - loads only after cookie consent -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-C5XC4KSB7N');
+        function ghhLoadGA() {
+            if (window.ghhGALoaded) return;
+            window.ghhGALoaded = true;
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-C5XC4KSB7N';
+            document.head.appendChild(s);
+            gtag('js', new Date());
+            gtag('config', 'G-C5XC4KSB7N');
+        }
+        try { if (localStorage.getItem('cookieConsent') === 'accepted') ghhLoadGA(); } catch (e) {}
     </script>
     
 
@@ -76,7 +84,7 @@
         .article-hero {
             min-height: 60vh;
             background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
-                        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920') center/cover;
+                        url('https://images.unsplash.com/photo-1611222566512-cb8dd8e689e5?w=1920') center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -244,7 +252,7 @@
 
         <p>Cabarete on the north coast has some of the most reliable wind conditions in the Caribbean, making it a world-class destination for kitesurfing and windsurfing. The trade winds blow here almost year-round, offshore mornings and afternoons, creating perfect conditions for both beginners and experts.</p>
 
-        <p>I am not a kitesurfer — at eighty, I have decided some adventures are better left to younger bodies — but I have organized countless kitesurfing trips to Cabarete. The learning conditions are excellent: steady wind, sandy beaches, and shallow water that allows for safe progression. Advanced kiters can ride the waves outside the reef, while beginners practice in the protected lagoon.</p>
+        <p>I am not a kitesurfer myself, but I have organized countless kitesurfing trips to Cabarete. The learning conditions are excellent: steady wind, sandy beaches, and shallow water that allows for safe progression. Advanced kiters can ride the waves outside the reef, while beginners practice in the protected lagoon.</p>
 
         <p>The windsurfing here is equally excellent. Cabarete hosted the World Windsurfing Championships multiple times for good reason. The wind is consistent, the water is warm, and the local instructors are among the best in the world.</p>
 
@@ -294,7 +302,7 @@
 
         <p>The Dominican Republic offers adventure tourism that changes people. Not because the mountains are the highest or the rapids are the wildest, but because the country strips away pretense and reveals what actually matters: competence, courage, and the willingness to be genuinely challenged.</p>
 
-        <p>That is why I am still doing this at eighty. That is why people come back year after year. That is why adventure tourism here is more than just another vacation activity.</p>
+        <p>That is why I am still doing this. That is why people come back year after year. That is why adventure tourism here is more than just another vacation activity.</p>
 
         <p>Come test yourself against something real. The mountains are waiting.</p>
 
@@ -322,7 +330,7 @@
     <div id="cookieBanner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: rgba(26, 95, 122, 0.98); color: white; padding: 1.25rem 1.5rem; box-shadow: 0 -4px 20px rgba(0,0,0,0.3); z-index: 10000; font-family: 'Inter', sans-serif; backdrop-filter: blur(10px);">
         <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;">
             <p style="margin: 0; flex: 1; min-width: 250px; font-size: 0.95rem; line-height: 1.5;">
-                🍪 We use cookies to analyze site traffic and improve your experience. Your data is never sold or shared.
+                🍪 We use cookies to analyze site traffic and improve your experience. Only with your consent. <a href="/privacy.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a>
             </p>
             <div style="display: flex; gap: 0.75rem; flex-shrink: 0;">
                 <button onclick="acceptCookies()" style="padding: 0.65rem 1.75rem; background: white; color: #1a5f7a; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 0.95rem; transition: all 0.2s; font-family: 'Inter', sans-serif;">
@@ -345,7 +353,7 @@
         }
 
         function acceptCookies() {
-            localStorage.setItem('cookieConsent', 'accepted');
+            localStorage.setItem('cookieConsent', 'accepted'); ghhLoadGA();
             document.getElementById('cookieBanner').style.display = 'none';
         }
 

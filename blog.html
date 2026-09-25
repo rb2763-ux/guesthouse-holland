@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5XC4KSB7N"></script>
+    <!-- Google tag (gtag.js) - loads only after cookie consent -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-C5XC4KSB7N');
+        function ghhLoadGA() {
+            if (window.ghhGALoaded) return;
+            window.ghhGALoaded = true;
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-C5XC4KSB7N';
+            document.head.appendChild(s);
+            gtag('js', new Date());
+            gtag('config', 'G-C5XC4KSB7N');
+        }
+        try { if (localStorage.getItem('cookieConsent') === 'accepted') ghhLoadGA(); } catch (e) {}
     </script>
     
 
@@ -301,7 +309,7 @@
 
             <!-- Blog Post: Taíno History - NEW (September 11, 2026) -->
             <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=400" alt="Taino people Dominican Republic history culture">
+                <img src="https://images.unsplash.com/photo-1782472768630-f4f934853f44?w=400" alt="Taino people Dominican Republic history culture">
                 <div class="blog-card-content">
                     <span class="category">🏗️ History &amp; Culture</span>
                     <h3>The Taíno People: The Dominican Republic’s First Inhabitants</h3>
@@ -312,7 +320,7 @@
 
             <!-- Blog Post: Day Trips - NEW (September 8, 2026) -->
             <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=400" alt="Day trips from Juan Dolio Dominican Republic">
+                <img src="https://images.unsplash.com/photo-1770653219427-a423df0c3dd8?w=400" alt="Day trips from Juan Dolio Dominican Republic">
                 <div class="blog-card-content">
                     <span class="category">🗺️ Tours &amp; Day Trips</span>
                     <h3>The Best Day Trips from Juan Dolio: Dre’s Picks</h3>
@@ -375,12 +383,22 @@
                     <a href="blog/2026-08-21-nature-photography-dominican-republic.html">Read More &rarr;</a>
                 </div>
             </article>
+            <!-- Blog Post: Baseball (August 18, 2026) -->
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1479546085767-8903baea90c6?w=400" alt="Baseball game in a full stadium">
+                <div class="blog-card-content">
+                    <span class="category">⚾ Culture</span>
+                    <h3>Baseball in the Dominican Republic: More Than a Sport</h3>
+                    <p>Baseball is the Dominican Republic's national obsession. Dre explains why it matters, how to watch a real game, and what it tells you about Dominican culture.</p>
+                    <a href="blog/2026-08-18-baseball-dominican-republic-culture.html">Read More &rarr;</a>
+                </div>
+            </article>
 
             <!-- Blog Post: Baseball Culture DR - (August 18, 2026) -->
 
             <!-- Blog Post: Haitian Revolution History - NEW (August 14, 2026) -->
             <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400" alt="Dominican Republic colonial history Zona Colonial">
+                <img src="https://images.unsplash.com/photo-1621730437374-d83c803fe5a4?w=400" alt="Dominican Republic colonial history Zona Colonial">
                 <div class="blog-card-content">
                     <span class="category">📜 History</span>
                     <h3>The Haitian Revolution and the Dominican Republic: A History Most Tourists Don't Know</h3>
@@ -402,7 +420,7 @@
 
             <!-- Blog Post: Sugar History DR - NEW (August 7, 2026) -->
             <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400" alt="Sugar industry Dominican Republic history cane fields bateyes">
+                <img src="https://images.unsplash.com/photo-1785052288471-fe47e7e3b8a0?w=400" alt="Sugar industry Dominican Republic history cane fields bateyes">
                 <div class="blog-card-content">
                     <span class="category">📜 History</span>
                     <h3>Sugar, Land, and Identity: How the Sugar Industry Shaped the Dominican Republic</h3>
@@ -446,7 +464,7 @@
 
             <!-- Blog Post: Taíno History - NEW (July 24, 2026) -->
             <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=400" alt="Taino history Dominican Republic Hispaniola first people">
+                <img src="https://images.unsplash.com/photo-1789163402234-ec889995449b?w=400" alt="Taino history Dominican Republic Hispaniola first people">
                 <div class="blog-card-content">
                     <span class="category">🏛️ History</span>
                     <h3>The Taíno: The First People of Hispaniola</h3>
@@ -490,7 +508,7 @@
 
             <!-- Blog Post: Nature/Eco-Tourism - NEW (July 10, 2026) -->
             <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=400" alt="Nature eco-tourism Dominican Republic what it actually means">
+                <img src="https://images.unsplash.com/photo-1701289870791-594cf2ce0448?w=400" alt="Nature eco-tourism Dominican Republic what it actually means">
                 <div class="blog-card-content">
                     <span class="category">🌿 Nature & Eco-Tourism</span>
                     <h3>Nature in the DR: What Eco-Tourism Actually Means</h3>
@@ -512,7 +530,7 @@
 
             <!-- Blog Post: Tours - NEW (July 3, 2026) -->
             <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" alt="Guided tours Dominican Republic what to expect">
+                <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=400" alt="Guided tours Dominican Republic what to expect">
                 <div class="blog-card-content">
                     <span class="category">🗺️ Tours &amp; Experiences</span>
                     <h3>Guided Tours in the DR: What to Expect and What to Skip</h3>
@@ -556,7 +574,7 @@
 
             <!-- Blog Post: History - NEW (June 19, 2026) -->
             <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400" alt="Colonial history Dominican Republic Santo Domingo">
+                <img src="https://images.unsplash.com/photo-1664985365876-9de234c826db?w=400" alt="Colonial history Dominican Republic Santo Domingo">
                 <div class="blog-card-content">
                     <span class="category">🏗️ History</span>
                     <h3>The History Beneath Your Feet: Understanding the Dominican Republic's Colonial Past</h3>
@@ -567,7 +585,7 @@
 
             <!-- Blog Post: Tours - NEW (June 16, 2026) -->
             <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" alt="Guided tour Dominican Republic with local guide">
+                <img src="https://images.unsplash.com/photo-1750691434571-e00a47843f6b?w=400" alt="Guided tour Dominican Republic with local guide">
                 <div class="blog-card-content">
                     <span class="category">🗺️ Tours</span>
                     <h3>A Day Tour with Dre: What to Expect When You Explore the DR with a Local</h3>
@@ -633,7 +651,7 @@
 
             <!-- Blog Post: Santo Domingo - NEW (May 26, 2026) -->
             <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400" alt="Santo Domingo Colonial Zone Dominican Republic">
+                <img src="https://images.unsplash.com/photo-1716718279681-3917f8d942fd?w=400" alt="Santo Domingo Colonial Zone Dominican Republic">
                 <div class="blog-card-content">
                     <span class="category">🏙️ City Guide</span>
                     <h3>Santo Domingo in a Day: Dre's Guide to the Capital</h3>
@@ -644,7 +662,7 @@
 
             <!-- Blog Post: Wildlife - NEW (May 22, 2026) -->
             <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400" alt="Wildlife Dominican Republic iguana">
+                <img src="https://images.unsplash.com/photo-1654026491861-9b7ebe0f3660?w=400" alt="Wildlife Dominican Republic iguana">
                 <div class="blog-card-content">
                     <span class="category">🦎 Wildlife</span>
                     <h3>Wildlife in the Dominican Republic: What You Might See and Where to Look</h3>
@@ -655,7 +673,7 @@
 
             <!-- Blog Post: What to Pack - NEW (May 19, 2026) -->
             <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=400" alt="Packing for Dominican Republic travel">
+                <img src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=400" alt="Packing for Dominican Republic travel">
                 <div class="blog-card-content">
                     <span class="category">🎒 Packing Tips</span>
                     <h3>What to Pack for the Dominican Republic: Dre's Honest List</h3>
@@ -688,7 +706,7 @@
 
             <!-- Blog Post: Day Trips - NEW (May 8, 2026) -->
             <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" alt="Day Trips from Juan Dolio Dominican Republic">
+                <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=400" alt="Day Trips from Juan Dolio Dominican Republic">
                 <div class="blog-card-content">
                     <span class="category">🗺️ Day Trips</span>
                     <h3>The Best Day Trips from Juan Dolio</h3>
@@ -699,7 +717,7 @@
 
             <!-- Blog Post: Getting Around - NEW (May 5, 2026) -->
             <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400" alt="Getting Around Dominican Republic Transport">
+                <img src="https://images.unsplash.com/photo-1786532966400-ceb84c2ae5e8?w=400" alt="Getting Around Dominican Republic Transport">
                 <div class="blog-card-content">
                     <span class="category">🚌 Getting Around</span>
                     <h3>Getting Around the Dominican Republic: What Nobody Tells You</h3>
@@ -743,7 +761,7 @@
 
             <!-- Blog Post: Budget Travel - NEW (Apr 21, 2026) -->
             <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=400" alt="Budget Travel Dominican Republic">
+                <img src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=400" alt="Budget Travel Dominican Republic">
                 <div class="blog-card-content">
                     <span class="category">💰 Budget Travel</span>
                     <h3>Dominican Republic on a Budget: Dre's Tips for Traveling Smart</h3>
@@ -773,6 +791,16 @@
                     <a href="blog/2026-04-14-best-time-visit-dominican-republic.html">Read More →</a>
                 </div>
             </article>
+            <!-- Blog Post: Local Markets & Street Food (April 10, 2026) -->
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400" alt="Grilled street food">
+                <div class="blog-card-content">
+                    <span class="category">🛒 Local Markets &amp; Street Food</span>
+                    <h3>Local Markets &amp; Street Food in the Dominican Republic: Dre's Insider Guide</h3>
+                    <p>Dre takes you beyond the tourist restaurants — into the markets, colmados and street corners where real Dominican life happens.</p>
+                    <a href="blog/2026-04-10-local-markets-street-food-dominican-republic.html">Read More &rarr;</a>
+                </div>
+            </article>
 
             <!-- Blog Post: Slow Travel - NEW (Apr 7, 2026) -->
             <article class="blog-card">
@@ -787,7 +815,7 @@
 
             <!-- Blog Post: Adventure Tours - NEW (Apr 4, 2026) -->
             <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" alt="Adventure Tours Dominican Republic">
+                <img src="https://images.unsplash.com/photo-1611222566512-cb8dd8e689e5?w=400" alt="Adventure Tours Dominican Republic">
                 <div class="blog-card-content">
                     <span class="category">🏔️ Adventure Tours</span>
                     <h3>Adventure Tours in the Dominican Republic: 30 Years of Outdoor Thrills</h3>
@@ -853,7 +881,7 @@
 
             <!-- Blog Post: Dominican History - NEW (Mar 13, 2026) -->
             <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=400" alt="Dominican Republic History">
+                <img src="https://images.unsplash.com/photo-1592174887344-02ff9373ca55?w=400" alt="Dominican Republic History">
                 <div class="blog-card-content">
                     <span class="category">📜 History & Culture</span>
                     <h3>Living Through Dominican History: 30+ Years of Change</h3>
@@ -981,7 +1009,7 @@
     <div id="cookieBanner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: rgba(26, 95, 122, 0.98); color: white; padding: 1.25rem 1.5rem; box-shadow: 0 -4px 20px rgba(0,0,0,0.3); z-index: 10000; font-family: 'Inter', sans-serif; backdrop-filter: blur(10px);">
         <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;">
             <p style="margin: 0; flex: 1; min-width: 250px; font-size: 0.95rem; line-height: 1.5;">
-                🍪 We use cookies to analyze site traffic and improve your experience. Your data is never sold or shared.
+                🍪 We use cookies to analyze site traffic and improve your experience. Only with your consent. <a href="/privacy.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a>
             </p>
             <div style="display: flex; gap: 0.75rem; flex-shrink: 0;">
                 <button onclick="acceptCookies()" style="padding: 0.65rem 1.75rem; background: white; color: #1a5f7a; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 0.95rem; transition: all 0.2s; font-family: 'Inter', sans-serif;">
@@ -1007,7 +1035,7 @@
         }
 
         function acceptCookies() {
-            localStorage.setItem('cookieConsent', 'accepted');
+            localStorage.setItem('cookieConsent', 'accepted'); ghhLoadGA();
             document.getElementById('cookieBanner').style.display = 'none';
             // GA4 already loaded, no action needed
         }

@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5XC4KSB7N"></script>
+    <!-- Google tag (gtag.js) - loads only after cookie consent -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-C5XC4KSB7N');
+        function ghhLoadGA() {
+            if (window.ghhGALoaded) return;
+            window.ghhGALoaded = true;
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-C5XC4KSB7N';
+            document.head.appendChild(s);
+            gtag('js', new Date());
+            gtag('config', 'G-C5XC4KSB7N');
+        }
+        try { if (localStorage.getItem('cookieConsent') === 'accepted') ghhLoadGA(); } catch (e) {}
     </script>
 
     <meta charset="UTF-8">
@@ -274,8 +282,8 @@
         <p>The website is hosted on GitHub Pages (GitHub, Inc., USA) and delivered through Cloudflare (Cloudflare, Inc., USA). When you open a page, these providers technically process your IP address, browser type, the page requested and the time of the request, in order to deliver the website and protect it against attacks. We do not use this data to identify you.</p>
 
         <h2>3. Google Analytics</h2>
-        <p>We use Google Analytics 4 (Google Ireland Ltd. / Google LLC) to understand how many people visit the site and which pages are useful. Google Analytics sets cookies and processes usage data such as pages viewed, approximate location, device and browser, and a shortened IP address. Data may be transferred to the USA.</p>
-        <p>You can switch Google Analytics off at any time: choose <strong>Reject</strong> in the cookie banner on our <a href="/">home page</a> (your choice is remembered in your browser), or install Google's <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">opt-out browser add-on</a>.</p>
+        <p>We use Google Analytics 4 (Google Ireland Ltd. / Google LLC) to understand how many people visit the site and which pages are useful. <strong>Google Analytics is only loaded after you click Accept in the cookie banner.</strong> It then sets cookies and processes usage data such as pages viewed, approximate location, device and browser, and a shortened IP address. Data may be transferred to the USA. Legal basis: your consent.</p>
+        <p>If you click Reject or ignore the banner, Google Analytics is not loaded. You can change your choice at any time: <button onclick="try{localStorage.removeItem('cookieConsent')}catch(e){}; location.reload();" style="font: inherit; color: var(--primary); background: none; border: none; padding: 0; text-decoration: underline; cursor: pointer;">reset my cookie choice</button>.</p>
 
         <h2>4. Chat assistant</h2>
         <p>On several pages you can chat with our booking assistant. It is operated for us by ChatPro AI (FITCOACHAI LTD, United Kingdom) and uses AI language models to answer your questions.</p>
@@ -302,7 +310,7 @@
         <p>Links to Booking.com, Facebook, YouTube and WhatsApp only load those services when you click them.</p>
 
         <h2>7. Storage in your browser</h2>
-        <p>Besides the Google Analytics cookies, the website stores two small entries in your browser: your cookie choice and your chosen language. They stay on your device and are not sent to us.</p>
+        <p>Besides the Google Analytics cookies (only after consent), the website stores two small entries in your browser: your cookie choice and your chosen language. They stay on your device and are not sent to us.</p>
 
         <h2>8. How long we keep data</h2>
         <p>Emails, chat conversations and booking details are kept as long as needed to handle your request and your stay, and as required by law. Google Analytics data is kept for the period set in Google Analytics, at most 14 months.</p>

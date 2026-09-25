@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5XC4KSB7N"></script>
+    <!-- Google tag (gtag.js) - loads only after cookie consent -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-C5XC4KSB7N');
+        function ghhLoadGA() {
+            if (window.ghhGALoaded) return;
+            window.ghhGALoaded = true;
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-C5XC4KSB7N';
+            document.head.appendChild(s);
+            gtag('js', new Date());
+            gtag('config', 'G-C5XC4KSB7N');
+        }
+        try { if (localStorage.getItem('cookieConsent') === 'accepted') ghhLoadGA(); } catch (e) {}
     </script>
     
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natural Wonders: An Eco-Guide's Journey Through the Dominican Republic | Guest House Holland</title>
-    <meta name="description" content="From hidden waterfalls to cloud forests, André shares his favorite natural wonders in the Dominican Republic after 30+ years as the country's first certified ECO-Tourguide.">
+    <meta name="description" content="From hidden waterfalls to cloud forests, Dre shares his favorite natural wonders in the Dominican Republic after 30+ years as the country's first certified ECO-Tourguide.">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -230,11 +238,11 @@
     <section class="article-hero">
         <p class="category">🌿 Nature & Eco-Tourism</p>
         <h1>Natural Wonders: An Eco-Guide's Journey Through the Dominican Republic</h1>
-        <p class="meta">By André (Dre) Broeders • February 27, 2026 • 6 min read</p>
+        <p class="meta">By Dre • February 27, 2026 • 6 min read</p>
     </section>
 
     <article class="article-content">
-        <p>When I received my ECO-Tourguide certification — number 001 — back in the 1990s, I had no idea it would define my life for the next three decades. Now at 80, I've explored every corner of this incredible island, and I can tell you with certainty: the Dominican Republic is one of the most biodiverse places on Earth, and most visitors only scratch the surface.</p>
+        <p>When I received my ECO-Tourguide certification — number 001 — back in the 1990s, I had no idea it would define my life for the next three decades. After three decades, I've explored every corner of this incredible island, and I can tell you with certainty: the Dominican Republic is one of the most biodiverse places on Earth, and most visitors only scratch the surface.</p>
 
         <p>Forget the all-inclusive resort pools for a moment. Let me show you the real natural treasures of this country — the places where I still find wonder after all these years.</p>
 
@@ -275,7 +283,7 @@
 
         <p>In my 30+ years here, I've watched coral reefs bleach, forests shrink, and species disappear. But I've also seen hope: communities that protect their mangroves, young Dominicans becoming nature guides, and visitors who care about leaving places better than they found them.</p>
 
-        <p>When you choose eco-tourism, you're voting with your wallet. You're telling the world that nature has value beyond what can be extracted from it. That's why I still guide, at 80, whenever I can.</p>
+        <p>When you choose eco-tourism, you're voting with your wallet. You're telling the world that nature has value beyond what can be extracted from it. That's why I still guide whenever I can.</p>
 
         <div class="cta-section">
             <h3>Experience the Real Dominican Republic</h3>
@@ -284,9 +292,9 @@
         </div>
 
         <div class="author-box">
-            <img src="/images/dre-portrait.jpg" alt="André (Dre) Broeders" onerror="this.style.display='none'">
+            <img src="/images/dre-portrait.jpg" alt="Dre" onerror="this.style.display='none'">
             <div>
-                <h4>André "Dre" Broeders</h4>
+                <h4>Dre</h4>
                 <p>ECO-Tourguide #001, Dominican Republic. Born in the Netherlands, home in the Caribbean for over 30 years. Owner of Guest House Holland and eternal advocate for sustainable tourism.</p>
             </div>
         </div>
@@ -312,7 +320,7 @@
     <div id="cookieBanner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: rgba(26, 95, 122, 0.98); color: white; padding: 1.25rem 1.5rem; box-shadow: 0 -4px 20px rgba(0,0,0,0.3); z-index: 10000; font-family: 'Inter', sans-serif; backdrop-filter: blur(10px);">
         <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;">
             <p style="margin: 0; flex: 1; min-width: 250px; font-size: 0.95rem; line-height: 1.5;">
-                🍪 We use cookies to analyze site traffic and improve your experience. Your data is never sold or shared.
+                🍪 We use cookies to analyze site traffic and improve your experience. Only with your consent. <a href="/privacy.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a>
             </p>
             <div style="display: flex; gap: 0.75rem; flex-shrink: 0;">
                 <button onclick="acceptCookies()" style="padding: 0.65rem 1.75rem; background: white; color: #1a5f7a; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 0.95rem; transition: all 0.2s; font-family: 'Inter', sans-serif;">
@@ -338,7 +346,7 @@
         }
 
         function acceptCookies() {
-            localStorage.setItem('cookieConsent', 'accepted');
+            localStorage.setItem('cookieConsent', 'accepted'); ghhLoadGA();
             document.getElementById('cookieBanner').style.display = 'none';
             // GA4 already loaded, no action needed
         }
