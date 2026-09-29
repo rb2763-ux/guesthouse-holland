@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) - loads only after cookie consent -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        function ghhLoadGA() {
+            if (window.ghhGALoaded) return;
+            window.ghhGALoaded = true;
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-C5XC4KSB7N';
+            document.head.appendChild(s);
+            gtag('js', new Date());
+            gtag('config', 'G-C5XC4KSB7N');
+        }
+        try { if (localStorage.getItem('cookieConsent') === 'accepted') ghhLoadGA(); } catch (e) {}
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fishermen of Juan Dolio: A Morning Worth Waking Up For | Guest House Holland</title>
+    <meta name="description" content="Dre on the fishermen of Juan Dolio - the pre-dawn departures, what actually comes back in the yolas, buying fish straight off the beach, and how the trade is changing.">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a5f7a;
+            --secondary: #c9a227;
+            --dark: #1a1a1a;
+            --light: #f8f8f8;
+            --text: #333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: white;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+
+        .article-hero {
+            padding-top: 100px;
+            min-height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                        url('https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=1400') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .article-hero { padding-top: 120px; }
+            .nav-links { display: none; }
+        }
+
+        .hero-content { max-width: 800px; padding: 2rem; }
+
+        .article-tag {
+            display: inline-block;
+            background: #b5651d;
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-meta { font-size: 0.95rem; opacity: 0.85; }
+
+        .article-body {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .article-body h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin: 2.5rem 0 1rem;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: var(--light);
+            border-left: 4px solid var(--secondary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box p { margin: 0; font-style: italic; color: #555; }
+
+        .tip-box {
+            background: #e8f4f8;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .tip-box strong { color: var(--primary); display: block; margin-bottom: 0.5rem; }
+
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+        }
+
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .cta-block {
+            background: #2c1654;
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-block h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-block p { margin-bottom: 1.5rem; opacity: 0.9; }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .cta-btn:hover { transform: translateY(-2px); }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        #cookie-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: rgba(26,26,26,0.97);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 9999;
+            font-size: 0.9rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        #cookie-banner a { color: var(--secondary); }
+
+        #cookie-accept {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">Guest House Holland</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#about">About Dre</a>
+            <a href="/tours.html">Tours</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="article-hero">
+        <div class="hero-content">
+            <span class="article-tag">🎣 Local Life</span>
+            <h1>The Fishermen of Juan Dolio: A Morning Worth Waking Up For</h1>
+            <p class="hero-meta">By Dre · September 29, 2026 · 5 min read</p>
+        </div>
+    </section>
+
+    <article class="article-body">
+
+        <div class="author-box">
+            <img src="/images/andre-profile.jpg" alt="Dre" class="author-avatar">
+            <div class="author-info">
+                <h4 style="font-size:1.1rem;">Dre — <span style="color:#27ae60;font-weight:700;font-family:'Inter',sans-serif;font-size:1rem;">🌿 ECO-Tourguide #001</span></h4>
+                <p>Long before the beach chairs get set out, Juan Dolio already had its morning. I've watched the same boats go out and come back for more years than I can count. This is what that actually looks like, and why it's worth setting an alarm for.</p>
+            </div>
+        </div>
+
+        <p>Most guests see Juan Dolio's beach at ten in the morning, already warm, already calm, ready for a day of doing not very much. What they miss is the part of the day that has nothing to do with tourism at all — the fishermen who have been working this same stretch of coast since well before sunrise, in wooden and fiberglass boats called yolas, doing a job that has barely changed in shape even as everything around it has.</p>
+
+        <h2>Before Sunrise</h2>
+
+        <p>The boats go out somewhere between four and five in the morning, while it's still dark and the sea is at its calmest. A yola is a simple open boat, usually with one or two men aboard, an outboard motor if they're lucky, oars if they're not. They head out past the reef to deeper water, sometimes returning within a few hours, sometimes staying out most of the morning depending on how the fish are running. If you're an early riser and walk the beach at six, you'll see the last of them leaving or the first of them already coming back — a quiet, practical scene that has nothing performative about it, because nobody out there is thinking about who's watching.</p>
+
+        <h2>What Actually Comes Back In</h2>
+
+        <p>The catch depends on the season and a fair amount of luck. Dorado (mahi-mahi) and robalo (snook) are common, along with mojarra and whatever snapper is running close to the reef that week. Lambi, the large conch that ends up in ceviche and stews across the coast, is gathered by divers rather than lines, usually a separate trip entirely. None of this is farmed or predictable in the way a supermarket fish counter is — some mornings the boats come back heavy, others they come back with barely enough for the fisherman's own family, and that unevenness is just part of the work.</p>
+
+        <div class="tip-box">
+            <strong>💡 Dre's Tip:</strong>
+            If you want to see the boats without getting in anyone's way, the stretch of sand near the fishing cooperative east of the main hotel strip is the place to stand around 6:30 to 7am. Bring a coffee, keep your distance while they're unloading, and don't photograph anyone's face without asking first — a smile and a "buenos días" goes a long way here.
+        </div>
+
+        <h2>Buying Straight Off the Beach</h2>
+
+        <p>This is the part most visitors never discover, and it's the reason I still walk down most mornings myself. When a boat comes in with a good catch, the fish gets sold right there on the sand, often before it's even fully unloaded — no ice counter, no middleman, just a scale, cash, and whatever's swimming an hour ago. Prices are set by what came in that day, not by a menu, and a friendly conversation usually gets you a fair one. If you're self-catering or just curious, this is as fresh and as local as food gets anywhere in the country.</p>
+
+        <div class="highlight-box">
+            <p>"People ask me why I still walk down to the beach most mornings when I've lived here thirty years. It's not for the exercise. It's because that's still the most honest hour Juan Dolio has." — Dre</p>
+        </div>
+
+        <h2>A Changing Way of Life</h2>
+
+        <p>I won't pretend this trade is what it was decades ago. Fish stocks close to shore are thinner — more boats working the same waters, warmer seas, and pressure on the reef nurseries where young fish grow. Some older fishermen I know now range further out or take tourists on boat trips to make the numbers work, different from how their fathers did it but not necessarily worse. The cooperative here has pushed for size limits and closed seasons, and most respect them, because they'll feel it first if the fish disappear.</p>
+
+        <h2>Why This Matters to Guests</h2>
+
+        <p>You don't need to buy fish or set an alarm for sunrise to get something out of this. Simply knowing that Juan Dolio has a working fishing fleet, not just a tourist beach, changes how the place feels. The whole fish on your plate at a beachfront restaurant tonight very likely came off one of these boats this same morning. That connection — between the quiet hour before the beach chairs come out and the dinner you'll eat tonight — is part of what makes this coast a real place and not a backdrop.</p>
+
+        <div class="tip-box">
+            <strong>💡 Dre's Tip:</strong>
+            Ask at dinner where the fish came from. Most of the smaller, family-run places along our stretch of coast will tell you honestly, and quite a few will tell you which boat. It's a small question that usually leads to a much better conversation than "how was your day at the beach."
+        </div>
+
+        <p>Juan Dolio will keep selling itself as a beach destination, and fairly so — the beach is genuinely good. But the fishermen who work it before anyone else is awake are as much a part of this coast as the sand is, and they've earned more than being scenery in someone else's sunrise photo. Go watch them work sometime. Buy something if you can. It's one of the more honest hours this town has to offer.</p>
+
+        <div class="cta-block">
+            <h3>Want to See the Real Morning Coast?</h3>
+            <p>Ask Dre about an early walk to the fishing boats, or which beachfront kitchens cook what came in that same day.</p>
+            <a href="/contact.html" class="cta-btn">Ask Dre →</a>
+        </div>
+
+    </article>
+
+    <footer>
+        <p>© 2026 Guest House Holland · Juan Dolio, Dominican Republic · <a href="/blog.html" style="color: var(--secondary);">Back to Blog</a></p>
+    </footer>
+
+    <div id="cookie-banner" style="display: none;">
+        <span>We use cookies for anonymous visitor statistics (Google Analytics), only with your consent. <a href="/privacy.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a></span>
+        <span style="white-space: nowrap;">
+            <button id="cookie-accept" onclick="ghhConsent('accepted')">Accept</button>
+            <button id="cookie-reject" onclick="ghhConsent('rejected')" style="background: transparent; color: inherit; border: 1px solid currentColor; margin-left: 0.5rem; padding: 0.5rem 1.25rem; border-radius: 4px; font-weight: 600; font-size: 0.9rem; cursor: pointer;">Reject</button>
+        </span>
+    </div>
+    <script>
+        function ghhConsent(v) {
+            try { localStorage.setItem('cookieConsent', v); } catch (e) {}
+            document.getElementById('cookie-banner').style.display = 'none';
+            if (v === 'accepted') ghhLoadGA();
+        }
+        try {
+            if (!localStorage.getItem('cookieConsent')) document.getElementById('cookie-banner').style.display = '';
+        } catch (e) { document.getElementById('cookie-banner').style.display = ''; }
+    </script>
+
+</body>
+</html>
