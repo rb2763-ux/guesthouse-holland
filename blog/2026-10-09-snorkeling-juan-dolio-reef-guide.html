@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) - loads only after cookie consent -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        function ghhLoadGA() {
+            if (window.ghhGALoaded) return;
+            window.ghhGALoaded = true;
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-C5XC4KSB7N';
+            document.head.appendChild(s);
+            gtag('js', new Date());
+            gtag('config', 'G-C5XC4KSB7N');
+        }
+        try { if (localStorage.getItem('cookieConsent') === 'accepted') ghhLoadGA(); } catch (e) {}
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snorkeling Juan Dolio's Reef: What's Actually Down There | Guest House Holland</title>
+    <meta name="description" content="Dre's honest guide to snorkeling the reef right off Juan Dolio - what you will and will not see, where to rent gear, and when the water is clearest.">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a5f7a;
+            --secondary: #c9a227;
+            --dark: #1a1a1a;
+            --light: #f8f8f8;
+            --text: #333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: white;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+
+        .article-hero {
+            padding-top: 100px;
+            min-height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                        url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=1400') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .article-hero { padding-top: 120px; }
+            .nav-links { display: none; }
+        }
+
+        .hero-content { max-width: 800px; padding: 2rem; }
+
+        .article-tag {
+            display: inline-block;
+            background: #0e7490;
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-meta { font-size: 0.95rem; opacity: 0.85; }
+
+        .article-body {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .article-body h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin: 2.5rem 0 1rem;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: var(--light);
+            border-left: 4px solid var(--secondary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box p { margin: 0; font-style: italic; color: #555; }
+
+        .tip-box {
+            background: #e8f4f8;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .tip-box strong { color: var(--primary); display: block; margin-bottom: 0.5rem; }
+
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+        }
+
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .cta-block {
+            background: #2c1654;
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-block h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-block p { margin-bottom: 1.5rem; opacity: 0.9; }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .cta-btn:hover { transform: translateY(-2px); }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        #cookie-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: rgba(26,26,26,0.97);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 9999;
+            font-size: 0.9rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        #cookie-banner a { color: var(--secondary); }
+
+        #cookie-accept {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">Guest House Holland</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#about">About Dre</a>
+            <a href="/tours.html">Tours</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="article-hero">
+        <div class="hero-content">
+            <span class="article-tag">🐠 Nature & Water Sports</span>
+            <h1>Snorkeling Juan Dolio's Reef: What's Actually Down There</h1>
+            <p class="hero-meta">By Dre · October 9, 2026 · 5 min read</p>
+        </div>
+    </section>
+
+    <article class="article-body">
+
+        <div class="author-box">
+            <img src="/images/andre-profile.jpg" alt="Dre" class="author-avatar">
+            <div class="author-info">
+                <h4 style="font-size:1.1rem;">Dre — <span style="color:#27ae60;font-weight:700;">🌿 ECO-Tourguide #001</span></h4>
+                <p>Guests see calm, flat water in front of Juan Dolio and ask if it's worth bringing a mask. My honest answer: yes, but set your expectations correctly first. Here's exactly what's under that water, and what isn't.</p>
+            </div>
+        </div>
+
+        <p>The sea along our stretch of coast looks unusually still compared to most beaches, and there's a reason for that: a shallow fringing reef runs more or less parallel to the shore, breaking up the swell before it reaches the sand. That reef is why Juan Dolio works as a family beach rather than a surf beach, and it's also why you can grab a mask and snorkel and be looking at fish within a few minutes of walking in, no boat required. It is not the reef you've seen in diving documentaries. It's smaller, patchier in places, and has taken damage over the decades from storms, boat anchors, and warming water, same as reefs everywhere in the Caribbean. I'd rather tell you that upfront than let you walk in expecting a postcard.</p>
+
+        <h2>What You'll Actually See</h2>
+
+        <p>Close to shore, in waist-to-chest-deep water, you'll mostly find sea fans, soft coral, and scattered brain and finger coral, with sergeant majors, parrotfish, and the occasional trumpetfish moving through. Swim out a bit further toward where the reef rises closer to the surface — usually fifty to a hundred meters out, depending on where you start — and the coral gets denser and the fish life more varied: blue tangs, squirrelfish, the odd barracuda hanging motionless in open water, and sea urchins wedged into crevices that you do not want to kick by accident. It's a real, living reef with real fish on it. It's just a working-class version of one, not a showpiece, and I think that's worth appreciating rather than apologizing for.</p>
+
+        <div class="tip-box">
+            <strong>💡 Dre's Tip:</strong>
+            Go in the morning, before the wind picks up. Visibility here depends entirely on how churned-up the water is, and a calm 8am swim shows you two or three times what a windy 2pm one does. After a few days of heavy rain, skip it entirely — runoff clouds the water for a day or two afterward.
+        </div>
+
+        <h2>Gear, and Where to Get It</h2>
+
+        <p>You don't need your own equipment. The same chair guys who rent loungers on the beach usually have masks, snorkels, and fins for a small daily fee — expect somewhere around RD$200–400 for a set, and always check the mask seal against your face before you pay, since a leaking mask will ruin the swim faster than anything in the water will. If you're particular about fit, a properly sealing mask is the one piece of gear worth bringing from home; everything else here works fine rented.</p>
+
+        <div class="highlight-box">
+            <p>"People ask me if it's 'good' snorkeling, like there's a scorecard. I tell them it's real snorkeling, right off the beach, free after the gear, with no boat and no schedule. For a first try with the kids or a lazy afternoon, that beats a lot of places with better coral and a two-hour round trip to reach it." — Dre</p>
+        </div>
+
+        <h2>If You Want More Coral, Go Further</h2>
+
+        <p>If our local reef gets you interested and you want to see healthier, more colorful coral, the boat trips out toward Catalina Island and parts of the reef near Bayahibe are a genuine step up — clearer water, less boat traffic over the years, and more fish per square meter. Those are full-day excursions, not something you do before breakfast, so think of our beach reef as the free daily option and the boat trips as the occasional splurge when you want to see the coast at its best.</p>
+
+        <div class="tip-box">
+            <strong>💡 Dre's Tip:</strong>
+            Swim with a buddy and stay aware of boat traffic near the two channels cut through the reef for fishing boats — that's the one place currents move faster and where small boats pass closer to swimmers than elsewhere.
+        </div>
+
+        <p>None of this requires planning. Pack a mask, rent one, or borrow a set from your apartment if a previous guest left theirs behind — it happens more than you'd think. Walk in at the quiet end of the beach before the day gets busy, and give the reef in front of Juan Dolio the twenty honest minutes it deserves. It won't blow you away, but it will probably surprise you, and that's usually enough.</p>
+
+        <div class="cta-block">
+            <h3>Not Sure Where to Start?</h3>
+            <p>Ask Dre which stretch of reef is calmest that day, or whether a boat trip further out is worth it during your stay.</p>
+            <a href="/contact.html" class="cta-btn">Ask Dre →</a>
+        </div>
+
+    </article>
+
+    <footer>
+        <p>© 2026 Guest House Holland · Juan Dolio, Dominican Republic · <a href="/blog.html" style="color: var(--secondary);">Back to Blog</a></p>
+    </footer>
+
+    <div id="cookie-banner" style="display: none;">
+        <span>We use cookies for anonymous visitor statistics (Google Analytics), only with your consent. <a href="/privacy.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a></span>
+        <span style="white-space: nowrap;">
+            <button id="cookie-accept" onclick="ghhConsent('accepted')">Accept</button>
+            <button id="cookie-reject" onclick="ghhConsent('rejected')" style="background: transparent; color: inherit; border: 1px solid currentColor; margin-left: 0.5rem; padding: 0.5rem 1.25rem; border-radius: 4px; font-weight: 600; font-size: 0.9rem; cursor: pointer;">Reject</button>
+        </span>
+    </div>
+    <script>
+        function ghhConsent(v) {
+            try { localStorage.setItem('cookieConsent', v); } catch (e) {}
+            document.getElementById('cookie-banner').style.display = 'none';
+            if (v === 'accepted') ghhLoadGA();
+        }
+        try {
+            if (!localStorage.getItem('cookieConsent')) document.getElementById('cookie-banner').style.display = '';
+        } catch (e) { document.getElementById('cookie-banner').style.display = ''; }
+    </script>
+
+</body>
+</html>
