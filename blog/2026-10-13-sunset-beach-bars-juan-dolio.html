@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) - loads only after cookie consent -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        function ghhLoadGA() {
+            if (window.ghhGALoaded) return;
+            window.ghhGALoaded = true;
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-C5XC4KSB7N';
+            document.head.appendChild(s);
+            gtag('js', new Date());
+            gtag('config', 'G-C5XC4KSB7N');
+        }
+        try { if (localStorage.getItem('cookieConsent') === 'accepted') ghhLoadGA(); } catch (e) {}
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunset Drinks in Juan Dolio: Dre's Honest Guide to the Beach Bars | Guest House Holland</title>
+    <meta name="description" content="Dre's honest guide to the beach bars and sunset spots in Juan Dolio - which ones are worth the price, what to order, and when the light is best.">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a5f7a;
+            --secondary: #c9a227;
+            --dark: #1a1a1a;
+            --light: #f8f8f8;
+            --text: #333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: white;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+
+        .article-hero {
+            padding-top: 100px;
+            min-height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                        url('https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=1400') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .article-hero { padding-top: 120px; }
+            .nav-links { display: none; }
+        }
+
+        .hero-content { max-width: 800px; padding: 2rem; }
+
+        .article-tag {
+            display: inline-block;
+            background: #b45309;
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-meta { font-size: 0.95rem; opacity: 0.85; }
+
+        .article-body {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .article-body h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin: 2.5rem 0 1rem;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: var(--light);
+            border-left: 4px solid var(--secondary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box p { margin: 0; font-style: italic; color: #555; }
+
+        .tip-box {
+            background: #e8f4f8;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .tip-box strong { color: var(--primary); display: block; margin-bottom: 0.5rem; }
+
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+        }
+
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .cta-block {
+            background: #2c1654;
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-block h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-block p { margin-bottom: 1.5rem; opacity: 0.9; }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .cta-btn:hover { transform: translateY(-2px); }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        #cookie-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: rgba(26,26,26,0.97);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 9999;
+            font-size: 0.9rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        #cookie-banner a { color: var(--secondary); }
+
+        #cookie-accept {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">Guest House Holland</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#about">About Dre</a>
+            <a href="/tours.html">Tours</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="article-hero">
+        <div class="hero-content">
+            <span class="article-tag">🍹 Food & Drink</span>
+            <h1>Sunset Drinks in Juan Dolio: Dre's Honest Guide to the Beach Bars</h1>
+            <p class="hero-meta">By Dre · October 13, 2026 · 5 min read</p>
+        </div>
+    </section>
+
+    <article class="article-body">
+
+        <div class="author-box">
+            <img src="/images/andre-profile.jpg" alt="Dre" class="author-avatar">
+            <div class="author-info">
+                <h4 style="font-size:1.1rem;">Dre — <span style="color:#27ae60;font-weight:700;">🌿 ECO-Tourguide #001</span></h4>
+                <p>Guests always ask me where to go for "a proper sunset drink" — not a resort buffet bar, something with real atmosphere. I've been having that drink on this stretch of coast for 30 years. Here's where I actually go, and where I don't bother.</p>
+            </div>
+        </div>
+
+        <p>Juan Dolio faces south, which matters more than most visitors realize: the sun doesn't drop straight into the sea here the way it does on the north coast, it slides down behind the hills to the west, which means the best light is often thirty or forty minutes before the sun actually touches the horizon — a long, warm, golden stretch rather than one dramatic moment. Knowing that changes when you should actually sit down with a drink. Show up right at "sunset time" on the clock and you'll often miss the best part, which already happened while you were still deciding what to order.</p>
+
+        <h2>The Beachfront Spots Worth Your Time</h2>
+
+        <p>Most of the real beach bars here are simple, open-air setups built right into the sand — plastic chairs, a thatched roof, a cooler, and usually someone's family running the whole operation. They're not polished and that's the appeal. A cold Presidente runs around RD$100–150, a rum and coke a bit more, and a proper cocktail with fresh lime somewhere around RD$250–350 depending on how far it is from the main strip. The places directly in front of Juan Dolio's public beach are the easiest to find and the most reliably open; walk a little further toward Guayacanes and you'll find quieter ones with fewer people but also fewer staff, so service can be slower — fine if you're not in a hurry, which you shouldn't be at sunset anyway.</p>
+
+        <div class="tip-box">
+            <strong>💡 Dre's Tip:</strong>
+            Order your first drink the moment you sit down, before the light gets good. Once the sky turns orange, every bar on the beach gets a rush of people doing exactly what you're doing, and service slows down right when you want it least.
+        </div>
+
+        <h2>What's Actually Worth Ordering</h2>
+
+        <p>Skip the elaborate frozen cocktail menus some places put out for tourists — they're usually made with syrup mixes, not real fruit, and they cost more for less flavor. A simple rum and fresh lime, a Cuba libre made properly, or a cold beer will almost always be better than anything with an umbrella in it. If a place offers Mama Juana, try a small shot rather than a full glass the first time — it's a herb-and-rum infusion that varies wildly in quality from one bar to the next, and the bottle sitting in direct sun on a shelf for six months is not necessarily the one you want. Ask what's fresh rather than assuming the fanciest-looking option is the best one.</p>
+
+        <div class="highlight-box">
+            <p>"People expect me to recommend some hidden five-star beach club. Honestly, my favorite sunset drink of the year was a RD$100 beer on a plastic chair with sand still on my feet, watching a fishing boat come in. You don't need to spend much to get the good part right." — Dre</p>
+        </div>
+
+        <h2>Further Out, If You Want a Change of Scene</h2>
+
+        <p>If you want something with a bit more polish — proper cocktail menu, music, a view from slightly elevated ground — Boca Chica and the hotel strips closer to Santo Domingo have a handful of rooftop and poolside bars worth the short drive, though you'll pay resort prices for the upgrade, roughly double what you'd spend on our stretch of beach. I send guests there when they want a special-occasion evening, not a daily habit. For the daily habit, the simple places right here do the job better, and you're not fighting traffic to get home afterward.</p>
+
+        <div class="tip-box">
+            <strong>💡 Dre's Tip:</strong>
+            Bring cash in small bills. Beach bars rarely take cards, and nobody wants to break a 2,000-peso note for a RD$100 beer at 6pm.
+        </div>
+
+        <p>None of this needs reservations or planning. Walk down to the sand an hour before the sun actually sets, pick whichever bar has the fewest empty chairs — that usually means the coldest beer and the friendliest owner — and let the evening slow down from there. After thirty years, it's still the simplest part of the day that I look forward to the most.</p>
+
+        <div class="cta-block">
+            <h3>Not Sure Which Spot to Try Tonight?</h3>
+            <p>Ask Dre — he'll point you to whichever beach bar fits the evening you're after, quiet or lively.</p>
+            <a href="/contact.html" class="cta-btn">Ask Dre →</a>
+        </div>
+
+    </article>
+
+    <footer>
+        <p>© 2026 Guest House Holland · Juan Dolio, Dominican Republic · <a href="/blog.html" style="color: var(--secondary);">Back to Blog</a></p>
+    </footer>
+
+    <div id="cookie-banner" style="display: none;">
+        <span>We use cookies for anonymous visitor statistics (Google Analytics), only with your consent. <a href="/privacy.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a></span>
+        <span style="white-space: nowrap;">
+            <button id="cookie-accept" onclick="ghhConsent('accepted')">Accept</button>
+            <button id="cookie-reject" onclick="ghhConsent('rejected')" style="background: transparent; color: inherit; border: 1px solid currentColor; margin-left: 0.5rem; padding: 0.5rem 1.25rem; border-radius: 4px; font-weight: 600; font-size: 0.9rem; cursor: pointer;">Reject</button>
+        </span>
+    </div>
+    <script>
+        function ghhConsent(v) {
+            try { localStorage.setItem('cookieConsent', v); } catch (e) {}
+            document.getElementById('cookie-banner').style.display = 'none';
+            if (v === 'accepted') ghhLoadGA();
+        }
+        try {
+            if (!localStorage.getItem('cookieConsent')) document.getElementById('cookie-banner').style.display = '';
+        } catch (e) { document.getElementById('cookie-banner').style.display = ''; }
+    </script>
+
+</body>
+</html>
