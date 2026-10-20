@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) - loads only after cookie consent -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        function ghhLoadGA() {
+            if (window.ghhGALoaded) return;
+            window.ghhGALoaded = true;
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-C5XC4KSB7N';
+            document.head.appendChild(s);
+            gtag('js', new Date());
+            gtag('config', 'G-C5XC4KSB7N');
+        }
+        try { if (localStorage.getItem('cookieConsent') === 'accepted') ghhLoadGA(); } catch (e) {}
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guayacanes: The Quiet Village Next Door | Guest House Holland</title>
+    <meta name="description" content="Dre's honest guide to Guayacanes, the small fishing village just past Juan Dolio - the calm reef-protected water, the fish shacks on the sand, and why it's worth the short walk or drive.">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a5f7a;
+            --secondary: #c9a227;
+            --dark: #1a1a1a;
+            --light: #f8f8f8;
+            --text: #333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: white;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+
+        .article-hero {
+            padding-top: 100px;
+            min-height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                        url('https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=1400') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .article-hero { padding-top: 120px; }
+            .nav-links { display: none; }
+        }
+
+        .hero-content { max-width: 800px; padding: 2rem; }
+
+        .article-tag {
+            display: inline-block;
+            background: #0d9488;
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-meta { font-size: 0.95rem; opacity: 0.85; }
+
+        .article-body {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .article-body h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin: 2.5rem 0 1rem;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: var(--light);
+            border-left: 4px solid var(--secondary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box p { margin: 0; font-style: italic; color: #555; }
+
+        .tip-box {
+            background: #e8f4f8;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .tip-box strong { color: var(--primary); display: block; margin-bottom: 0.5rem; }
+
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+        }
+
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .cta-block {
+            background: #2c1654;
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-block h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-block p { margin-bottom: 1.5rem; opacity: 0.9; }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .cta-btn:hover { transform: translateY(-2px); }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        #cookie-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: rgba(26,26,26,0.97);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 9999;
+            font-size: 0.9rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        #cookie-banner a { color: var(--secondary); }
+
+        #cookie-accept {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">Guest House Holland</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#about">About Dre</a>
+            <a href="/tours.html">Tours</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="article-hero">
+        <div class="hero-content">
+            <span class="article-tag">🏖️ Beaches</span>
+            <h1>Guayacanes: The Quiet Village Next Door</h1>
+            <p class="hero-meta">By Dre · October 20, 2026 · 5 min read</p>
+        </div>
+    </section>
+
+    <article class="article-body">
+
+        <div class="author-box">
+            <img src="/images/andre-profile.jpg" alt="Dre" class="author-avatar">
+            <div class="author-info">
+                <h4 style="font-size:1.1rem;">Dre — <span style="color:#27ae60;font-weight:700;">🌿 ECO-Tourguide #001</span></h4>
+                <p>Guests staying in Juan Dolio often never make it the short distance to Guayacanes, and I think that's a shame. It's not a secret exactly - the taxi drivers all know it - it's just small enough that nobody bothers to market it. Here's why I still send people there after thirty years.</p>
+            </div>
+        </div>
+
+        <p>Guayacanes sits just east of Juan Dolio, close enough that you can walk it along the beach in twenty minutes or get a motoconcho there for under RD$100. It's a real fishing village first and a beach destination second, and that order matters - the boats on the sand aren't decoration, the men mending nets in the shade aren't posing for photos, and the pace of the place has nothing to do with tourism. I've been coming here since long before anyone thought to put up a beach bar, and it's one of the few stretches of this coast that still feels the way the whole coast used to.</p>
+
+        <h2>Why the Water Looks Different Here</h2>
+
+        <p>The first thing most people notice is the color - a flatter, calmer turquoise than the open beach in front of Juan Dolio. That's the reef doing its job. A barrier reef runs close to shore here and breaks up the swell before it reaches the sand, which means Guayacanes has long stretches where the water barely moves even when the wind is up everywhere else. It's shallow for a good distance out too, which makes it one of the better spots on this coast for anyone traveling with small kids or anyone who just doesn't want to fight waves to cool off. The trade-off is that it's not the place for bodysurfing or anything with real swell - for that, you want the open beach back toward Juan Dolio or further east.</p>
+
+        <div class="tip-box">
+            <strong>💡 Dre's Tip:</strong>
+            Go on a weekday morning if you want the water to yourself. Weekends bring day-trippers from Santo Domingo who've figured out the same thing I'm telling you - calm water, real food, no resort markup.
+        </div>
+
+        <h2>Lunch at the Ranchitos</h2>
+
+        <p>The real reason I send guests to Guayacanes is lunch. A row of simple open-sided shacks - ranchitos, we call them - sit right on the sand, each one run by a family, each one serving whatever came off the boats that morning. Order the pescado frito, a whole fried fish, with tostones and a cold Presidente, and expect to pay somewhere around RD$400-600 depending on the catch and the size. It's not a menu you negotiate from a laminated card with photos; you ask what's fresh, and you take what they tell you. The quality has nothing to do with how nice the plastic chairs look, and I've had some of my best meals on this coast sitting at a wobbly table with sand under my feet.</p>
+
+        <div class="highlight-box">
+            <p>"People ask me why I don't just eat at the places with the view and the printed menu. I tell them the view at Guayacanes is the fishing boat the fish came off two hours ago. That's a better view than most restaurants will ever give you." — Dre</p>
+        </div>
+
+        <h2>What's Actually There (and What Isn't)</h2>
+
+        <p>Don't come expecting infrastructure. There's no strip of shops, no organized tour desk, no lifeguard rotation the way some beaches further toward Boca Chica have. What you'll find is the village itself - small houses, a church, kids playing baseball in whatever open space is flat enough, and a beach that belongs entirely to the people who live there, with visitors as welcome guests rather than the main event. Bring cash, bring sun protection since shade is limited to the ranchitos themselves, and don't expect anyone to rush you - that's the whole point of coming.</p>
+
+        <p>If you only have time for one place beyond the main Juan Dolio strip, I'd put Guayacanes ahead of almost anywhere else I recommend. It's close, it's calm, it's honest about what it is, and it hasn't changed much in the years I've been bringing people here - which, on this coast, is getting rarer every year.</p>
+
+        <div class="cta-block">
+            <h3>Want to See Guayacanes for Yourself?</h3>
+            <p>Ask Dre about getting there, and which ranchito to try first.</p>
+            <a href="/contact.html" class="cta-btn">Ask Dre →</a>
+        </div>
+
+    </article>
+
+    <footer>
+        <p>© 2026 Guest House Holland · Juan Dolio, Dominican Republic · <a href="/blog.html" style="color: var(--secondary);">Back to Blog</a></p>
+    </footer>
+
+    <div id="cookie-banner" style="display: none;">
+        <span>We use cookies for anonymous visitor statistics (Google Analytics), only with your consent. <a href="/privacy.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a></span>
+        <span style="white-space: nowrap;">
+            <button id="cookie-accept" onclick="ghhConsent('accepted')">Accept</button>
+            <button id="cookie-reject" onclick="ghhConsent('rejected')" style="background: transparent; color: inherit; border: 1px solid currentColor; margin-left: 0.5rem; padding: 0.5rem 1.25rem; border-radius: 4px; font-weight: 600; font-size: 0.9rem; cursor: pointer;">Reject</button>
+        </span>
+    </div>
+    <script>
+        function ghhConsent(v) {
+            try { localStorage.setItem('cookieConsent', v); } catch (e) {}
+            document.getElementById('cookie-banner').style.display = 'none';
+            if (v === 'accepted') ghhLoadGA();
+        }
+        try {
+            if (!localStorage.getItem('cookieConsent')) document.getElementById('cookie-banner').style.display = '';
+        } catch (e) { document.getElementById('cookie-banner').style.display = ''; }
+    </script>
+
+</body>
+</html>
