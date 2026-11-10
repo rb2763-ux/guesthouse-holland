@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) - loads only after cookie consent -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        function ghhLoadGA() {
+            if (window.ghhGALoaded) return;
+            window.ghhGALoaded = true;
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-C5XC4KSB7N';
+            document.head.appendChild(s);
+            gtag('js', new Date());
+            gtag('config', 'G-C5XC4KSB7N');
+        }
+        try { if (localStorage.getItem('cookieConsent') === 'accepted') ghhLoadGA(); } catch (e) {}
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dominican Asado: What a Real Weekend Cookout Looks Like | Guest House Holland</title>
+    <meta name="description" content="Dre's honest guide to the Dominican asado - the weekend cookout culture of driveways, colmado parking lots, and apartment courtyards, and how a visitor can actually get invited to one.">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a5f7a;
+            --secondary: #c9a227;
+            --dark: #1a1a1a;
+            --light: #f8f8f8;
+            --text: #333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: white;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+
+        .article-hero {
+            padding-top: 100px;
+            min-height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                        url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1400') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .article-hero { padding-top: 120px; }
+            .nav-links { display: none; }
+        }
+
+        .hero-content { max-width: 800px; padding: 2rem; }
+
+        .article-tag {
+            display: inline-block;
+            background: #b45309;
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-meta { font-size: 0.95rem; opacity: 0.85; }
+
+        .article-body {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .article-body h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin: 2.5rem 0 1rem;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: var(--light);
+            border-left: 4px solid var(--secondary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box p { margin: 0; font-style: italic; color: #555; }
+
+        .tip-box {
+            background: #e8f4f8;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .tip-box strong { color: var(--primary); display: block; margin-bottom: 0.5rem; }
+
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+        }
+
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .cta-block {
+            background: #2c1654;
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-block h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-block p { margin-bottom: 1.5rem; opacity: 0.9; }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .cta-btn:hover { transform: translateY(-2px); }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        #cookie-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: rgba(26,26,26,0.97);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 9999;
+            font-size: 0.9rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        #cookie-banner a { color: var(--secondary); }
+
+        #cookie-accept {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">Guest House Holland</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#about">About Dre</a>
+            <a href="/tours.html">Tours</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="article-hero">
+        <div class="hero-content">
+            <span class="article-tag">🍖 Food & Local Life</span>
+            <h1>The Dominican Asado: What a Real Weekend Cookout Looks Like</h1>
+            <p class="hero-meta">By Dre · November 10, 2026 · 6 min read</p>
+        </div>
+    </section>
+
+    <article class="article-body">
+
+        <div class="author-box">
+            <img src="/images/andre-profile.jpg" alt="Dre" class="author-avatar">
+            <div class="author-info">
+                <h4 style="font-size:1.1rem;">Dre — <span style="color:#27ae60;font-weight:700;">🌿 ECO-Tourguide #001</span></h4>
+                <p>Most Saturdays, if you walk past the right driveway in Juan Dolio around four in the afternoon, you'll smell it before you see it - charcoal, chicken skin, and someone's uncle arguing with the fire. After thirty years here, the asado is still one of my favorite things about this country, and almost no tourist ever sees one.</p>
+            </div>
+        </div>
+
+        <p>Visitors hear "Dominican food" and think of a restaurant plate - mangú, a fried egg, some salami. That's weekday food, eaten fast. The asado is different. It's not a restaurant thing at all; it's what families do on a Saturday or Sunday afternoon when there's no particular occasion except that it's the weekend and someone has a grill, a cooler of Presidente, and enough relatives nearby to fill a yard.</p>
+
+        <h2>Not a Barbecue, Not a Party - Something in Between</h2>
+
+        <p>Calling it a "barbecue" undersells it and calling it a "party" overstates it. An asado usually starts in the early afternoon with someone setting up a simple metal grill - sometimes homemade from an oil drum cut in half - over charcoal, not gas. There's no real start time and no real end time. People drift in over a couple of hours: a cousin with a bag of ice, a neighbor who heard the radio from the street, someone's kids who just want to be near the food. Nobody sends invitations. If you're already standing there when the meat comes off the grill, you're generally expected to eat.</p>
+
+        <h2>What's Actually on the Grill</h2>
+
+        <p>Chicken thighs marinated in sour orange, garlic, and oregano are the backbone of most asados - cheap, forgiving on a cheap grill, and nearly always good. Pork chunks (pernil or chuletas) show up often too, sometimes pork ribs if the family's doing well that month. Longaniza, a garlicky Dominican sausage, gets thrown on almost as a snack while the main meat cooks. On the side: yuca boiled and doused in a garlicky oil-and-vinegar sauce called mojo, a simple cabbage slaw called ensalada de repollo, and white rice if anyone bothered to cook it - plenty of asados skip rice entirely and just eat meat and yuca off a paper plate standing up.</p>
+
+        <div class="tip-box">
+            <strong>💡 Dre's Tip:</strong>
+            If you ever get invited to one of these, bring beer or ice, not food. Showing up with a dish nobody asked for is seen as slightly odd - the host has it covered. A cold case of Presidente or a bag of ice for the cooler is always welcome and tells people you understand how this works.
+        </div>
+
+        <h2>Where This Actually Happens</h2>
+
+        <p>The best asados aren't at restaurants or beach clubs - they're in driveways, apartment courtyards, and the dirt lot beside a colmado where someone's set up a grill for the neighborhood rather than just the family. Guayacanes and the quieter streets back from the main road in Juan Dolio are full of this on a Sunday; you'll hear merengue or bachata from a speaker balanced on a plastic chair before you see the smoke. It's loud, a little chaotic, and completely unplanned by tourism standards - which is exactly why it's real.</p>
+
+        <div class="highlight-box">
+            <p>"Guests sometimes ask me to book them 'an authentic Dominican barbecue experience.' I tell them that's not really something you book - it's something you get invited to. The honest version is messier than any tour, and better for it." — Dre</p>
+        </div>
+
+        <h2>Can a Visitor Actually Get In On This?</h2>
+
+        <p>Not by looking for it on a tour menu, but it happens more than people expect. Apartment neighbors having a Sunday asado will often wave a curious guest over, especially if you've already said hello a few times during the week. Staying somewhere for more than a few days helps enormously - a one-night tourist is a stranger, a guest who's been around all week is a familiar face worth feeding. If it doesn't happen on its own, ask whoever you're renting from, or ask us; plenty of our longer-stay guests have ended up at a neighbor's grill without ever meaning to go looking for one.</p>
+
+        <p>It won't look like the postcard version of Caribbean dining, and there's no menu, no bill, and usually no plan. That's the whole point. If you want to understand how Dominicans actually eat together, skip the resort buffet on a Sunday afternoon and go find the smoke.</p>
+
+        <div class="cta-block">
+            <h3>Staying Longer in Juan Dolio?</h3>
+            <p>Ask Dre how to meet the neighbors - the rest tends to take care of itself.</p>
+            <a href="/contact.html" class="cta-btn">Ask Dre →</a>
+        </div>
+
+    </article>
+
+    <footer>
+        <p>© 2026 Guest House Holland · Juan Dolio, Dominican Republic · <a href="/blog.html" style="color: var(--secondary);">Back to Blog</a></p>
+    </footer>
+
+    <div id="cookie-banner" style="display: none;">
+        <span>We use cookies for anonymous visitor statistics (Google Analytics), only with your consent. <a href="/privacy.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a></span>
+        <span style="white-space: nowrap;">
+            <button id="cookie-accept" onclick="ghhConsent('accepted')">Accept</button>
+            <button id="cookie-reject" onclick="ghhConsent('rejected')" style="background: transparent; color: inherit; border: 1px solid currentColor; margin-left: 0.5rem; padding: 0.5rem 1.25rem; border-radius: 4px; font-weight: 600; font-size: 0.9rem; cursor: pointer;">Reject</button>
+        </span>
+    </div>
+    <script>
+        function ghhConsent(v) {
+            try { localStorage.setItem('cookieConsent', v); } catch (e) {}
+            document.getElementById('cookie-banner').style.display = 'none';
+            if (v === 'accepted') ghhLoadGA();
+        }
+        try {
+            if (!localStorage.getItem('cookieConsent')) document.getElementById('cookie-banner').style.display = '';
+        } catch (e) { document.getElementById('cookie-banner').style.display = ''; }
+    </script>
+
+</body>
+</html>
