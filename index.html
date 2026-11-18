@@ -414,12 +414,43 @@
             letter-spacing: 0.5px;
         }
 
-        .booking-badge {
-            width: 220px;
-            height: auto;
-            border-radius: 6px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            object-fit: contain;
+        .rating-badge {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 1.5rem 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(26,95,122,0.15);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-width: 160px;
+            text-decoration: none;
+        }
+
+        .rating-badge .number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .rating-badge .number small {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .rating-badge .text {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .rating-badge .date {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-top: 0.3rem;
         }
 
         .about-content h2 {
@@ -873,9 +904,17 @@
                 font-size: 0.75rem;
             }
             
-            .booking-badge {
-                width: 170px !important;
-                max-width: 170px !important;
+            .rating-badge {
+                padding: 1.2rem 1.5rem;
+                min-width: 120px;
+            }
+
+            .rating-badge .number {
+                font-size: 2rem;
+            }
+
+            .rating-badge .text {
+                font-size: 0.75rem;
             }
         }
     </style>
@@ -994,7 +1033,11 @@ nav.scrolled .lang-current{color:var(--text)}
                         <div class="number">#001</div>
                         <div class="text">ECO-Tourguide</div>
                     </div>
-                    <img src="images/booking-award-v6.png" alt="Booking.com Traveller Review Award 2026 - 8.2" class="booking-badge" style="width: 220px !important; height: auto !important; max-width: 220px !important;">
+                    <a href="https://www.booking.com/hotel/do/guest-house-holland.en.html" target="_blank" rel="noopener" class="rating-badge" title="Guest rating on Booking.com, November 2026">
+                        <div class="number"><span data-i18n="rating_score">9.2</span><small>/10</small></div>
+                        <div class="text" data-i18n="rating_text">Guest rating on Booking.com</div>
+                        <div class="date" data-i18n="rating_date">November 2026</div>
+                    </a>
                 </div>
             </div>
             <div class="about-content">
