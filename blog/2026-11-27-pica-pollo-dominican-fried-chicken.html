@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) - loads only after cookie consent -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        function ghhLoadGA() {
+            if (window.ghhGALoaded) return;
+            window.ghhGALoaded = true;
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-C5XC4KSB7N';
+            document.head.appendChild(s);
+            gtag('js', new Date());
+            gtag('config', 'G-C5XC4KSB7N');
+        }
+        try { if (localStorage.getItem('cookieConsent') === 'accepted') ghhLoadGA(); } catch (e) {}
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pica Pollo: Dre's Guide to the Dominican Republic's Fried Chicken Shacks | Guest House Holland</title>
+    <meta name="description" content="Dre's honest guide to pica pollo - the roadside fried chicken shacks found all over the Dominican Republic. What it is, how to spot a good one near Juan Dolio, and what to order.">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a5f7a;
+            --secondary: #c9a227;
+            --dark: #1a1a1a;
+            --light: #f8f8f8;
+            --text: #333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: white;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+
+        .article-hero {
+            padding-top: 100px;
+            min-height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                        url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1400') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .article-hero { padding-top: 120px; }
+            .nav-links { display: none; }
+        }
+
+        .hero-content { max-width: 800px; padding: 2rem; }
+
+        .article-tag {
+            display: inline-block;
+            background: #b45309;
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-meta { font-size: 0.95rem; opacity: 0.85; }
+
+        .article-body {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .article-body h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin: 2.5rem 0 1rem;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: var(--light);
+            border-left: 4px solid var(--secondary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box p { margin: 0; font-style: italic; color: #555; }
+
+        .tip-box {
+            background: #e8f4f8;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .tip-box strong { color: var(--primary); display: block; margin-bottom: 0.5rem; }
+
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+        }
+
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .cta-block {
+            background: #2c1654;
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-block h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-block p { margin-bottom: 1.5rem; opacity: 0.9; }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .cta-btn:hover { transform: translateY(-2px); }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        #cookie-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: rgba(26,26,26,0.97);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 9999;
+            font-size: 0.9rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        #cookie-banner a { color: var(--secondary); }
+
+        #cookie-accept {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">Guest House Holland</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#about">About Dre</a>
+            <a href="/tours.html">Tours</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="article-hero">
+        <div class="hero-content">
+            <span class="article-tag">🍗 Food & Local Life</span>
+            <h1>Pica Pollo: Dre's Guide to the Dominican Republic's Fried Chicken Shacks</h1>
+            <p class="hero-meta">By Dre · November 27, 2026 · 4 min read</p>
+        </div>
+    </section>
+
+    <article class="article-body">
+
+        <div class="author-box">
+            <img src="/images/andre-profile.jpg" alt="Dre" class="author-avatar">
+            <div class="author-info">
+                <h4 style="font-size:1.1rem;">Dre — <span style="color:#27ae60;font-weight:700;">🌿 ECO-Tourguide #001</span></h4>
+                <p>After thirty-plus years here, I still stop for pica pollo more often than I'd admit to a nutritionist. It's cheap, it's everywhere, and most visitors walk past it without knowing what they're missing.</p>
+            </div>
+        </div>
+
+        <p>Drive through any town in the Dominican Republic after dark and you'll see them: small open-front shacks with a few plastic chairs, a deep fryer going, and a line of local customers who clearly know something you don't. That's pica pollo - Dominican fried chicken, and one of the most honest, inexpensive meals you can eat in this country. It rarely makes it into tourist guides because it looks like nothing special. It is, in fact, one of the things I miss most on the rare trip back to Europe.</p>
+
+        <h2>What Pica Pollo Actually Is</h2>
+
+        <p>The chicken is marinated first - usually in sour orange juice, garlic, oregano, and a short list of other seasonings that varies from one cook to the next - then cut into pieces and deep-fried to order, bone in, skin on, nothing breaded or battered the way North American fried chicken usually is. What comes out is crisp on the outside, juicy inside, and tastes strongly of the marinade rather than of batter or grease. It's almost always sold with a side of tostones (fried green plantain) or fried yuca, and a small cabbage-and-tomato salad dressed with vinegar to cut through the fried food. Order "una media con todo" - half a chicken with everything - and you'll get all three on one plate for not much money.</p>
+
+        <h2>Pica Pollo vs. Pollo al Carbón</h2>
+
+        <p>Don't confuse the two. Pica pollo is fried; pollo al carbón is grilled over charcoal, usually whole or in large pieces, with a smokier, less crisp result and a slightly different marinade leaning more on garlic and bitter orange. Both are everywhere, often from the same shack, and both are good - it genuinely comes down to whether you want fried or grilled that night. If a place only does one, it's usually the better of the two for that place, since nobody puts real effort into a side dish.</p>
+
+        <div class="tip-box">
+            <strong>💡 Dre's Tip:</strong>
+            Judge a pica pollo spot by how busy it is with Dominicans, not by how it looks. The best ones are often the roughest-looking - plastic tables, a hand-painted sign, maybe no name at all - because the owner spent the money on good oil and fresh chicken instead of paint. A quarter chicken with tostones and salad should run you somewhere around RD$200-350. If a menu quotes you in dollars, you're in a tourist-priced spot, not a real one.
+        </div>
+
+        <h2>Where to Find It Near Juan Dolio</h2>
+
+        <p>You don't need to go looking far. Along the main road through Juan Dolio and in Guayacanes there are several small, no-frills places that do a steady trade with locals from early evening until late. None of them have websites or Google reviews worth trusting - the way you find a good one is by watching where the motoconchos and the off-duty hotel staff are eating. If you see Dominican families at the plastic tables at 9pm, that's your answer. Avoid the handful of places right on the tourist strip that mostly serve a quieter, more expensive version of the same food to people who don't know better.</p>
+
+        <div class="highlight-box">
+            <p>"Pica pollo is not a dish I recommend because it's exotic or impressive. I recommend it because it's what this country actually eats on a Tuesday night, and because after thirty years I still haven't found a fried chicken I like more." — Dre</p>
+        </div>
+
+        <h2>Dre's Honest Take</h2>
+
+        <p>This isn't fine dining and it was never meant to be. It's a late-night staple, a post-beach dinner, a stop on the way home from work, cheap enough that nobody thinks twice about it. For visitors, it's one of the easiest ways to eat exactly what Dominicans eat, pay what Dominicans pay, and sit among Dominicans doing it - no reservation, no dress code, no performance for tourists. Go hungry, order more than you think you need, and don't expect a fork; pica pollo is eaten with your hands, the way it's supposed to be.</p>
+
+        <div class="cta-block">
+            <h3>Want Dre to Point You to His Favorite?</h3>
+            <p>Ask him which shack near Juan Dolio he actually eats at - he'll tell you.</p>
+            <a href="/contact.html" class="cta-btn">Ask Dre →</a>
+        </div>
+
+    </article>
+
+    <footer>
+        <p>© 2026 Guest House Holland · Juan Dolio, Dominican Republic · <a href="/blog.html" style="color: var(--secondary);">Back to Blog</a></p>
+    </footer>
+
+    <div id="cookie-banner" style="display: none;">
+        <span>We use cookies for anonymous visitor statistics (Google Analytics), only with your consent. <a href="/privacy.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a></span>
+        <span style="white-space: nowrap;">
+            <button id="cookie-accept" onclick="ghhConsent('accepted')">Accept</button>
+            <button id="cookie-reject" onclick="ghhConsent('rejected')" style="background: transparent; color: inherit; border: 1px solid currentColor; margin-left: 0.5rem; padding: 0.5rem 1.25rem; border-radius: 4px; font-weight: 600; font-size: 0.9rem; cursor: pointer;">Reject</button>
+        </span>
+    </div>
+    <script>
+        function ghhConsent(v) {
+            try { localStorage.setItem('cookieConsent', v); } catch (e) {}
+            document.getElementById('cookie-banner').style.display = 'none';
+            if (v === 'accepted') ghhLoadGA();
+        }
+        try {
+            if (!localStorage.getItem('cookieConsent')) document.getElementById('cookie-banner').style.display = '';
+        } catch (e) { document.getElementById('cookie-banner').style.display = ''; }
+    </script>
+
+</body>
+</html>
